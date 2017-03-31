@@ -1,0 +1,14 @@
+.sass-cache/
+*.css.map
+
+# IntelliJ project files
+.idea
+out
+gen
+config.rb
+framework/assets/images/
+framework/assets/javascript/jQuery/
+.jpg
+.svg
+.png
+/STOCK/
