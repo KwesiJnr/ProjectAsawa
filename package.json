@@ -1,0 +1,47 @@
+{
+  "name": "asawaresortllc",
+  "version": "1.0.0",
+  "description": "Initial Website for Asawa Resort LLC.",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlclean": "^2.7.14",
+    "gulp-ignore": "^2.0.2",
+    "gulp-imacss": "^1.0.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-newer": "^1.3.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-preprocess": "^2.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-pug-lint": "^0.1.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^2.1.2",
+    "node-sass-asset-functions": "^0.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KwesiJnr/ProjectAsawa.git"
+  },
+  "keywords": [
+    "asawa",
+    "asawaresort"
+  ],
+  "author": "Stephen Asamoah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KwesiJnr/ProjectAsawa/issues"
+  },
+  "homepage": "https://github.com/KwesiJnr/ProjectAsawa#readme"
+}

@@ -1,0 +1,17 @@
+//- Unordered List Generator
+mixin ulGen(ul_items)
+        ul
+            each item in ul_items
+                li
+                    +links(item)
+
+
+
+
+//- Links inks
+mixin links(items)
+    - var linkatts = {'href': items.link}
+    if items.link
+        a()&attributes(linkatts)= items.title
+    else
+        | #{items.title}

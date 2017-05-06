@@ -12,3 +12,5 @@ framework/assets/javascript/jQuery/
 .svg
 .png
 /STOCK/
+/node_modules/
+/.gtm/
