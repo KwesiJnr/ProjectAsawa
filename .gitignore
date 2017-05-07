@@ -14,3 +14,7 @@ framework/assets/javascript/jQuery/
 /STOCK/
 /node_modules/
 /.gtm/
+/framework/src/assets/images
+/framework/src/assets/fonts/
+/framework/build/assets/fonts/
+/framework/build/assets/images/

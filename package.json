@@ -9,6 +9,9 @@
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
+    "gulp-cache": "^0.4.6",
+    "gulp-cache-bust": "^1.1.0",
+    "gulp-cached": "^1.1.1",
     "gulp-concat": "^2.6.1",
     "gulp-htmlclean": "^2.7.14",
     "gulp-ignore": "^2.0.2",

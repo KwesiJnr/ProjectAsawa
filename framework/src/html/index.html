@@ -4,9 +4,187 @@
     <!-- @include ../templates/_meta.html-->
 </head>
 <body>
-    <!-- @include ../templates/_header.html-->
+<!-- @include ../templates/_header.html-->
+<amp-sidebar id="hamburger" layout="nodisplay" side="left">
+    <ul>
+        <li class="navbar-close" role="button" on="tap:hamburger.close" tabindex="-1">&times;</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</amp-sidebar>
 
-    <!-- @include ../templates/_footer.html-->
-    <!-- @include ../templates/_scripts.html-->
+<div class="container">
+    <section class="main__bckgrnd">
+        <amp-img class="main__bckgrnd--img" src="../assets/images/index-background.jpg" width="1920" height="880"
+                 layout="responsive"></amp-img>
+
+        <h2 class="hdln--prim">Discover Asawa</h2>
+        <h5>The all-in-one getaway you've been yearning for.</h5>
+
+        <div>
+            <button class="btn btn__explore"></button>
+            <span>Explore</span>
+        </div>
+
+        <!-- Secondary Header -->
+        <div class="hdr__sec">
+            <ul>
+                <li>Book A Reservation</li>
+                <li><a href="#">Arrival Date</a></li>
+                <li><a href="#">Departure Date</a></li>
+                <li><a href="#">Book</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <!-- WeatherVane -->
+        <div class="wthr">
+            <h3 class="wthr--heading">The Weather</h3>
+            <ul class="wthr__child">
+                <!-- Weather Today -->
+                <li class="wthr__today">
+                    <h3 class="wthr__child--heading">Today <span>May 2</span></h3>
+                    <ul class="wthr__child--list">
+                        <li class="wthr__today--img">
+                            <amp-img src="../assets/images/weather/sunny.png" alt="Weather Today"
+                                     width="192" height="179" layout="fixed"></amp-img>
+                        </li>
+                        <li class="wthr__today--temp">19 Celsius</li>
+                        <li>Suggested Activity:<a href="#" class="actv--sugst">Kayaking</a></li>
+                    </ul>
+                </li>
+
+                <!-- Weather Tomorrow -->
+                <li class="wthr__tomorrow">
+                    <h3 class="wthr__child--heading">Tomorrow <span>May 3</span></h3>
+                    <ul class="wthr__child--list">
+                        <li class="wthr__tomorrow--img">
+                            <amp-img src="../assets/images/weather/rainy.png"
+                                     alt="Weather Tomorrow" width="192" height="179"
+                                     layout="fixed"></amp-img>
+                        </li>
+                        <li class="wthr__tomorrow--temp">13 Celsius</li>
+                        <li>Suggested Activity:<a href="#" class="actv--sugst">Kayaking</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Page Description -->
+        <div class="panel__desc">
+            <h2 class="panel__desc--heading">The Perfect Getaway</h2>
+            <p>Step onto the balcony, bask in the glorious tropical sunshine and inhale the sweet scent of tropical
+                flowers in the courtyard. With an elevated view on the landscape, you can drink in the stunning
+                greenery and wildlife that stretch miles and miles around our resort.</p>
+
+            <p>Take a moment and step onto the grass, wiggle your toes in 'em. This is the moment you have always
+                wanted. Perfect place, perfect food - all away from the humdrum and chaos of urban life.</p>
+
+            <p>All of this comes completely hassle-free. You only need to book a reservation and we handle
+                everything. Walk-in, walk-out as you please.</p>
+
+            <p>We are Asawa, and are happy to have you stay with us!</p>
+
+            <ul class="desc__imgs">
+                <li class="desc__img">
+                    <amp-img src="../assets/images/pnldesc-img-one.jpg" alt="Beachfront Image" width="230"
+                             height="170" layout="fixed"></amp-img>
+                </li>
+                <li class="desc__img">
+                    <amp-img src="../assets/images/pnldesc-img-two.jpg" alt="Poolside Image" width="230" height="170"
+                             layout="fixed"></amp-img>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Indulge -->
+        <div class="page__plan">
+            <h2 class="panel__desc--heading">Allow Us to Indulge You</h2>
+            <ul>
+                <li class="desc__img">
+                    <amp-img src="../assets/images/pnldesc-img-one.jpg" alt="Stacked Beach Images" width="230"
+                             height="170" layout="fixed"></amp-img>
+                </li>
+                <li>
+                    <p>Hello, and welcome to the Asawa Resort. Vacations and holidays are meant for relaxaion. Sit back,
+                        relax and leave the organising to us. We've got you covered.</p>
+
+                    <p>With a ton of exciting new things to try and explore at Asawa, we would like to help you plan
+                        your stay so you don't spend too much time on one single piece of entertainment when there's
+                        much much more!</p>
+
+                    <button class="btn btn__plan">Plan Your Stay</button>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+</div>
+
+<section>
+    <h2 class="v-hidden">Extended Gallery</h2>
+    <ul class="gallery__extnd">
+        <li>
+            <amp-img src="../assets/images/gallery/adventure.jpg" alt="Adventure-Image" width="640" height="440"
+                     layout="responsive"></amp-img>
+        </li>
+        <li>
+            <amp-img src="../assets/images/gallery/honeymoon.jpg" alt="Honeymoon-Image" width="640" height="440"
+                     layout="responsive"></amp-img>
+        </li>
+        <li>
+            <amp-img src="../assets/images/gallery/relaxation.jpg" alt="Relaxation-Image" width="640" height="440"
+                     layout="responsive"></amp-img>
+        </li>
+        <li>
+            <amp-img src="../assets/images/gallery/nature.jpg" alt="Nature-Image" width="640" height="440"
+                     layout="responsive"></amp-img>
+        </li>
+        <li>
+            <amp-img src="../assets/images/gallery/rooms.jpg" alt="Room-Image" width="640" height="440"
+                     layout="responsive"></amp-img>
+        </li>
+        <li>
+            <amp-img src="../assets/images/gallery/serene.jpg" alt="Serene-Image" width="640" height="440"
+                     layout="responsive"></amp-img>
+        </li>
+    </ul>
+</section>
+
+<section class="container panel__reviews">
+    <h2 class="panel__reviews--heading">What Our Guests Are Saying</h2>
+    <blockquote>Asawa Resort is situated on the beach with a mountain view from the front. The tropical gardens are
+        beautiful
+        and the pool area great for swimming and relaxing. The location is perfect for touring the island and close to
+        shops and restaurants and the airport. Well worth staying and would recommend.
+    </blockquote>
+    <cite>Charles Mooreland, Irish Visitor</cite>
+</section>
+
+<!-- Secondary Header Lower -->
+<section class="panel__prefooter">
+    <div class="hdr__sec">
+        <ul>
+            <li>Book A Reservation</li>
+            <li><a href="#">Arrival Date</a></li>
+            <li><a href="#">Departure Date</a></li>
+            <li><a href="#">Book</a></li>
+        </ul>
+    </div>
+
+    <h2 class="panel__prefooter--heading">It Pays to Book Direct</h2>
+
+    <hr>
+    <p class="panel__prefooter--desc">Book direct today for to get exclusive deals and promotions. You also get to enter
+        our weekly Best Member Raffle
+        for a chance to win amazing rewards!</p>
+
+
+</section>
+
+<!-- @include ../templates/_footer.html-->
 </body>
 </html>
