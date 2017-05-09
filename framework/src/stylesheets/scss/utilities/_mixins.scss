@@ -1,0 +1,37 @@
+// ==========================================================================
+// BEM Naming Functions
+// ==========================================================================
+// Element Mixin
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+// Modifier Mixin
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// ==========================================================================
+// Media Query Functions
+// ==========================================================================
+@mixin media-q($break) {
+  @if $break == 'small' {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $break == 'medium' {
+    @media (min-width: $breakpoint-md + 1) {
+      @content;
+    }
+  } @else if $break == 'large' {
+    @media (min-width: $breakpoint-lg) {
+      @content
+    }
+  } @else {
+    @error '"#{$break}" is not a valid breakpoint value. Please re-assess and enter correct value (e.g. "small", "medium" or "large")';
+  }
+}

@@ -2,7 +2,7 @@
  * Created by Kwesi Greyback on 5/4/2017.
  */
 var gulp = require('gulp'),
-    broswersync = require('browser-sync'),
+    browsersync = require('browser-sync'),
     cache = require('gulp-cache'),
     cached = require('gulp-cached'),
     cachebust = require('gulp-cache-bust'),
@@ -29,7 +29,7 @@ var gulp = require('gulp'),
 // Directory
 var
     devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production'),
-    reload = broswersync.reload,
+    reload = browsersync.reload,
     source = 'framework/src/',
     dest = 'framework/build/',
     scsspath = source + 'stylesheets/scss/',
@@ -43,12 +43,12 @@ var
         exclude: '!' + source + 'jade/resrcs/**/*',
 
         renameOpts: {
-          prefix: "_"
+            prefix: "_"
         },
 
 
         options: {
-            pretty:true
+            pretty: true
         }
     },
 
@@ -57,6 +57,7 @@ var
         in: source + 'html/**/*',
         out: dest + 'html',
         watch: [source + 'html/**/*', source + 'templates/**/*'],
+        rel: [dest + 'html/**/*'],
 
         processOpts: {
             context: {
@@ -116,14 +117,16 @@ var
     },
 
     // BrowserSync
-    bsopts = {
+    bsOpts = {
         server: {
             baseDir: [dest, dest + 'html'],
             index: 'index.html'
         },
-        open: false,
+        open: true,
         notify: true,
-        tunnel: 'asawa',
+        //tunnel: 'gulp',
+        browser: 'chrome',
+        reloadDelay: 500,
         online: false
     },
 
@@ -147,8 +150,9 @@ gulp.task('pug', function () {
         .pipe(gulp.dest(jade.out));
 });
 
+
 // #HTML
-gulp.task('html', function () {
+gulp.task('html', ['sass'], function () {
     var pages = gulp.src(htmldir.in)
         .pipe(preprocess(htmldir.processOpts));
 
@@ -156,9 +160,8 @@ gulp.task('html', function () {
         pages = pages
             .pipe(filesize({title: 'HTML size in:'}))
             .pipe(htmlclean())
-            .pipe(filesize({title: 'HTML size out:'}))
+            .pipe(filesize({title: 'HTML size out:'}));
     }
-
     return pages
         .pipe(cachebust())
         .pipe(gulp.dest(htmldir.out));
@@ -166,30 +169,28 @@ gulp.task('html', function () {
 
 //#CSS
 gulp.task('sass', function () {
-    var sassfiles = gulp.src(cssdir.in);
-
-    sassfiles = sassfiles
+    var files = gulp.src(cssdir.in);
+    files = files
         .pipe(sass(cssdir.sassOpts))
-        .pipe(filesize({title: 'CSS file-size before optimisation:'}))
+        .pipe(filesize({title: 'CSS file-size before optimization by pleeeaase:'}))
         .pipe(please(cssdir.automaton.options))
-        .pipe(filesize({title: 'CSS file-size before optimisation:'}));
+        .pipe(filesize({title: 'CSS file-size after optimization by pleeease:'}));
 
     // rename on minify
     if (!devBuild) {
-        return sassfiles.pipe(rename(cssdir.mini))
-            .pipe(cached(cssdir.cachename))
+        return files
             .pipe(gulp.dest(cssdir.out))
-            .pipe(broswersync.stream())
+            .pipe(browsersync.stream())
     } else {
-        return sassfiles.pipe(cached(cssdir.cachename))
-            .pipe(gulp.dest(cssdir.out))
-            .pipe(broswersync.stream())
+        return files.pipe(gulp.dest(cssdir.out))
+            .pipe(browsersync.stream())
+
     }
 });
 
 // #BrowserSync
 gulp.task('browsersync', function () {
-    broswersync(bsopts);
+    browsersync(bsOpts);
 });
 
 // Fonts
@@ -230,8 +231,8 @@ gulp.task('default', ['html', 'sass', 'imagemin', 'fonts', 'browsersync'], funct
     // Font_Watch
     gulp.watch(fontdir.in, ['fonts']);
 
-    //CSS Watch
-    gulp.watch(cssdir.watch, ['sass']);
+    //CSS Watch and include into html (compromise for browserSync CSS Injection
+    gulp.watch(cssdir.watch, ['sass', 'html', reload]);
 
     // Image_Watch
     gulp.watch(imagedir.in, ['imagemin']);

@@ -1,0 +1,14 @@
+// ==========================================================================
+// BASE STYLES
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $black;
+  font-size: 1.6rem;
+}

@@ -1,0 +1,9 @@
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+
+// ==========================================================================
+// Color Palette - Shade Picker
+// ==========================================================================
+@function palette($palette, $shade: 'base') {
+  @return map_get(map_get($color-palettes, $palette), $shade);
+}

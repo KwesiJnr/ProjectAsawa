@@ -7,6 +7,7 @@
 <!-- @include ../templates/_header.html-->
 <amp-sidebar id="hamburger" layout="nodisplay" side="left">
     <ul>
+
         <li class="navbar-close" role="button" on="tap:hamburger.close" tabindex="-1">&times;</li>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -16,28 +17,15 @@
 </amp-sidebar>
 
 <div class="container">
-    <section class="main__bckgrnd">
-        <amp-img class="main__bckgrnd--img" src="../assets/images/index-background.jpg" width="1920" height="880"
-                 layout="responsive"></amp-img>
-
-        <h2 class="hdln--prim">Discover Asawa</h2>
-        <h5>The all-in-one getaway you've been yearning for.</h5>
-
-        <div>
-            <button class="btn btn__explore"></button>
-            <span>Explore</span>
-        </div>
-
-        <!-- Secondary Header -->
-        <div class="hdr__sec">
-            <ul>
-                <li>Book A Reservation</li>
-                <li><a href="#">Arrival Date</a></li>
-                <li><a href="#">Departure Date</a></li>
-                <li><a href="#">Book</a></li>
-            </ul>
-        </div>
-    </section>
+    <!-- Secondary Header -->
+    <div class="hdr__sec">
+        <ul>
+            <li>Book A Reservation</li>
+            <li><a href="#">Arrival Date</a></li>
+            <li><a href="#">Departure Date</a></li>
+            <li><a href="#">Book</a></li>
+        </ul>
+    </div>
 
     <section>
         <!-- WeatherVane -->
