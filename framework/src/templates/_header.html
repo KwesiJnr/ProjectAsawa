@@ -1,31 +1,20 @@
 <!-- Primary Header -->
-<header class="hdr_prim">
-    <section class="main__bckgrnd">
-        <amp-img class="main__bckgrnd--img" src="../assets/images/index-background.jpg" width="1920" height="880"
-                 layout="fixed"></amp-img>
+<header class="hdr hdr__prim">
 
-        <div class="main__backgrnd--inner">
-            <h2 class="hdln--prim">Discover Asawa</h2>
-            <h5>The all-in-one getaway you've been yearning for.</h5>
+    <div class="grid">
+        <section class="nav__container">
+            <!-- Left Navigation -->
+            <div class="flex__nav tab">
+                <a href="/" class="hdr__title icn__logo">
+                    <span class="srt">Asawa Resort Logo</span>
+                </a>
+                <button class="hamburger" id="menu__toggle" on="tap:sidebar.toggle"></button>
 
-            <div>
-                <button class="btn btn__explore"></button>
-                <span>Explore</span>
+                <!-- Right Navigation -->
+                <div class="flex__nav--right btn__primary">
+                    <a href="misc/availability.html">Check</a>
+                </div>
             </div>
-        </div>
-    </section>
-    <ul class="flex-nav">
-        <li>
-            <button class="navbar-trigger" role="button" on="tap:hamburger.toggle" tabindex="0">☰</button>
-        </li>
-        <li>
-            <a href="index.html">
-                <amp-img src="../assets/images/logo/asawa-logo.svg" width="60" height="60" layout="fixed"></amp-img>
-            </a>
-        </li>
-
-        <li>
-            <a href="availability.html" class="">Check Availability</a>
-        </li>
-    </ul>
+        </section>
+    </div>
 </header>

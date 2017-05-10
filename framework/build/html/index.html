@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="canonical" href="index.html" />
     <script type="application/ld+json">
@@ -24,555 +25,649 @@
     <title>Home | Asawa Resort
     </title>
     <style amp-custom>
-        /**
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         * Portfolio Framework
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         */
-        /*!
-         *
-         * Color Me SASS v1.0
-         * Built and Designed by Richard Bray
-         *
-         */
+        
+        
+        
+        
         .srt {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            padding: 0;
-            clip: rect(0 0 0 0);
-            border: 0;
-            overflow: hidden;
-            transition: all 4s ease;
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          padding: 0;
+          clip: rect(0 0 0 0);
+          border: 0;
+          overflow: hidden;
         }
-
-        /**
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         * SITE SETTINGS
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         */
+        
+        
         /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-        /* Document
-           ========================================================================== */
-        /**
-         * 1. Correct the line height in all browsers.
-         * 2. Prevent adjustments of font size after orientation changes in
-         *    IE on Windows Phone and in iOS.
-         */
+        
+        
         html {
-            line-height: 1.15;
-            /* 1 */
-            -ms-text-size-adjust: 100%;
-            /* 2 */
-            -webkit-text-size-adjust: 100%;
-            /* 2 */
+          line-height: 1.15;
+          
+          -ms-text-size-adjust: 100%;
+          
+          -webkit-text-size-adjust: 100%;
+          
         }
-
-        /* Sections
-           ========================================================================== */
-        /**
-         * Remove the margin in all browsers (opinionated).
-         */
+        
+        
+        
         body {
-            margin: 0;
+          margin: 0;
         }
-
-        /**
-         * Add the correct display in IE 9-.
-         */
+        
+        
         article,
         aside,
         footer,
         header,
         nav,
         section {
-            display: block;
+          display: block;
         }
-
-        /**
-         * Correct the font size and margin on `h1` elements within `section` and
-         * `article` contexts in Chrome, Firefox, and Safari.
-         */
+        
+        
         h1 {
-            font-size: 2em;
-            margin: 0.67em 0;
+          font-size: 2em;
+          margin: 0.67em 0;
         }
-
-        /* Grouping content
-           ========================================================================== */
-        /**
-         * Add the correct display in IE 9-.
-         * 1. Add the correct display in IE.
-         */
+        
+        
+        
         figcaption,
         figure,
         main {
-            /* 1 */
-            display: block;
+          
+          display: block;
         }
-
-        /**
-         * Add the correct margin in IE 8.
-         */
+        
+        
         figure {
-            margin: 1em 40px;
+          margin: 1em 40px;
         }
-
-        /**
-         * 1. Add the correct box sizing in Firefox.
-         * 2. Show the overflow in Edge and IE.
-         */
+        
+        
         hr {
-            box-sizing: content-box;
-            /* 1 */
-            height: 0;
-            /* 1 */
-            overflow: visible;
-            /* 2 */
+          box-sizing: content-box;
+          
+          height: 0;
+          
+          overflow: visible;
+          
         }
-
-        /**
-         * 1. Correct the inheritance and scaling of font size in all browsers.
-         * 2. Correct the odd `em` font sizing in all browsers.
-         */
+        
+        
         pre {
-            font-family: monospace, monospace;
-            /* 1 */
-            font-size: 1em;
-            /* 2 */
+          font-family: monospace, monospace;
+          
+          font-size: 1em;
+          
         }
-
-        /* Text-level semantics
-           ========================================================================== */
-        /**
-         * 1. Remove the gray background on active links in IE 10.
-         * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
-         */
+        
+        
+        
         a {
-            background-color: transparent;
-            /* 1 */
-            -webkit-text-decoration-skip: objects;
-            /* 2 */
+          background-color: transparent;
+          
+          -webkit-text-decoration-skip: objects;
+          
         }
-
-        /**
-         * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
-         * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-         */
+        
+        
         abbr[title] {
-            border-bottom: none;
-            /* 1 */
-            text-decoration: underline;
-            /* 2 */
-            text-decoration: underline dotted;
-            /* 2 */
+          border-bottom: none;
+          
+          text-decoration: underline;
+          
+          text-decoration: underline dotted;
+          
         }
-
-        /**
-         * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
-         */
+        
+        
         b,
         strong {
-            font-weight: inherit;
+          font-weight: inherit;
         }
-
-        /**
-         * Add the correct font weight in Chrome, Edge, and Safari.
-         */
+        
+        
         b,
         strong {
-            font-weight: bolder;
+          font-weight: bolder;
         }
-
-        /**
-         * 1. Correct the inheritance and scaling of font size in all browsers.
-         * 2. Correct the odd `em` font sizing in all browsers.
-         */
+        
+        
         code,
         kbd,
         samp {
-            font-family: monospace, monospace;
-            /* 1 */
-            font-size: 1em;
-            /* 2 */
+          font-family: monospace, monospace;
+          
+          font-size: 1em;
+          
         }
-
-        /**
-         * Add the correct font style in Android 4.3-.
-         */
+        
+        
         dfn {
-            font-style: italic;
+          font-style: italic;
         }
-
-        /**
-         * Add the correct background and color in IE 9-.
-         */
+        
+        
         mark {
-            background-color: #ff0;
-            color: #000;
+          background-color: #ff0;
+          color: #000;
         }
-
-        /**
-         * Add the correct font size in all browsers.
-         */
+        
+        
         small {
-            font-size: 80%;
+          font-size: 80%;
         }
-
-        /**
-         * Prevent `sub` and `sup` elements from affecting the line height in
-         * all browsers.
-         */
+        
+        
         sub,
         sup {
-            font-size: 75%;
-            line-height: 0;
-            position: relative;
-            vertical-align: baseline;
+          font-size: 75%;
+          line-height: 0;
+          position: relative;
+          vertical-align: baseline;
         }
-
+        
         sub {
-            bottom: -0.25em;
+          bottom: -0.25em;
         }
-
+        
         sup {
-            top: -0.5em;
+          top: -0.5em;
         }
-
-        /* Embedded content
-           ========================================================================== */
-        /**
-         * Add the correct display in IE 9-.
-         */
+        
+        
+        
         audio,
         video {
-            display: inline-block;
+          display: inline-block;
         }
-
-        /**
-         * Add the correct display in iOS 4-7.
-         */
+        
+        
         audio:not([controls]) {
-            display: none;
-            height: 0;
+          display: none;
+          height: 0;
         }
-
-        /**
-         * Remove the border on images inside links in IE 10-.
-         */
+        
+        
         img {
-            border-style: none;
+          border-style: none;
         }
-
-        /**
-         * Hide the overflow in IE.
-         */
+        
+        
         svg:not(:root) {
-            overflow: hidden;
+          overflow: hidden;
         }
-
-        /* Forms
-           ========================================================================== */
-        /**
-         * 1. Change the font styles in all browsers (opinionated).
-         * 2. Remove the margin in Firefox and Safari.
-         */
+        
+        
+        
         button,
         input,
         optgroup,
         select,
         textarea {
-            font-family: sans-serif;
-            /* 1 */
-            font-size: 100%;
-            /* 1 */
-            line-height: 1.15;
-            /* 1 */
-            margin: 0;
-            /* 2 */
+          font-family: sans-serif;
+          
+          font-size: 100%;
+          
+          line-height: 1.15;
+          
+          margin: 0;
+          
         }
-
-        /**
-         * Show the overflow in IE.
-         * 1. Show the overflow in Edge.
-         */
+        
+        
         button,
         input {
-            /* 1 */
-            overflow: visible;
+          
+          overflow: visible;
         }
-
-        /**
-         * Remove the inheritance of text transform in Edge, Firefox, and IE.
-         * 1. Remove the inheritance of text transform in Firefox.
-         */
+        
+        
         button,
         select {
-            /* 1 */
-            text-transform: none;
+          
+          text-transform: none;
         }
-
-        /**
-         * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
-         *    controls in Android 4.
-         * 2. Correct the inability to style clickable types in iOS and Safari.
-         */
+        
+        
         button,
         html [type="button"],
         [type="reset"],
         [type="submit"] {
-            -webkit-appearance: button;
-            /* 2 */
+          -webkit-appearance: button;
+          
         }
-
-        /**
-         * Remove the inner border and padding in Firefox.
-         */
+        
+        
         button::-moz-focus-inner,
         [type="button"]::-moz-focus-inner,
         [type="reset"]::-moz-focus-inner,
         [type="submit"]::-moz-focus-inner {
-            border-style: none;
-            padding: 0;
+          border-style: none;
+          padding: 0;
         }
-
-        /**
-         * Restore the focus styles unset by the previous rule.
-         */
+        
+        
         button:-moz-focusring,
         [type="button"]:-moz-focusring,
         [type="reset"]:-moz-focusring,
         [type="submit"]:-moz-focusring {
-            outline: 1px dotted ButtonText;
+          outline: 1px dotted ButtonText;
         }
-
-        /**
-         * Correct the padding in Firefox.
-         */
+        
+        
         fieldset {
-            padding: 0.35em 0.75em 0.625em;
+          padding: 0.35em 0.75em 0.625em;
         }
-
-        /**
-         * 1. Correct the text wrapping in Edge and IE.
-         * 2. Correct the color inheritance from `fieldset` elements in IE.
-         * 3. Remove the padding so developers are not caught out when they zero out
-         *    `fieldset` elements in all browsers.
-         */
+        
+        
         legend {
-            box-sizing: border-box;
-            /* 1 */
-            color: inherit;
-            /* 2 */
-            display: table;
-            /* 1 */
-            max-width: 100%;
-            /* 1 */
-            padding: 0;
-            /* 3 */
-            white-space: normal;
-            /* 1 */
+          box-sizing: border-box;
+          
+          color: inherit;
+          
+          display: table;
+          
+          max-width: 100%;
+          
+          padding: 0;
+          
+          white-space: normal;
+          
         }
-
-        /**
-         * 1. Add the correct display in IE 9-.
-         * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
-         */
+        
+        
         progress {
-            display: inline-block;
-            /* 1 */
-            vertical-align: baseline;
-            /* 2 */
+          display: inline-block;
+          
+          vertical-align: baseline;
+          
         }
-
-        /**
-         * Remove the default vertical scrollbar in IE.
-         */
+        
+        
         textarea {
-            overflow: auto;
+          overflow: auto;
         }
-
-        /**
-         * 1. Add the correct box sizing in IE 10-.
-         * 2. Remove the padding in IE 10-.
-         */
+        
+        
         [type="checkbox"],
         [type="radio"] {
-            box-sizing: border-box;
-            /* 1 */
-            padding: 0;
-            /* 2 */
+          box-sizing: border-box;
+          
+          padding: 0;
+          
         }
-
-        /**
-         * Correct the cursor style of increment and decrement buttons in Chrome.
-         */
+        
+        
         [type="number"]::-webkit-inner-spin-button,
         [type="number"]::-webkit-outer-spin-button {
-            height: auto;
+          height: auto;
         }
-
-        /**
-         * 1. Correct the odd appearance in Chrome and Safari.
-         * 2. Correct the outline style in Safari.
-         */
+        
+        
         [type="search"] {
-            -webkit-appearance: textfield;
-            /* 1 */
-            outline-offset: -2px;
-            /* 2 */
+          -webkit-appearance: textfield;
+          
+          outline-offset: -2px;
+          
         }
-
-        /**
-         * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
-         */
+        
+        
         [type="search"]::-webkit-search-cancel-button,
         [type="search"]::-webkit-search-decoration {
-            -webkit-appearance: none;
+          -webkit-appearance: none;
         }
-
-        /**
-         * 1. Correct the inability to style clickable types in iOS and Safari.
-         * 2. Change font properties to `inherit` in Safari.
-         */
+        
+        
         ::-webkit-file-upload-button {
-            -webkit-appearance: button;
-            /* 1 */
-            font: inherit;
-            /* 2 */
+          -webkit-appearance: button;
+          
+          font: inherit;
+          
         }
-
-        /* Interactive
-           ========================================================================== */
-        /*
-         * Add the correct display in IE 9-.
-         * 1. Add the correct display in Edge, IE, and Firefox.
-         */
+        
+        
+        
         details,
         menu {
-            display: block;
+          display: block;
         }
-
-        /*
-         * Add the correct display in all browsers.
-         */
+        
+        
         summary {
-            display: list-item;
+          display: list-item;
         }
-
-        /* Scripting
-           ========================================================================== */
-        /**
-         * Add the correct display in IE 9-.
-         */
+        
+        
+        
         canvas {
-            display: inline-block;
+          display: inline-block;
         }
-
-        /**
-         * Add the correct display in IE.
-         */
+        
+        
         template {
-            display: none;
+          display: none;
         }
-
-        /* Hidden
-           ========================================================================== */
-        /**
-         * Add the correct display in IE 10-.
-         */
+        
+        
+        
         [hidden] {
-            display: none;
+          display: none;
         }
-
+        
         html {
-            font-size: 62.5%;
+          font-size: 62.5%;
         }
-
+        
         body {
-            color: #333333;
-            font-size: 16px;
-            font-size: 1.6rem;
+          background-color: #f2f3f4;
+          color: #333333;
+          font-size: 16px;
+          font-family: 'Playfair Display';
+          line-height: 1.5;
+          -webkit-font-smoothing: antialiased;
         }
-
-        /**
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         * BUTTON STYLES
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         */
-        /**
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         * DIVIDER STYLES
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         */
-        /**
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         * FORM STYLES
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         */
-
-        /**
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         * #MISCELLANEOUS STYLES
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         */
-        /**
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         * TABLE STYLES
-         * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-         */
-        @media all and (max-width: 767px) {
-            .main__bckgrnd--img {
-                display: block;
-                margin-left: -800px;
-            }
+        
+        h1 {
+          font-size: 68.54px;
+          font-size: 6.854rem;
         }
-
+        
+        h2 {
+          font-size: 42.36px;
+          font-size: 4.236rem;
+        }
+        
+        h3 {
+          font-size: 26.18px;
+          font-size: 2.618rem;
+        }
+        
+        h4,
+        p {
+          font-size: 16.18px;
+          font-size: 1.618rem;
+        }
+        
+        h5,
+        small {
+          font-size: 10px;
+          font-size: 1rem;
+        }
+        
+        h6 {
+          font-size: 6.18px;
+          font-size: 0.618rem;
+        }
+        
+        ul,
+        p,
+        button {
+          margin: 0;
+          padding: 0;
+        }
+        
+        
+        
+        
+        @font-face {
+          font-family: "Kaushan Script";
+          src: url('../../assets/fonts/kaushan script/kaushan-script.eot') format('embedded-opentype'), url('../../assets/fonts/kaushan script/kaushan-script.ttf') format('truetype'), url('../../assets/fonts/kaushan script/kaushan-script.woff') format('woff'), url('../../assets/fonts/kaushan script/kaushan-script.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-family: "WCManoNegraBta";
+          src: url('../../assets/fonts/wc mano negra/wcmanonegrabta.eot') format('embedded-opentype'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.svg') format('svg'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.ttf') format('truetype'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.woff') format('woff'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-family: "Playfair Display";
+          src: url('../../assets/fonts/playfair display/playfair-display.eot') format('embedded-opentype'), url('../../assets/fonts/playfair display/playfair-display.eot') format('embedded-opentype'), url('../../assets/fonts/playfair display/playfair-display.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-italic.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-italic.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-italic.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-bold.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-bold.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-bold.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-bold-italic.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-bold-italic.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-bold-italic.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-black.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-black.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-black.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-black-italic.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-black-italic.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-black-italic.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-family: "Noto Serif";
+          src: url('../../assets/fonts/noto serif/noto-serif.eot') format('embedded-opentype'), url('../../assets/fonts/noto serif/noto-serif.svg') format('svg'), url('../../assets/fonts/noto serif/noto-serif.ttf') format('truetype'), url('../../assets/fonts/noto serif/noto-serif.woff') format('woff'), url('../../assets/fonts/noto serif/noto-serif.woff2') format('woff2'), url('../../assets/fonts/noto serif/noto-serif-italic.ttf') format('truetype'), url('../../assets/fonts/noto serif/noto-serif-italic.woff') format('woff'), url('../../assets/fonts/noto serif/noto-serif-italic.woff2') format('woff2'), url('../../assets/fonts/noto serif/noto-serif-bold.eot') format('embedded-opentype'), url('../../assets/fonts/noto serif/noto-serif-bold.woff') format('woff'), url('../../assets/fonts/noto serif/noto-serif-bold.woff2') format('woff2'), url('../../assets/fonts/noto serif/noto-serif-bold-italic.ttf') format('truetype'), url('../../assets/fonts/noto serif/noto-serif-bold-italic.woff') format('woff'), url('../../assets/fonts/noto serif/noto-serif-bold-italic.woff2') format('woff2');
+        }
+        
+        .hdln__prim {
+          line-height: 1;
+        }
+        
+        .hdr {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: #fff;
+          box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+          z-index: 1000;
+        }
+        
+        .hdr__title {
+          width: auto;
+          padding: 48px 46px;
+          padding: 4.8rem 4.6rem;
+        }
+        
+        .grid__col--1 {
+          width: 6.78%;
+        }
+        
+        .grid__col--2 {
+          width: 15.254%;
+        }
+        
+        .grid__col--3 {
+          width: 23.729%;
+        }
+        
+        .grid__col--4 {
+          width: 32.203%;
+        }
+        
+        .grid__col--5 {
+          width: 40.678%;
+        }
+        
+        .grid__col--6 {
+          width: 49.153%;
+        }
+        
+        .grid__col--7 {
+          width: 57.627%;
+        }
+        
+        .grid__col--8 {
+          width: 66.102%;
+        }
+        
+        .grid__col--9 {
+          width: 74.576%;
+        }
+        
+        .grid__col--10 {
+          width: 83.051%;
+        }
+        
+        .grid__col--11 {
+          width: 91.525%;
+        }
+        
+        .grid__col--12 {
+          width: 100%;
+        }
+        
+        .grid {
+          width: 90%;
+          margin-right: auto;
+          margin-left: auto;
+        }
+        
+        .hdln__prim {
+          color: #f2f3f4;
+          font-family: "WCManoNegraBta", serif;
+          font-size: 68.54px;
+          font-size: 6.854rem;
+        }
+        
+        .main--bckgrnd {
+          position: relative;
+        }
+        
+        .main--bckgrnd--inner {
+          position: absolute;
+          top: 50vh;
+          left: 50vw;
+          width: 85vw;
+          max-width: 640px;
+          max-width: 64rem;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          background-color: rgba(51, 51, 51, 0.5);
+          color: #f2f3f4;
+          text-align: center;
+        }
+        
+        
+        .flex__nav {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+        }
+        
+        
+        
+        
+        
+        .icn__logo {
+          background: url('../../assets/images/logo/mobile-asawa-logo.svg') no-repeat center;
+          text-transform: none;
+          white-space: nowrap;
+        }
+        
+        .img__main--bckgrnd {
+          background: url('../../assets/images/generic/index-background-768.jpg') no-repeat;
+          height: 100vh;
+        }
+        
+        
+        .nav__container {
+          width: 100%;
+        }
+        
+        .flex__nav {
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+        }
+        
+        .hamburger {
+          -webkit-box-ordinal-group: 0;
+              -ms-flex-order: -1;
+                  order: -1;
+          width: 34px;
+          width: 3.4rem;
+          height: 34px;
+          height: 3.4rem;
+          -webkit-transform: scale(-1, 1);
+                  transform: scale(-1, 1);
+          border: 0;
+          background: url('../../assets/images/icons/mobile-icon-hamburger.svg') no-repeat center;
+          cursor: pointer;
+        }
+        
+        
+        
+        @media (min-width: 768px) {
+          .hdln__prim {
+            font-size: 11.089rem;
+          }
+          .img__main--bckgrnd {
+            background: url('../../assets/images/generic/index-background-1200.jpg') no-repeat;
+          }
+        }
+        
+        @media (min-width: 1200px) {
+          .img__main--bckgrnd {
+            background: url('../../assets/images/generic/index-background-1920.jpg') no-repeat;
+          }
+        }
+        
+        @media (min-width: 1px) and (max-width: 480px) {
+          .img__main--bckgrnd {
+            background: url('../../assets/images/generic/index-background-480.jpg') no-repeat;
+          }
+        }
+        
     </style>
 </head>
 <body>
-<!-- Primary Header -->
-<header class="hdr_prim">
-    <section class="main__bckgrnd">
-        <amp-img class="main__bckgrnd--img" src="../assets/images/index-background.jpg" width="1920" height="880"
-                 layout="fixed"></amp-img>
+<!-- Main Background Image -->
+<div class="img__main--bckgrnd" role="presentation" aria-label="Main Page Background Image"></div>
 
-        <div class="main__backgrnd--inner">
-            <h2 class="hdln--prim">Discover Asawa</h2>
-            <h5>The all-in-one getaway you've been yearning for.</h5>
+<amp-sidebar id="sidebar" layout="nodisplay" side="left">
+    <form action="/" class="dynamic__layer primary" target="_top" novalidate>
+        <button type="reset" class="btn__close" on="tap:sidebar.close">X</button>
 
-            <div>
-                <button class="btn btn__explore"></button>
-                <span>Explore</span>
-            </div>
+        <div class="hdr__prim--items">
+            <a href="index.html" class="menu__item">Home</a>
+            <label class="menu__item item__layer--1 has--sub-lvl"><input type="checkbox">Services
+                <div class="submenu dynamic__layer secondary">
+                    <div class="btn__prev">Back</div>
+                    <button type="reset" class="btn__close" on="tap:hamburger.close"></button>
+
+                    <div class="layer--items">
+                        <a href="services/reservations/" class="menu__item layer__item--lvl2">Reservations</a>
+                        <a href="services/gym/" class="menu__item layer__item--lvl2">Gym</a>
+                        <a href="services/courier/" class="menu__item layer__item--lvl2">Courier Services</a>
+                    </div>
+                </div>
+            </label>
+            <a href="about.html" class="menu__item">About</a>
+            <a href="contact.html" class="menu__item">Contacts</a>
         </div>
-    </section>
-    <ul class="flex-nav">
-        <li>
-            <button class="navbar-trigger" role="button" on="tap:hamburger.toggle" tabindex="0">☰</button>
-        </li>
-        <li>
-            <a href="index.html">
-                <amp-img src="../assets/images/logo/asawa-logo.svg" width="60" height="60" layout="fixed"></amp-img>
-            </a>
-        </li>
-
-        <li>
-            <a href="availability.html" class="">Check Availability</a>
-        </li>
-    </ul>
-</header>
-<amp-sidebar id="hamburger" layout="nodisplay" side="left">
-    <ul>
-
-        <li class="navbar-close" role="button" on="tap:hamburger.close" tabindex="-1">&times;</li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+    </form>
 </amp-sidebar>
+<!-- Primary Header -->
+<header class="hdr hdr__prim">
+
+    <div class="grid">
+        <section class="nav__container">
+            <!-- Left Navigation -->
+            <div class="flex__nav tab">
+                <a href="/" class="hdr__title icn__logo">
+                    <span class="srt">Asawa Resort Logo</span>
+                </a>
+                <button class="hamburger" id="menu__toggle" on="tap:sidebar.toggle"></button>
+
+                <!-- Right Navigation -->
+                <div class="flex__nav--right btn__primary">
+                    <a href="misc/availability.html">Check</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+
+<section class="main--bckgrnd--inner">
+    <h2 class="hdln__prim">Discover Asawa</h2>
+    <span>The all-in-one getaway you've been yearning for.</span>
+
+    <div>
+        <button class="btn btn__explore"></button>
+        <span>Explore</span>
+    </div>
+</section>
 
 <div class="container">
     <!-- Secondary Header -->
@@ -733,14 +828,14 @@
 
 
 <footer>
-    <ul>
-        <li><a href="index.html">Asawa Resort LLC.</a>
-        </li>
-        <li>Legal Notice
-        </li>
-        <li><a href="policy.html">Privacy Policy</a>
-        </li>
-    </ul>
+  <ul>
+    <li><a href="index.html">Asawa Resort LLC.</a>
+    </li>
+    <li>Legal Notice
+    </li>
+    <li><a href="policy.html">Privacy Policy</a>
+    </li>
+  </ul>
 </footer>
 </body>
 </html>

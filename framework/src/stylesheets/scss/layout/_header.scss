@@ -1,3 +1,20 @@
 // ==========================================================================
 // HEADER STYLES
 // ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+.hdr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, .15);
+  z-index: 1000;
+
+  // Header Title
+  @include e(title) {
+    width: auto;
+    padding: 4.8rem 4.6rem;
+  }
+}

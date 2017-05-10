@@ -3,6 +3,18 @@
  * Portfolio Framework
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
+/*
+ * A partial implementation of the Ruby list functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/lists.rb
+ */
+/*
+ * A partial implementation of the Ruby constants functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/constants.rb
+ */
+/*
+ * A partial implementation of the Ruby display functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
+ */
 .srt {
   position: absolute;
   width: 1px;
@@ -12,7 +24,6 @@
   clip: rect(0 0 0 0);
   border: 0;
   overflow: hidden;
-  transition: all 4s ease;
 }
 
 /**
@@ -459,40 +470,279 @@ html {
 }
 
 body {
+  background-color: #f2f3f4;
   color: #333333;
   font-size: 16px;
-  font-size: 1.6rem;
+  font-family: 'Playfair Display';
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-/**
- * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
- * BUTTON STYLES
- * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+h1 {
+  font-size: 68.54px;
+  font-size: 6.854rem;
+}
+
+h2 {
+  font-size: 42.36px;
+  font-size: 4.236rem;
+}
+
+h3 {
+  font-size: 26.18px;
+  font-size: 2.618rem;
+}
+
+h4,
+p {
+  font-size: 16.18px;
+  font-size: 1.618rem;
+}
+
+h5,
+small {
+  font-size: 10px;
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 6.18px;
+  font-size: 0.618rem;
+}
+
+ul,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * A partial implementation of the Ruby list functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/lists.rb
  */
+/*
+ * A partial implementation of the Ruby constants functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/constants.rb
+ */
+/*
+ * A partial implementation of the Ruby display functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
+ */
+@font-face {
+  font-family: "Kaushan Script";
+  src: url('../../assets/fonts/kaushan script/kaushan-script.eot') format('embedded-opentype'), url('../../assets/fonts/kaushan script/kaushan-script.ttf') format('truetype'), url('../../assets/fonts/kaushan script/kaushan-script.woff') format('woff'), url('../../assets/fonts/kaushan script/kaushan-script.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "WCManoNegraBta";
+  src: url('../../assets/fonts/wc mano negra/wcmanonegrabta.eot') format('embedded-opentype'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.svg') format('svg'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.ttf') format('truetype'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.woff') format('woff'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url('../../assets/fonts/playfair display/playfair-display.eot') format('embedded-opentype'), url('../../assets/fonts/playfair display/playfair-display.eot') format('embedded-opentype'), url('../../assets/fonts/playfair display/playfair-display.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-italic.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-italic.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-italic.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-bold.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-bold.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-bold.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-bold-italic.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-bold-italic.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-bold-italic.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-black.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-black.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-black.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-black-italic.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-black-italic.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-black-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Serif";
+  src: url('../../assets/fonts/noto serif/noto-serif.eot') format('embedded-opentype'), url('../../assets/fonts/noto serif/noto-serif.svg') format('svg'), url('../../assets/fonts/noto serif/noto-serif.ttf') format('truetype'), url('../../assets/fonts/noto serif/noto-serif.woff') format('woff'), url('../../assets/fonts/noto serif/noto-serif.woff2') format('woff2'), url('../../assets/fonts/noto serif/noto-serif-italic.ttf') format('truetype'), url('../../assets/fonts/noto serif/noto-serif-italic.woff') format('woff'), url('../../assets/fonts/noto serif/noto-serif-italic.woff2') format('woff2'), url('../../assets/fonts/noto serif/noto-serif-bold.eot') format('embedded-opentype'), url('../../assets/fonts/noto serif/noto-serif-bold.woff') format('woff'), url('../../assets/fonts/noto serif/noto-serif-bold.woff2') format('woff2'), url('../../assets/fonts/noto serif/noto-serif-bold-italic.ttf') format('truetype'), url('../../assets/fonts/noto serif/noto-serif-bold-italic.woff') format('woff'), url('../../assets/fonts/noto serif/noto-serif-bold-italic.woff2') format('woff2');
+}
+
+.hdln__prim {
+  line-height: 1;
+}
+
+.hdr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.hdr__title {
+  width: auto;
+  padding: 48px 46px;
+  padding: 4.8rem 4.6rem;
+}
+
+.grid__col--1 {
+  width: 6.78%;
+}
+
+.grid__col--2 {
+  width: 15.254%;
+}
+
+.grid__col--3 {
+  width: 23.729%;
+}
+
+.grid__col--4 {
+  width: 32.203%;
+}
+
+.grid__col--5 {
+  width: 40.678%;
+}
+
+.grid__col--6 {
+  width: 49.153%;
+}
+
+.grid__col--7 {
+  width: 57.627%;
+}
+
+.grid__col--8 {
+  width: 66.102%;
+}
+
+.grid__col--9 {
+  width: 74.576%;
+}
+
+.grid__col--10 {
+  width: 83.051%;
+}
+
+.grid__col--11 {
+  width: 91.525%;
+}
+
+.grid__col--12 {
+  width: 100%;
+}
+
+.grid {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hdln__prim {
+  color: #f2f3f4;
+  font-family: "WCManoNegraBta", serif;
+  font-size: 68.54px;
+  font-size: 6.854rem;
+}
+
+.main--bckgrnd {
+  position: relative;
+}
+
+.main--bckgrnd--inner {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  width: 85vw;
+  max-width: 640px;
+  max-width: 64rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(51, 51, 51, 0.5);
+  color: #f2f3f4;
+  text-align: center;
+}
+
 /**
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  * DIVIDER STYLES
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
+.flex__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 /**
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  * FORM STYLES
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
+/*
+ * A partial implementation of the Ruby list functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/lists.rb
+ */
+/*
+ * A partial implementation of the Ruby constants functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/constants.rb
+ */
+/*
+ * A partial implementation of the Ruby display functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
+ */
+.icn__logo {
+  background: url('../../assets/images/logo/mobile-asawa-logo.svg') no-repeat center;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.img__main--bckgrnd {
+  background: url('../../assets/images/generic/index-background-768.jpg') no-repeat;
+  height: 100vh;
+}
 
 /**
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  * #MISCELLANEOUS STYLES
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
+.nav__container {
+  width: 100%;
+}
+
+.flex__nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hamburger {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  width: 34px;
+  width: 3.4rem;
+  height: 34px;
+  height: 3.4rem;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+  border: 0;
+  background: url('../../assets/images/icons/mobile-icon-hamburger.svg') no-repeat center;
+  cursor: pointer;
+}
+
 /**
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  * TABLE STYLES
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
-@media all and (max-width: 767px) {
-  .main__bckgrnd--img {
-    display: block;
-    margin-left: -800px;
+
+@media (min-width: 768px) {
+  .hdln__prim {
+    font-size: 11.089rem;
+  }
+  .img__main--bckgrnd {
+    background: url('../../assets/images/generic/index-background-1200.jpg') no-repeat;
+  }
+}
+
+@media (min-width: 1200px) {
+  .img__main--bckgrnd {
+    background: url('../../assets/images/generic/index-background-1920.jpg') no-repeat;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 480px) {
+  .img__main--bckgrnd {
+    background: url('../../assets/images/generic/index-background-480.jpg') no-repeat;
   }
 }

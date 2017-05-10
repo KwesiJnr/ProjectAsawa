@@ -1,0 +1,20 @@
+// ==========================================================================
+// Grid Columns
+// ==========================================================================
+
+// Calculate grid columns
+@for $i from 1 through $g-col-c {
+  $cont: g-context($g-col-w, $g-col-c, $g-gutter-w);
+  $tar: ($g-col-w * $i) + ($g-gutter-w * ($i - 1));
+
+  // generate column modifier classes
+  .grid__col--#{$i} {
+    width: percentage($tar / $cont);
+  }
+}
+
+.grid {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}

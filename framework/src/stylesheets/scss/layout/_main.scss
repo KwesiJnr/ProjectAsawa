@@ -1,3 +1,21 @@
 // ==========================================================================
 // MAIN STYLES
 // ==========================================================================
+
+.main {
+  @include m(bckgrnd) {
+    position: relative;
+
+    @include m(inner) {
+      position: absolute;
+      top: 50vh;
+      left: 50vw;
+      width: 85vw;
+      max-width: 64rem;
+      transform: translate(-50%, -50%);
+      background-color: rgba($black, .5);
+      color: $white;
+      text-align: center;
+    }
+  }
+}

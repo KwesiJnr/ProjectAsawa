@@ -7,7 +7,8 @@
 // Font Stacks
 $font-family-primary: 'Playfair Display', serif;
 $font-family-secondary: 'Kaushan Script', serif;
-$font-family-generic: Rubik, sans-serif;
+$font-family-tertiary: 'WCManoNegraBta', serif;
+$font-family-generic: 'Rubik', sans-serif;
 
 $font-weight-thin: 100;
 $font-weight-light: 300;
@@ -44,3 +45,15 @@ $ui-colors: (
         success: $green,
         error: $redBright
 );
+
+// Grid (All multiples of 24px, the baseline
+$g-col-w: 80px; // Grid Column Width
+$g-gutter-w: 20px; // Grid Gutter Width
+$g-col-c: 12; // Grid Column Count
+$g-max-w: 1200px; // Maximum Grid Width
+
+// Breakpoints
+$breakpoint-min: 1px;
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1200px;

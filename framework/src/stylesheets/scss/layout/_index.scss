@@ -1,9 +1,12 @@
 // Special Commands: SCSS_LINT
 // scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "extends";
 // Footer Style
 @import 'footer';
 // Header Style
 @import "header";
+// Grid Styles
+@import "grid-columns";
 // Headline Style
 @import "headlines";
 // Main Style

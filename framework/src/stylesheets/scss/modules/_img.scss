@@ -1,11 +1,26 @@
 // ==========================================================================
-// IMage Styles
+// Image Styles
 // ==========================================================================
 
-@media all and (max-width: 767px) {
-  .main__bckgrnd--img {
-    display: block;
-    margin-left: -800px;
-  }
+.img {
+  @include e(main) {
+    @include m(bckgrnd) {
+      background: image-url('generic/index-background-768.jpg') no-repeat;
+      height: 100vh;
 
+
+      @include media-q('medium') {
+        background: image-url('generic/index-background-1200.jpg') no-repeat;
+      }
+
+      @include media-q('large') {
+        background: image-url('generic/index-background-1920.jpg') no-repeat;
+      }
+
+      // Mobile Special
+      @include media-q('min') {
+        background: image-url('generic/index-background-480.jpg') no-repeat;
+      }
+    }
+  }
 }

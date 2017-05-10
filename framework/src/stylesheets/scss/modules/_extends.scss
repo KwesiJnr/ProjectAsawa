@@ -1,0 +1,10 @@
+.hdln {
+  @include m(prim) {
+
+  }
+}
+
+%flex-sb {
+  display: flex;
+  justify-content: space-between;
+}

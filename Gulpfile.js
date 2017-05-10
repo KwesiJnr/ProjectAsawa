@@ -1,7 +1,9 @@
 /**
  * Created by Kwesi Greyback on 5/4/2017.
  */
-var gulp = require('gulp'),
+var
+    assetsass = require('node-sass-asset-functions'),
+    gulp = require('gulp'),
     browsersync = require('browser-sync'),
     cache = require('gulp-cache'),
     cached = require('gulp-cached'),
@@ -16,14 +18,18 @@ var gulp = require('gulp'),
     pkg = require('./package.json'),
     please = require('gulp-pleeease'),
     plumber = require('gulp-plumber'),
+    postcss = require('gulp-postcss'),
     pug = require('gulp-pug'),
     puglint = require('gulp-pug-lint'),
     preprocess = require('gulp-preprocess'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
+    smacss = require('css-declaration-sorter'),
+    svgo = require('gulp-svgo'),
+    stripcomments = require('gulp-strip-css-comments'),
     filesize = require('gulp-size'),
-    uglify = require('gulp-uglify'),
-    assetsass = require('node-sass-asset-functions');
+    uglify = require('gulp-uglify');
+
 
 
 // Directory
@@ -86,6 +92,11 @@ var
         mini: {suffix: '.min'},
         cachename: 'sass-cache',
 
+        sortOrder: {
+            order: 'smacss',
+            verbose: true
+        },
+
         // Pleeease
         sassOpts: {
             outputStyle: 'expanded',
@@ -122,7 +133,7 @@ var
             baseDir: [dest, dest + 'html'],
             index: 'index.html'
         },
-        open: true,
+        open: false,
         notify: true,
         //tunnel: 'gulp',
         browser: 'chrome',
@@ -133,7 +144,11 @@ var
     // Fonts
     fontdir = {
         in: source + 'assets/fonts/**/*',
-        out: dest + 'assets/fonts'
+        out: dest + 'assets/fonts',
+
+        genOpts: {
+            in: source + 'assets/fonts/**/*.{ttf,otf}'
+        }
     };
 
 
@@ -164,6 +179,7 @@ gulp.task('html', ['sass'], function () {
     }
     return pages
         .pipe(cachebust())
+        .pipe(stripcomments())
         .pipe(gulp.dest(htmldir.out));
 });
 
@@ -179,10 +195,14 @@ gulp.task('sass', function () {
     // rename on minify
     if (!devBuild) {
         return files
+            .pipe(cached(cssdir.cachename))
+            .pipe(rename(cssdir.mini))
+            .pipe(postcss([smacss(cssdir.sortOrder)]))
             .pipe(gulp.dest(cssdir.out))
             .pipe(browsersync.stream())
     } else {
-        return files.pipe(gulp.dest(cssdir.out))
+        return files
+            .pipe(gulp.dest(cssdir.out))
             .pipe(browsersync.stream())
 
     }
@@ -193,19 +213,21 @@ gulp.task('browsersync', function () {
     browsersync(bsOpts);
 });
 
-// Fonts
+
+// #Fonts
 gulp.task('fonts', function () {
     return gulp.src(fontdir.in)
         .pipe(newer(fontdir.out))
         .pipe(gulp.dest(fontdir.out))
 });
 
-// Image Optimizer
+// #Image Optimizer
 gulp.task('imagemin', function () {
     var images = gulp.src(imagedir.in);
     return images
         .pipe(newer(imagedir.out))
         .pipe(imagemin(imagedir.imgOpts))
+        .pipe(svgo())
         .pipe(gulp.dest(imagedir.out));
 });
 

@@ -1,0 +1,25 @@
+.nav {
+  @include e(container) {
+    width: 100%;
+  }
+}
+
+.flex {
+  @include e(nav) {
+    @extend %flex-sb;
+
+    //width: 100%;
+    align-items: center;
+  }
+}
+
+// #Hamburger
+.hamburger {
+  order: -1;
+  width: 3.4rem;
+  height: 3.4rem;
+  transform: scale(-1, 1);
+  border: 0;
+  background: image-url('icons/mobile-icon-hamburger.svg') no-repeat center;
+  cursor: pointer;
+}

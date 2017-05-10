@@ -1,0 +1,9 @@
+@import "../../../../../bower_components/compass-mixins/lib/compass";
+
+.icn {
+  @include e(logo) {
+    background: image-url('logo/mobile-asawa-logo.svg') no-repeat center;
+    text-transform: none;
+    white-space: nowrap;
+  }
+}

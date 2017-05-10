@@ -1,3 +1,16 @@
 // ==========================================================================
 // HEADLINE STYLES
 // ==========================================================================
+.hdln {
+  @include e(prim) {
+    @extend %hdln;
+
+    color: $white;
+    font-family: $font-family-tertiary;
+    font-size: 6.854rem;
+
+    @include media-q('medium') {
+      font-size: 11.089rem;
+    }
+  }
+}

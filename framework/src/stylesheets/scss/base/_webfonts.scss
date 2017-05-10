@@ -1,0 +1,28 @@
+@import '../../../../../bower_components/compass-mixins/lib/compass';
+
+// Kaushan Script
+@include font-face('Kaushan Script', font-files('kaushan script/kaushan-script.eot', 'kaushan script/kaushan-script.ttf', 'kaushan script/kaushan-script.woff',
+        'kaushan script/kaushan-script.woff2'));
+
+// WC Mano Negra
+@include font-face('WCManoNegraBta', font-files(
+                'wc mano negra/wcmanonegrabta.eot', 'wc mano negra/wcmanonegrabta.svg', 'wc mano negra/wcmanonegrabta.ttf', 'wc mano negra/wcmanonegrabta.woff',
+                'wc mano negra/wcmanonegrabta.woff2'));
+
+// Playfair Display
+@include font-face('Playfair Display', font-files(
+                'playfair display/playfair-display.eot', 'playfair display/playfair-display.eot', 'playfair display/playfair-display.woff', 'playfair display/playfair-display.woff2',
+                'playfair display/playfair-display-italic.ttf', 'playfair display/playfair-display-italic.woff', 'playfair display/playfair-display-italic.woff2',
+                'playfair display/playfair-display-bold.ttf', 'playfair display/playfair-display-bold.woff', 'playfair display/playfair-display-bold.woff2',
+                'playfair display/playfair-display-bold-italic.ttf', 'playfair display/playfair-display-bold-italic.woff', 'playfair display/playfair-display-bold-italic.woff2',
+                'playfair display/playfair-display-black.ttf', 'playfair display/playfair-display-black.woff', 'playfair display/playfair-display-black.woff2',
+                'playfair display/playfair-display-black-italic.ttf', 'playfair display/playfair-display-black-italic.woff', 'playfair display/playfair-display-black-italic.woff2'
+));
+
+// Noto Serif
+@include font-face('Noto Serif', font-files(
+                'noto serif/noto-serif.eot', 'noto serif/noto-serif.svg', 'noto serif/noto-serif.ttf', 'noto serif/noto-serif.woff', 'noto serif/noto-serif.woff2',
+                'noto serif/noto-serif-italic.ttf', 'noto serif/noto-serif-italic.woff', 'noto serif/noto-serif-italic.woff2',
+                'noto serif/noto-serif-bold.eot', 'noto serif/noto-serif-bold.woff', 'noto serif/noto-serif-bold.woff2',
+                'noto serif/noto-serif-bold-italic.ttf', 'noto serif/noto-serif-bold-italic.woff', 'noto serif/noto-serif-bold-italic.woff2'
+));
