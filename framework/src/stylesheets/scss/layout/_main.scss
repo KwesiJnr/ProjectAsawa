@@ -1,6 +1,8 @@
 // ==========================================================================
 // MAIN STYLES
 // ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PropertySortOrder
 
 .main {
   @include m(bckgrnd) {
@@ -8,17 +10,25 @@
 
     @include m(inner) {
       position: absolute;
-      top: 50vh;
+      top: 45vh;
       left: 50vw;
       width: 85vw;
       max-width: 64rem;
+      padding: 4.8rem 1.2rem;
       transform: translate(-50%, -50%);
       background-color: rgba($black, .5);
       color: $white;
       text-align: center;
+
+      @media (max-width: 769px) and (orientation: landscape) {
+        top: 50vh;
+        padding: 3.6rem;
+      }
     }
   }
 }
+
+
 
 .item {
   @include e(layer) {

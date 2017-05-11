@@ -9,30 +9,26 @@
 
 <amp-sidebar id="sidebar" layout="nodisplay" side="left">
     <form action="/" class="dynamic__layer primary" target="_top" novalidate>
-        <div class="grid">
-            <button type="reset" class="icn__close" on="tap:sidebar.close"></button>
-        </div>
+        <button type="reset" class="icn__close" on="tap:sidebar.close" aria-label="Close Sidebar Button"></button>
 
         <div class="hdr__prim--items">
-            <div class="grid">
-                <a href="/" class="menu__item">Home</a>
-                <label class="menu__item item__layer--1 has--sub-lvl"><input type="checkbox">Services
-                    <div class="submenu dynamic__layer secondary">
-                        <div class="btn__prev">Back</div>
-                        <div class="grid">
-                            <button type="reset" class="icn__close" on="tap:sidebar.close"></button>
+            <a href="/" class="menu__item">Home</a>
+            <label class="menu__item item__layer--1 has--sub-lvl"><input type="checkbox">Services
+                <div class="submenu dynamic__layer secondary">
+                    <!-- Submenu Back Key -->
+                    <div class="btn__prev">Back</div>
+                    <button type="reset" class="icn__close" on="tap:sidebar.close"></button>
 
-                            <div class="layer--items">
-                                <a href="services/reservations/" class="menu__item layer__item--lvl2">Reservations</a>
-                                <a href="services/gym/" class="menu__item layer__item--lvl2">Gym</a>
-                                <a href="services/courier/" class="menu__item layer__item--lvl2">Spa</a>
-                            </div>
-                        </div>
+                    <!-- Submenu Content -->
+                    <div class="layer--items">
+                        <a href="services/reservations/" class="menu__item layer__item--lvl2">Reservations</a>
+                        <a href="services/gym/" class="menu__item layer__item--lvl2">Gym</a>
+                        <a href="services/courier/" class="menu__item layer__item--lvl2">Spa</a>
                     </div>
-                </label>
-                <a href="about.html" class="menu__item">About</a>
-                <a href="contact.html" class="menu__item">Contacts</a>
-            </div>
+                </div>
+            </label>
+            <a href="about.html" class="menu__item">About</a>
+            <a href="contact.html" class="menu__item">Contacts</a>
         </div>
     </form>
 </amp-sidebar>
@@ -43,7 +39,7 @@
     <span>The all-in-one getaway you've been yearning for.</span>
 
     <div>
-        <button class="btn btn__explore"></button>
+        <button class="btn btn__cc"></button>
         <span>Explore</span>
     </div>
 </section>

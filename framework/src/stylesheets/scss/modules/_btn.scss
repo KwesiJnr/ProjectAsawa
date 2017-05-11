@@ -1,11 +1,13 @@
 // ==========================================================================
 // #BUTTON STYLES
 // ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PropertySortOrder
 .btn {
   @include e(prev) {
     position: absolute;
-    top: 2.4rem;
-    right: 2.4rem;
+    top: 2.8rem;
+    right: 4rem;
     font-family: $font-family-utility;
     font-size: 1.4rem;
     color: palette(grey, 'light');
@@ -21,7 +23,7 @@
       display: inline-block;
       top: 1px;
       left: 0;
-      background: image-url('icons/icon-prev.svg') no-repeat center/contain transparent;
+      background: image-url('icons/icon-prev.svg') no-repeat center / contain transparent;
 
     }
   }

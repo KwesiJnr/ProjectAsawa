@@ -6,10 +6,11 @@
   @include e(main) {
     @include m(bckgrnd) {
       background: image-url('generic/index-background-768.jpg') no-repeat;
-      height: 100vh;
+      height: 80vh;
 
 
       @include media-q('medium') {
+        height: 90vh;
         background: image-url('generic/index-background-1200.jpg') no-repeat;
       }
 
@@ -20,6 +21,10 @@
       // Mobile Special
       @include media-q('min') {
         background: image-url('generic/index-background-480.jpg') no-repeat;
+      }
+
+      @media (max-width: 769px) and (orientation: landscape) {
+        height: 100vh;
       }
     }
   }

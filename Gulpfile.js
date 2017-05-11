@@ -2,7 +2,6 @@
  * Created by Kwesi Greyback on 5/4/2017.
  */
 var
-    ampvalidator = require('gulp-amphtml-validator'),
     assetsass = require('node-sass-asset-functions'),
     gulp = require('gulp'),
     browsersync = require('browser-sync'),
@@ -15,11 +14,13 @@ var
     htmlclean = require('gulp-htmlclean'),
     imagemin = require('gulp-imagemin'),
     imacss = require('gulp-imacss'),
+    nano = require('gulp-cssnano'),
     newer = require('gulp-newer'),
     pkg = require('./package.json'),
     please = require('gulp-pleeease'),
     plumber = require('gulp-plumber'),
     postcss = require('gulp-postcss'),
+    purge = require('gulp-css-purge'),
     pug = require('gulp-pug'),
     puglint = require('gulp-pug-lint'),
     preprocess = require('gulp-preprocess'),
@@ -29,7 +30,8 @@ var
     svgo = require('gulp-svgo'),
     stripcomments = require('gulp-strip-css-comments'),
     filesize = require('gulp-size'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    uncss = require('gulp-uncss');
 
 
 
@@ -41,6 +43,7 @@ var
     dest = 'framework/build/',
     scsspath = source + 'stylesheets/scss/',
     csspath = dest + 'stylesheets/css',
+    htmlpathout = dest + 'html/**/*',
 
 
     // Pug
@@ -74,8 +77,8 @@ var
             }
         },
 
-        ampOpts: {
-            validate: true
+        removeUnused: {
+            html: [htmlpathout]
         }
     },
 
@@ -97,6 +100,7 @@ var
         mini: {suffix: '.min'},
         cachename: 'sass-cache',
 
+        // PropertySortOrder
         sortOrder: {
             order: 'smacss',
             verbose: true
@@ -142,18 +146,14 @@ var
         notify: true,
         tunnel: 'gulp',
         browser: 'chrome',
-        reloadDelay: 500,
-        online: false
+        reloadDelay: 500
+        //online: false
     },
 
     // Fonts
     fontdir = {
         in: source + 'assets/fonts/**/*',
-        out: dest + 'assets/fonts',
-
-        genOpts: {
-            in: source + 'assets/fonts/**/*.{ttf,otf}'
-        }
+        out: dest + 'assets/fonts'
     };
 
 
@@ -174,8 +174,8 @@ gulp.task('pug', function () {
 // #HTML
 gulp.task('html', ['sass'], function () {
     var pages = gulp.src(htmldir.in)
-        .pipe(preprocess(htmldir.processOpts))
-        .pipe(ampvalidator(htmldir.ampOpts));
+        .pipe(preprocess(htmldir.processOpts));
+
 
     if (!devBuild) {
         pages = pages
@@ -194,9 +194,13 @@ gulp.task('sass', function () {
     var files = gulp.src(cssdir.in);
     files = files
         .pipe(sass(cssdir.sassOpts))
-        .pipe(filesize({title: 'CSS file-size before optimization by pleeeaase:'}))
+        .pipe(filesize({title: 'Applying Automaton:'}))
         .pipe(please(cssdir.automaton.options))
-        .pipe(filesize({title: 'CSS file-size after optimization by pleeease:'}));
+        .pipe(filesize({title: 'CSS file-size after Automaton:'}))
+        .pipe(filesize({title: 'Applying purge...'}))
+        .pipe(purge())
+        .pipe(filesize({title: 'CSS file-size after purge:'}));
+
 
     // rename on minify
     if (!devBuild) {
@@ -204,6 +208,12 @@ gulp.task('sass', function () {
             .pipe(cached(cssdir.cachename))
             .pipe(rename(cssdir.mini))
             .pipe(postcss([smacss(cssdir.sortOrder)]))
+            .pipe(filesize({title: 'Applying nano:'}))
+            .pipe(nano())
+            .pipe(filesize({title: 'CSS file-size after nano:'}))
+            .pipe(filesize({title: 'Removing unused css:'}))
+            .pipe(uncss(htmldir.removeUnused))
+            .pipe(filesize({title: 'Removed unused complete. File size is now:'}))
             .pipe(gulp.dest(cssdir.out))
             .pipe(browsersync.stream())
     } else {
