@@ -2,5 +2,27 @@
 // #BUTTON STYLES
 // ==========================================================================
 .btn {
+  @include e(prev) {
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    font-family: $font-family-utility;
+    font-size: 1.4rem;
+    color: palette(grey, 'light');
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
+    @include media-q('medium') {
+      top: 4.8rem;
+    }
+
+    @include p-el(before, 1.2rem, 1.2rem) {
+      position: relative;
+      display: inline-block;
+      top: 1px;
+      left: 0;
+      background: image-url('icons/icon-prev.svg') no-repeat center/contain transparent;
+
+    }
+  }
 }

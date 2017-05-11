@@ -1,5 +1,24 @@
-/**
- * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
- * #MISCELLANEOUS STYLES
- * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
- */
+// ==========================================================================
+// #MISCELLANEOUS STYLES
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+.menu {
+  @include e(item) {
+    display: block;
+    position: relative;
+    padding: 3.6rem 2.4rem 3.6rem 0;
+    border-bottom: 1px solid palette(grey, 'x-light');
+    color: $grey;
+    font-size: 2.4rem;
+    font-weight: $font-weight-light;
+
+    @include media-q('medium') {
+      padding-left: 2.4rem;
+    }
+
+    &:hover {
+      background-color: palette(grey, 'x-light');
+    }
+  }
+}

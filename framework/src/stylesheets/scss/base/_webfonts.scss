@@ -19,10 +19,10 @@
                 'playfair display/playfair-display-black-italic.ttf', 'playfair display/playfair-display-black-italic.woff', 'playfair display/playfair-display-black-italic.woff2'
 ));
 
-// Noto Serif
-@include font-face('Noto Serif', font-files(
-                'noto serif/noto-serif.eot', 'noto serif/noto-serif.svg', 'noto serif/noto-serif.ttf', 'noto serif/noto-serif.woff', 'noto serif/noto-serif.woff2',
-                'noto serif/noto-serif-italic.ttf', 'noto serif/noto-serif-italic.woff', 'noto serif/noto-serif-italic.woff2',
-                'noto serif/noto-serif-bold.eot', 'noto serif/noto-serif-bold.woff', 'noto serif/noto-serif-bold.woff2',
-                'noto serif/noto-serif-bold-italic.ttf', 'noto serif/noto-serif-bold-italic.woff', 'noto serif/noto-serif-bold-italic.woff2'
+// Noto Sans
+@include font-face('Noto sans', font-files(
+                'noto sans/noto-sans.eot', 'noto sans/noto-sans.svg', 'noto sans/noto-sans.ttf', 'noto sans/noto-sans.woff', 'noto sans/noto-sans.woff2',
+                'noto sans/noto-sans-italic.ttf', 'noto sans/noto-sans-italic.woff', 'noto sans/noto-sans-italic.woff2',
+                'noto sans/noto-sans-bold.eot', 'noto sans/noto-sans-bold.woff', 'noto sans/noto-sans-bold.woff2',
+                'noto sans/noto-sans-bold-italic.ttf', 'noto sans/noto-sans-bold-italic.woff', 'noto sans/noto-sans-bold-italic.woff2'
 ));

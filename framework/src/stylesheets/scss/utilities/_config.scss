@@ -8,7 +8,7 @@
 $font-family-primary: 'Playfair Display', serif;
 $font-family-secondary: 'Kaushan Script', serif;
 $font-family-tertiary: 'WCManoNegraBta', serif;
-$font-family-generic: 'Rubik', sans-serif;
+$font-family-utility: 'Noto Sans', sans-serif;
 
 $font-weight-thin: 100;
 $font-weight-light: 300;
@@ -22,7 +22,7 @@ $font-weight-ultrabold: 900;
 // Base Colors
 $black: rgb(51, 51, 51);
 $white: $whiteAntiflash;
-$grey: $grayGunmetal;
+$grey: $gray;
 
 // Brand Colors
 $color-primary: #90c;
@@ -54,6 +54,6 @@ $g-max-w: 1200px; // Maximum Grid Width
 
 // Breakpoints
 $breakpoint-min: 1px;
-$breakpoint-sm: 480px;
+$breakpoint-sm: 320px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1200px;

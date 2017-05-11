@@ -13,3 +13,50 @@
   border: 0;
   overflow: hidden;
 }
+
+// For Pseudo Elements
+%pseudos {
+  position: absolute;
+  content: '';
+}
+
+
+// Center alignment
+
+%center-align {
+  text-align: center;
+}
+
+// Left Text Align
+%align-left {
+  text-align: left;
+}
+
+// Right Text Align
+%align-right {
+  text-align: right;
+}
+
+%b-color-primary {
+  background-color: $color-primary;
+}
+
+%b-color-primary-gradient {
+  background-image: $color-primary-gradient;
+}
+
+%b-color-secondary {
+  background-color: $color-secondary;
+}
+
+%color-primary {
+  color: $color-primary;
+}
+
+%color-primary-gradient {
+  background-image: $color-primary-gradient;
+}
+
+%color-secondary {
+  color: $color-secondary;
+}

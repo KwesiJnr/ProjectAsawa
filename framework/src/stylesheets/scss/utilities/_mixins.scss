@@ -15,6 +15,31 @@
   }
 }
 
+// Generate color modifier classes
+@mixin btn-bg ($color-map) {
+  @each $theme, $color in $color-map {
+    &--#{$theme} {
+      background-color: $color;
+    }
+  }
+}
+
+
+// Generate ::before or ::after pseudo-element shapes
+@mixin p-el($el-name, $h: 'null', $w: 'null') {
+  @if $el-name == 'before' or $el-name == 'after' {
+    &::#{$el-name} {
+      @extend %pseudos;
+      width: $w;
+      height: $h;
+      @content;
+    }
+  }
+  @else {
+    @error '"#{$el-name}" is not a valid pseudo element.';
+  }
+}
+
 // ==========================================================================
 // Media Query Functions
 // ==========================================================================
@@ -28,7 +53,7 @@
       @content;
     }
   } @else if $break == 'medium' {
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-md + 1) {
       @content;
     }
   } @else if $break == 'large' {

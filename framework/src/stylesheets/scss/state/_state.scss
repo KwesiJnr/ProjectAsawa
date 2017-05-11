@@ -1,0 +1,12 @@
+amp-sidebar {
+  .has--sub-lvl {
+    @include p-el(after, 1.8rem, 1.8rem) {
+      display: inline-block;
+      position: absolute;
+      top: calc(50% - 9px);
+      right: 2.4rem;
+      background: image-url('icons/icon-sub.svg') no-repeat;
+      transform: scale(-1, 1);
+    }
+  }
+}

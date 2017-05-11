@@ -5,16 +5,120 @@
 // scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
 .hdr {
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
+  background-color: $white;
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, .15);
-  z-index: 1000;
+
+  @include media-q('medium') {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  // Primary Items
+  &__prim--items {
+    a:hover {
+      color: $grey;
+    }
+  }
+
 
   // Header Title
   @include e(title) {
     width: auto;
-    padding: 4.8rem 4.6rem;
+    padding: 2rem 3.1rem 4rem;
+
+    @include media-q(medium) {
+      padding: 4rem 6.2rem 8rem;
+    }
   }
+}
+
+amp-sidebar {
+  width: 85vw;
+
+  @include media-q('medium') {
+    width: 45vw;
+  }
+
+
+
+  //Dynamic Layer
+  .dynamic__layer {
+    background-color: $white;
+
+    @include p-el(after, 100vh, 1rem) {
+      @extend %b-color-primary-gradient;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &.primary {
+      position: relative;
+      height: 100vh;
+    }
+
+    &.secondary {
+      z-index: 2;
+
+      &:after {
+        background: none;
+      }
+    }
+
+
+    .hdr__prim--items {
+      position: absolute;
+      top: 12rem;
+      right: 0;
+      left: 0;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    input:checked+.submenu {
+      transform: translateX(0);
+    }
+
+  }
+}
+
+// SubMenu
+.submenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $white;
+
+  transform: translateX(100%);
+  transition: transform 350ms cubic-bezier(.36,.11,.59,.84);
+
+  &:after {
+    background: none;
+  }
+}
+
+// Layer Items
+.layer {
+  @include m(items) {
+    a {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// Sidebar Mask
+[class*="amphtml-sidebar-mask"] {
+  @extend %b-color-primary;
+  opacity: .6;
 }

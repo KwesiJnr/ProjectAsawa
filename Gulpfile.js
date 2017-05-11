@@ -2,6 +2,7 @@
  * Created by Kwesi Greyback on 5/4/2017.
  */
 var
+    ampvalidator = require('gulp-amphtml-validator'),
     assetsass = require('node-sass-asset-functions'),
     gulp = require('gulp'),
     browsersync = require('browser-sync'),
@@ -71,6 +72,10 @@ var
                 author: pkg.author,
                 version: pkg.version
             }
+        },
+
+        ampOpts: {
+            validate: true
         }
     },
 
@@ -135,7 +140,7 @@ var
         },
         open: false,
         notify: true,
-        //tunnel: 'gulp',
+        tunnel: 'gulp',
         browser: 'chrome',
         reloadDelay: 500,
         online: false
@@ -169,7 +174,8 @@ gulp.task('pug', function () {
 // #HTML
 gulp.task('html', ['sass'], function () {
     var pages = gulp.src(htmldir.in)
-        .pipe(preprocess(htmldir.processOpts));
+        .pipe(preprocess(htmldir.processOpts))
+        .pipe(ampvalidator(htmldir.ampOpts));
 
     if (!devBuild) {
         pages = pages

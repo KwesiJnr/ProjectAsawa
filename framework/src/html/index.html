@@ -9,24 +9,30 @@
 
 <amp-sidebar id="sidebar" layout="nodisplay" side="left">
     <form action="/" class="dynamic__layer primary" target="_top" novalidate>
-        <button type="reset" class="btn__close" on="tap:sidebar.close">X</button>
+        <div class="grid">
+            <button type="reset" class="icn__close" on="tap:sidebar.close"></button>
+        </div>
 
         <div class="hdr__prim--items">
-            <a href="index.html" class="menu__item">Home</a>
-            <label class="menu__item item__layer--1 has--sub-lvl"><input type="checkbox">Services
-                <div class="submenu dynamic__layer secondary">
-                    <div class="btn__prev">Back</div>
-                    <button type="reset" class="btn__close" on="tap:hamburger.close"></button>
+            <div class="grid">
+                <a href="/" class="menu__item">Home</a>
+                <label class="menu__item item__layer--1 has--sub-lvl"><input type="checkbox">Services
+                    <div class="submenu dynamic__layer secondary">
+                        <div class="btn__prev">Back</div>
+                        <div class="grid">
+                            <button type="reset" class="icn__close" on="tap:sidebar.close"></button>
 
-                    <div class="layer--items">
-                        <a href="services/reservations/" class="menu__item layer__item--lvl2">Reservations</a>
-                        <a href="services/gym/" class="menu__item layer__item--lvl2">Gym</a>
-                        <a href="services/courier/" class="menu__item layer__item--lvl2">Courier Services</a>
+                            <div class="layer--items">
+                                <a href="services/reservations/" class="menu__item layer__item--lvl2">Reservations</a>
+                                <a href="services/gym/" class="menu__item layer__item--lvl2">Gym</a>
+                                <a href="services/courier/" class="menu__item layer__item--lvl2">Spa</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </label>
-            <a href="about.html" class="menu__item">About</a>
-            <a href="contact.html" class="menu__item">Contacts</a>
+                </label>
+                <a href="about.html" class="menu__item">About</a>
+                <a href="contact.html" class="menu__item">Contacts</a>
+            </div>
         </div>
     </form>
 </amp-sidebar>
