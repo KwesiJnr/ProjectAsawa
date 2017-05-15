@@ -8,11 +8,12 @@
 
 .icn {
   @include e(logo) {
+    @extend %icn-sm;
+    width: 5.6rem;
     background: image-url('logo/mobile-asawa-logo.svg') no-repeat center;
-    text-transform: none;
-    white-space: nowrap;
 
     @include media-q('medium') {
+      width: auto;
       background: image-url('logo/asawa-logo.svg') no-repeat center;
     }
   }
@@ -21,13 +22,12 @@
   // #Hamburger
   // ==========================================================================
   @include e(hamburger) {
+    @extend %icn-sm;
     order: -1;
-    transform: scale(-1, 1);
     background: image-url('icons/mobile-icon-hamburger.svg') no-repeat center transparent;
     cursor: pointer;
 
     @include media-q('medium') {
-
       background: image-url('icons/icon-hamburger.svg') no-repeat center;
     }
   }
@@ -37,7 +37,7 @@
   // #Close
   // ==========================================================================
   @include e(close) {
-    width: auto;
+    @extend %icn-md;
     padding: 3.6rem 4.8rem;
     background: image-url('icons/icon-close.svg') no-repeat center / 20px transparent;
 
@@ -45,19 +45,39 @@
       padding: 4rem 8.4rem 8rem;
     }
   }
-}
 
-// ==========================================================================
-// # DRY
-// ==========================================================================
-.icn__hamburger,
-.icn__close {
-  width: 3.4rem;
-  height: 3.4rem;
-  border: 0;
+  // ==========================================================================
+  // #Check
+  // ==========================================================================
+  @include e(check) {
+    width: 2.4rem;
+    height: 2.4rem;
 
-  @include media-q('medium') {
-    width: 4rem;
-    height: 4rem;
+    &.btn--hollow {
+      @include media-q('medium') {
+        width: auto;
+        height: auto;
+      }
+
+      @include breakpoint(width 1px 768px) {
+        padding: 0;
+        background: image-url('icons/mobile-icon-notepad.svg') no-repeat center;
+        cursor: pointer;
+      }
+    }
+
+    a {
+      display: none;
+    }
+
+    @include media-q(medium) {
+      border: 1px solid $white;
+      //background-image: none;
+
+      a {
+        display: inline-block;
+        color: $white;
+      }
+    }
   }
 }

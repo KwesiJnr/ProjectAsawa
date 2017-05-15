@@ -7,10 +7,22 @@
 
     color: $white;
     font-family: $font-family-tertiary;
-    font-size: 6.854rem;
+    font-size: 20vmin;
+    letter-spacing: $ls-mid;
 
     @include media-q('medium') {
-      font-size: 11.089rem;
+      font-size: 13.09rem;
+      line-height: 1;
+    }
+  }
+
+  @include e(sec) {
+    margin-top: 3.6rem;
+    font-size: 5.5vmin;
+    line-height: 1.24;
+
+    @include media-q(medium) {
+      font-size: 2.634rem;
     }
   }
 }

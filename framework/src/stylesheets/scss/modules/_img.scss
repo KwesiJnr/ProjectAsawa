@@ -1,12 +1,18 @@
 // ==========================================================================
 // Image Styles
 // ==========================================================================
-
 .img {
   @include e(main) {
     @include m(bckgrnd) {
-      background: image-url('generic/index-background-768.jpg') no-repeat;
+      position: relative;
       height: 80vh;
+      background: image-url('generic/index-background-768.jpg') no-repeat;
+
+      @include p-el(before, 100%, 100%) {
+        background-image: scrim-gradient(to bottom, rgba($black, .3), rgba($black, .6));
+        //z-index: 1;
+      }
+
 
 
       @include media-q('medium') {
@@ -27,5 +33,35 @@
         height: 100vh;
       }
     }
+  }
+}
+
+// Breakpoints for Index Background
+@include breakpoint($hidpi-port) {
+  .img__main--bckgrnd {
+    height: 100vh;
+    background: image-url('generic/index-background-768-port.jpg') no-repeat;
+    background-size: cover;
+  }
+}
+@include breakpoint(width 480px 768px) {
+  .main--bckgrnd--inner {
+    top: 50vmax;
+    height: 60vmax;
+  }
+}
+
+@include breakpoint($hidpi-land) {
+  //.img__main--bckgrnd {
+  //  background: image-url('generic/index-background-768-land.jpg') no-repeat;
+  //  background-size: cover;
+  //}
+  //
+  //.main--bckgrnd--inner {
+  //  top: 60vmin;
+  //}
+
+  .hdln__prim {
+    font-size: 10vmax;
   }
 }

@@ -6,8 +6,8 @@
 
 // Font Stacks
 $font-family-primary: 'Playfair Display', serif;
-$font-family-secondary: 'Kaushan Script', serif;
-$font-family-tertiary: 'WCManoNegraBta', serif;
+$font-family-secondary: 'Kaushan Script', cursie;
+$font-family-tertiary: 'WCManoNegraBta', cursive;
 $font-family-utility: 'Noto Sans', sans-serif;
 
 $font-weight-thin: 100;
@@ -15,6 +15,11 @@ $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-weight-ultrabold: 900;
+
+// Letter Spacing
+$ls-min: .6px;
+$ls-mid: 1px;
+$ls-max: 4px;
 
 // Call Color-Me-Sass
 @import "../../../../../node_modules/color-me-sass/color-me-sass";
@@ -26,9 +31,12 @@ $grey: $gray;
 
 // Brand Colors
 $color-primary: #90c;
-$color-primary-gradient: linear-gradient(-60deg, #90c, #9905d1, #93f);
-$color-secondary: $blueVirb;
+$color-primary-light: #9905d1;
+$color-primary-gradient: scrim-gradient(#90c, #9905d1);
+$color-secondary: $blueAzure;
+$color-secondary-light: $blueVirb;
 $color-accent: $yellow;
+$color-accent-light: $yellowLight;
 
 // Color Palette
 $color-palettes: (
@@ -41,9 +49,19 @@ $color-palettes: (
 );
 
 $ui-colors: (
-        default: $color-secondary,
-        success: $green,
-        error: $redBright
+        default: ($color-secondary, $blueVirb),
+        success: ($green, #5f5),
+        error: ($redBright, $redCrimson),
+        cta: ($color-accent, $color-accent-light),
+        hollow: (transparent, rgba($white, .2))
+);
+
+$ui-colors-grad: (
+    default: $blueVirb,
+    success: #55FF55,
+    error: #dc143c,
+    cta: $yellowLight,
+    hollow: $white
 );
 
 // Grid (All multiples of 24px, the baseline
@@ -57,3 +75,7 @@ $breakpoint-min: 1px;
 $breakpoint-sm: 320px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1200px;
+
+// HiDPI
+$hidpi-port: (min-resolution 2dppx max-resolution 5dppx) (orientation portrait);
+$hidpi-land: (min-resolution 2dppx) (orientation landscape);

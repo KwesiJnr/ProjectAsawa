@@ -10,6 +10,7 @@ var
     cachebust = require('gulp-cache-bust'),
     del = require('del'),
     concat = require('gulp-concat'),
+    gradientease = require('postcss-easing-gradients'),
     ignore = require('gulp-ignore'),
     htmlclean = require('gulp-htmlclean'),
     imagemin = require('gulp-imagemin'),
@@ -144,10 +145,9 @@ var
         },
         open: false,
         notify: true,
-        tunnel: 'gulp',
         browser: 'chrome',
-        reloadDelay: 500
-        //online: false
+        reloadDelay: 500,
+        online: false
     },
 
     // Fonts
@@ -194,6 +194,7 @@ gulp.task('sass', function () {
     var files = gulp.src(cssdir.in);
     files = files
         .pipe(sass(cssdir.sassOpts))
+        .pipe(postcss([gradientease()]))
         .pipe(filesize({title: 'Applying Automaton:'}))
         .pipe(please(cssdir.automaton.options))
         .pipe(filesize({title: 'CSS file-size after Automaton:'}))

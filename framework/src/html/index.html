@@ -3,9 +3,21 @@
 <head>
     <!-- @include ../templates/_meta.html-->
 </head>
-<body>
+<body class="page-index">
 <!-- Main Background Image -->
-<div class="img__main--bckgrnd" role="presentation" aria-label="Main Page Background Image"></div>
+<div class="img__main--bckgrnd" role="presentation" aria-label="Main Page Background Image">
+    <section class="main--bckgrnd--inner">
+        <h2 class="hdln__prim">Discover Asawa</h2>
+        <span class="hdln__sec">The all-in-one getaway you truly deserve.</span>
+
+        <a href="#explore--to" class="btn btn__cc btn--cta" aria-label="Arrow: Scroll to Main Content below">
+            <button class="arrowheads" role="presentation">
+                <span aria-labelledby="explore--to">.</span><span aria-labelledby="explore--to">.</span>
+            </button>
+        </a>
+        <span>Explore</span>
+    </section>
+</div>
 
 <amp-sidebar id="sidebar" layout="nodisplay" side="left">
     <form action="/" class="dynamic__layer primary" target="_top" novalidate>
@@ -34,28 +46,46 @@
 </amp-sidebar>
 <!-- @include ../templates/_header.html-->
 
-<section class="main--bckgrnd--inner">
-    <h2 class="hdln__prim">Discover Asawa</h2>
-    <span>The all-in-one getaway you've been yearning for.</span>
+
+<!-- Secondary Header -->
+<div class="hdr__sec" id="explore--to">
+    <form action-xhr="https://formspree.io/your@email.com" target="_blank" method="post" class="form__rsrv">
+        <div class="grid">
+            <h2 class="form__rsrv--hd">Book A Reservation</h2>
+
+            <div class="form__rsrv--motor">
+                <!-- Date In -->
+                <div class="form__mod">
+                    <label for="book__date--in" class="form__label book--label">Arrival Date</label>
+                    <input type="date" value="2017-01-01" class="form--input book--text" id="book__date--in">
+                </div>
+
+                <!-- Date Out -->
+                <div class="form__mod">
+                    <label for="book__date--out" class="form__label book--label">Departure Date</label>
+                    <input type="date" value="2017-01-02" class="form--input book--text" id="book__date--out">
+                </div>
+
+                <!-- Submit -->
+                <div class="form__mod book__submit btn btn--cta">
+                    <label for="book__submit" class="srt">Get Rates</label>
+                    <input type="submit" value="Get Rates" id="book__submit"
+                           aria-label="Button to get rates">
+                </div>
+
+                <!-- Admin Features -->
+                <input type="hidden" name="_next" value="/appreciation/reservations.html"/>
+                <input type="text" name="_gotcha" class="form--gotcha"/> <!-- Gotcha for SpamBots -->
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<section class="grid">
+
 
     <div>
-        <button class="btn btn__cc"></button>
-        <span>Explore</span>
-    </div>
-</section>
-
-<div class="container">
-    <!-- Secondary Header -->
-    <div class="hdr__sec">
-        <ul>
-            <li>Book A Reservation</li>
-            <li><a href="#">Arrival Date</a></li>
-            <li><a href="#">Departure Date</a></li>
-            <li><a href="#">Book</a></li>
-        </ul>
-    </div>
-
-    <section>
         <!-- WeatherVane -->
         <div class="wthr">
             <h3 class="wthr--heading">The Weather</h3>
@@ -137,8 +167,8 @@
             </ul>
 
         </div>
-    </section>
-</div>
+    </div>
+</section>
 
 <section>
     <h2 class="v-hidden">Extended Gallery</h2>

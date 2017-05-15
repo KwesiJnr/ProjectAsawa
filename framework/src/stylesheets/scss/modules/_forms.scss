@@ -1,8 +1,212 @@
-/**
- * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
- * FORM STYLES
- * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
- */
+// ==========================================================================
+// FORM STYLES
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PropertySortOrder
 
-form {
+.form {
+  @include e(rsrv) {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    background: ease-in-out-quad-gradient(to right, #9905d1, #9900cc);
+
+    @include media-q('large') {
+      padding-top: 4rem;
+      padding-bottom: 4.5rem;
+    }
+
+    .grid {
+      @include media-q(medium) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 1;
+      }
+    }
+
+    @include m(motor) {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      //align-items: baseline;
+      flex-direction: column;
+      flex-grow: 1;
+
+      @include media-q('medium') {
+        width: 100%;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-around;
+      }
+
+      @include media-q('large') {
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+
+
+    @include m(hd) {
+      //font-family: $font-family-tertiary;
+      margin-bottom: 1.2rem;
+      color: $white;
+      font-size: 2.346rem;
+      line-height: 1;
+
+      @include media-q('medium') {
+        flex-basis: 100%;
+        margin-bottom: 2.4rem;
+        text-align: center
+      }
+    }
+  }
+
+  @include e(mod) {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2.4rem;
+    color: palette(grey);
+    font-family: $font-family-utility;
+    text-align: center;
+
+    @include media-q('medium') {
+      margin-bottom: 0;
+      font-weight: $font-weight-bold;
+    }
+
+    &.form__submit {
+      width: auto;
+      align-self: center;
+    }
+  }
+
+  @include m(input) {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2.4rem;
+    padding: 1.6rem 2rem;
+    background-color: $white;
+    color: palette(grey);
+    font-family: $font-family-utility;
+    font-size: 1.4rem;
+    //z-index: 0;
+    outline: none;
+
+    &:focus,
+    &:hover {
+      background-color: palette(grey, 'x-light');
+    }
+
+    @include media-q('medium') {
+      margin-bottom: 0;
+      //flex-basis: 45%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.6rem;
+
+    }
+  }
+
+  @include e(label) {
+    //font-size: 1.8rem;
+    font-weight: $font-weight-bold;
+  }
+
+  @include m(gotcha) {
+    display: none;
+  }
+}
+
+.book {
+  @include m(text) {
+    padding-left: calc(100% - 14rem);
+    background-color: $white;
+    font-weight: $font-weight-light;
+
+      @include media-q('medium') {
+        padding: 2.8rem 3.6rem .8rem 7.2rem;
+        border-left: 1px dotted palette(grey, 'light');
+        color: palette(grey, 'light');
+        font-size: 16px;
+        font-weight: $font-weight-light;
+        text-align: center;
+      }
+
+
+  }
+
+  @include m(label) {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    @include media-q('medium') {
+      top: .6rem;
+      left: 50%;
+      line-height: 1;
+      transform: translateX(-50%);
+    }
+  }
+
+  @include e(submit) {
+
+    margin-bottom: 0;
+
+    @include media-q(medium) {
+      width: auto;
+      height: 5.6rem;
+      border-top-right-radius: 100rem;
+      border-bottom-right-radius: 100rem;
+      align-self: center;
+      //padding: 0 3.6rem;
+      //line-height: 1.5;
+    }
+
+    input {
+      color: palette(grey);
+      font-family: $font-family-utility;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}
+
+//#book__date--in::before {
+//  content: 'Arrival Date \25B6';
+//  @include media-q('medium') {
+//    content: 'Arrival Date'
+//  }
+//}
+//
+//#book__date--out::before {
+//  content: 'Departure Date \25B6';
+//  @include media-q('medium') {
+//    content: 'Departure Date'
+//  }
+//}
+//
+//#book__date--in,
+//#book__date--out {
+//  text-align: right;
+//
+//  &::before {
+//    padding: 1.6rem 2rem;
+//  }
+//
+//  @include media-q(medium) {
+//    text-align: center;
+//  }
+//}
+//
+#book__submit {
+
+}
+
+.form__mod .form--input {
+  margin: 0;
 }

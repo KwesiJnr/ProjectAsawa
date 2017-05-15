@@ -4,17 +4,20 @@
 // Special Commands: SCSS_LINT
 // scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PropertySortOrder
 .hdr {
-  position: fixed;
+  position: absolute;
   z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
+  margin: 0;
   background-color: $white;
-  box-shadow: 0 0 40px 0 rgba(0, 0, 0, .15);
+  //box-shadow: 0 0 40px 0 rgba(0, 0, 0, .15);
 
   @include media-q('medium') {
-    background-color: transparent;
-    box-shadow: none;
+    .page-index & {
+      background: transparent;
+      box-shadow: none;
+    }
   }
 
   // Primary Items
@@ -28,7 +31,7 @@
   // Header Title
   @include e(title) {
     width: auto;
-    padding: 2rem 3.1rem 4rem;
+    padding: 2.4rem 5.6rem 2.4rem;
 
     @include media-q(medium) {
       padding: 4rem 6.2rem 8rem;
@@ -96,7 +99,7 @@ amp-sidebar {
 .hdr__prim--items {
   @include media-q('medium'){
     &::-webkit-scrollbar {
-      //display: none;
+      display: none;
     }
   }
 }

@@ -18,8 +18,15 @@
 // Generate color modifier classes
 @mixin btn-bg ($color-map) {
   @each $theme, $color in $color-map {
+    $lightcolor: nth($color, 1);
+    $deepcolor: nth($color, 2);
+
     &--#{$theme} {
-      background-color: $color;
+      background-color: $deepcolor;
+
+      &:hover {
+        background: ease-in-out-quad-gradient(to right, $lightcolor, $deepcolor);
+      }
     }
   }
 }
@@ -49,7 +56,7 @@
       @content;
     }
   } @else if $break == 'small' {
-    @media (min-width: $breakpoint-sm + 1) {
+    @media (min-width: $breakpoint-sm + 1) and (max-width: $breakpoint-md){
       @content;
     }
   } @else if $break == 'medium' {

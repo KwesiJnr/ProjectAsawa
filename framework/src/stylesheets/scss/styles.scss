@@ -5,6 +5,9 @@
  */
 // Special Commands: SCSS_LINT
 // scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "../../../../bower_components/breakpoint-sass/stylesheets/breakpoint";
+@import '../../../../bower_components/compass-mixins/lib/compass';
+
 // ==========================================================================
 // UTILITIES
 // ==========================================================================

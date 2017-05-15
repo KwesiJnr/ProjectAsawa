@@ -3,7 +3,24 @@
 // ==========================================================================
 // Special Commands: SCSS_LINT
 // scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PropertySortOrder
+
+
 .btn {
+  @include btn-bg($ui-colors);
+  display: inline-block;
+  position: relative;
+  margin-bottom: 2rem;
+  border: 0;
+  padding: 1.6rem 2.4rem;
+  box-sizing: border-box;
+  color: $white;
+  font-family: $font-family-utility;
+  font-weight: $font-weight-bold;
+  //transition: background-color .4s;
+  cursor: pointer;
+  text-transform: uppercase;
+
+
   @include e(prev) {
     position: absolute;
     top: 2.8rem;
@@ -27,4 +44,78 @@
 
     }
   }
+
+  @include e(cc) {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    margin-top: 3.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    line-height: 6rem;
+    opacity: .8;
+
+    &.btn--cta {
+      background-color: $color-accent;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .arrowheads {
+      border: 0;
+      padding: 0;
+      margin: 0;
+
+      span {
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        border-left: 3px dotted $color-primary;
+        border-bottom: 3px dotted $color-primary;
+        color: transparent;
+        cursor: pointer;
+        transform: rotate(-45deg);
+        animation: exploreArrow 2s infinite;
+
+        &:nth-of-type(1) {
+          animation-delay: 0s;
+        }
+
+        &:nth-of-type(2) {
+          top: 18px;
+          animation-delay: .2s;
+        }
+      }
+    }
+  }
+
+
+  @include e(primary) {
+    .hdr & {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.btn--cta {
+  background: $color-accent;
+
+  &:hover {
+    background: ease-in-out-sine-gradient(to left, $color-accent-light, $color-accent);
+  }
+
+  + span {
+    font-size: 2.436rem;
+  }
+}
+
+.btn.btn__primary {
+  padding: 1.2rem;
+  font-size: 14px;
 }

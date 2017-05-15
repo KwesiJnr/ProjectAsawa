@@ -42,7 +42,8 @@
     "gulp-svgo": "^1.0.3",
     "gulp-uglify": "^2.1.2",
     "gulp-uncss": "^1.0.6",
-    "node-sass-asset-functions": "^0.1.0"
+    "node-sass-asset-functions": "^0.1.0",
+    "postcss-easing-gradients": "^1.2.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

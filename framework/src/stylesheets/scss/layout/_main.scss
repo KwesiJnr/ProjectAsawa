@@ -8,22 +8,44 @@
   @include m(bckgrnd) {
     position: relative;
 
+
     @include m(inner) {
+      @extend %flex-sb;
+      flex-direction: column;
+      align-items: center;
       position: absolute;
-      top: 45vh;
+      top: 50vh;
       left: 50vw;
       width: 85vw;
-      max-width: 64rem;
       padding: 4.8rem 1.2rem;
       transform: translate(-50%, -50%);
-      background-color: rgba($black, .5);
-      color: $white;
+      //background: scrim-gradient(to bottom left, rgba($black, .4), rgba($black, .7));
+      color: white;
       text-align: center;
 
-      @media (max-width: 769px) and (orientation: landscape) {
-        top: 50vh;
-        padding: 3.6rem;
+
+
+      @include media-q(medium) {
+        max-width: 64rem;
       }
+
+      @include media-q(large) {
+        max-width: 76.8rem;
+      }
+
+      // Special fallback for poor devices
+    //  @include breakpoint((max-width 769px) (orientation landscape)){
+    //    top: 50vmin;
+    //    padding: 1.8rem;
+    //    //height: auto;
+    //    //max-height: 70vh;
+    //  }
+    //
+    //  @include breakpoint((width 320px 480px) (orientation portrait)) {
+    //    top: 50vmax;
+    //    height: 80vh;
+    //    max-height: 90vmax;
+    //  }
     }
   }
 }
