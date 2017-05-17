@@ -1,13 +1,6 @@
-.sass-cache/
-*.css.map
-
-# IntelliJ project files
 .idea
-out
-gen
+
 config.rb
-framework/assets/images/
-framework/assets/javascript/jQuery/
 .jpg
 .svg
 .png
@@ -18,5 +11,4 @@ framework/assets/javascript/jQuery/
 /framework/src/assets/fonts/
 /framework/build/assets/fonts/
 /framework/build/assets/images/
-/framework/src/stylesheets/scss/color-me-sass/
 /bower_components/

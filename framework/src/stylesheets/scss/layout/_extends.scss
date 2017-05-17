@@ -1,3 +1,30 @@
 %hdln {
   line-height: .8;
 }
+
+// ==========================================================================
+// PANEL
+// ==========================================================================
+%panel-default {
+  margin-top: 0;
+  padding-top: 2.4rem;
+
+  @include media-q(medium) {
+    padding-bottom: 2.4rem;
+  }
+}
+
+
+%panel-padding {
+  margin-top: 0;
+  padding-top: 4rem;
+
+  @include media-q(small) {
+    padding-bottom: 4rem;
+  }
+
+  @include media-q(medium) {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+}

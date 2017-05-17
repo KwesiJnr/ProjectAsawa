@@ -1,3 +1,44 @@
 // ==========================================================================
 // PANEL STYLES
 // ==========================================================================
+.panel {
+  @extend %panel-default;
+  // panel centered
+  @include m(centered) {
+    @extend %panel-default;
+    @extend %align-center;
+  }
+
+  // panel padded centered {
+  @include m(padded) {
+    @extend %panel-padding;
+
+    @include m(centered) {
+      @extend %panel-padding;
+      @extend %align-center;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  @include e(desc) {
+    p {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include e(hd) {
+    @extend %align-center;
+
+    margin-bottom: 1.8rem;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+  }
+}

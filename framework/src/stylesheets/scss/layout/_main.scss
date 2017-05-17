@@ -33,30 +33,19 @@
         max-width: 76.8rem;
       }
 
-      // Special fallback for poor devices
-    //  @include breakpoint((max-width 769px) (orientation landscape)){
-    //    top: 50vmin;
-    //    padding: 1.8rem;
-    //    //height: auto;
-    //    //max-height: 70vh;
-    //  }
-    //
-    //  @include breakpoint((width 320px 480px) (orientation portrait)) {
-    //    top: 50vmax;
-    //    height: 80vh;
-    //    max-height: 90vmax;
-    //  }
+      @include breakpoint((width 320px 768px) (orientation landscape)) {
+        top: 50vh;
+        padding-top: 7.2rem;
+        padding-bottom: 1.4rem;
+
+        .btn--cta + span {
+          font-size: 1.618rem;
+        }
+      }
     }
   }
 }
 
 
 
-.item {
-  @include e(layer) {
-    @include m(1) {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-}
+

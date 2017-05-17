@@ -1,6 +1,9 @@
 // ==========================================================================
 // Image Styles
 // ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PropertySortOrder
+
 .img {
   @include e(main) {
     @include m(bckgrnd) {
@@ -10,13 +13,10 @@
 
       @include p-el(before, 100%, 100%) {
         background-image: scrim-gradient(to bottom, rgba($black, .3), rgba($black, .6));
-        //z-index: 1;
       }
 
-
-
       @include media-q('medium') {
-        height: 90vh;
+        //height: 90vh;
         background: image-url('generic/index-background-1200.jpg') no-repeat;
       }
 
@@ -29,39 +29,45 @@
         background: image-url('generic/index-background-480.jpg') no-repeat;
       }
 
-      @media (max-width: 769px) and (orientation: landscape) {
+      @media (max-width: 769px) {
         height: 100vh;
+      }
+
+      @include breakpoint($hidpi-port) {
+        background: image-url('generic/index-background-768-port.jpg') no-repeat;
+        background-size: cover;
+      }
+
+      @include breakpoint($hidpi-land) {
+        background: image-url('generic/index-background-768-land.jpg') no-repeat;
+        background-size: cover;
+
+        .hdln__prim {
+          font-size: 10vmax;
+        }
+      }
+    }
+  }
+
+  // ==========================================================================
+  // Image Module
+  // ==========================================================================
+  @include e(mod) {
+    .flex__col--2-3 & {
+      display: none;
+
+      @include media-q('medium') {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        justify-content: space-between;
+
+        > li {
+          align-self: flex-end;
+        }
       }
     }
   }
 }
 
-// Breakpoints for Index Background
-@include breakpoint($hidpi-port) {
-  .img__main--bckgrnd {
-    height: 100vh;
-    background: image-url('generic/index-background-768-port.jpg') no-repeat;
-    background-size: cover;
-  }
-}
-@include breakpoint(width 480px 768px) {
-  .main--bckgrnd--inner {
-    top: 50vmax;
-    height: 60vmax;
-  }
-}
 
-@include breakpoint($hidpi-land) {
-  //.img__main--bckgrnd {
-  //  background: image-url('generic/index-background-768-land.jpg') no-repeat;
-  //  background-size: cover;
-  //}
-  //
-  //.main--bckgrnd--inner {
-  //  top: 60vmin;
-  //}
-
-  .hdln__prim {
-    font-size: 10vmax;
-  }
-}

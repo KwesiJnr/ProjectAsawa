@@ -4,13 +4,3 @@
   }
 }
 
-.flex {
-  @include e(nav) {
-    @extend %flex-sb;
-
-    //width: 100%;
-    align-items: center;
-  }
-}
-
-
