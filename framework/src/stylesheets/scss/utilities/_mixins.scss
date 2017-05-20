@@ -20,9 +20,11 @@
   @each $theme, $color in $color-map {
     $lightcolor: nth($color, 1);
     $deepcolor: nth($color, 2);
+    $textColor: nth($color, 3);
 
     &--#{$theme} {
       background-color: $deepcolor;
+      color: $textColor;
 
       &:hover {
         background: ease-in-out-quad-gradient(to right, $lightcolor, $deepcolor);

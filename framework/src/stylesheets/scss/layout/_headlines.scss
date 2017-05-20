@@ -7,18 +7,22 @@
 
     color: $white;
     font-family: $font-family-tertiary;
-    font-size: 20vmin;
+    font-size: 10rem;
     letter-spacing: $ls-mid;
 
     @include media-q('medium') {
       font-size: 13.09rem;
       line-height: 1;
     }
+
+    @include breakpoint(max-width 480px) {
+      font-size: 8rem;
+    }
   }
 
   @include e(sec) {
     margin-top: 3.6rem;
-    font-size: 5.5vmin;
+    font-size: 3.2rem;
     line-height: 1.24;
 
     @include media-q(medium) {

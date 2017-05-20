@@ -85,6 +85,7 @@
   @include m(input) {
     position: relative;
     width: 100%;
+    max-width: 600px;
     margin-bottom: 2.4rem;
     padding: 1.6rem 2rem;
     background-color: $white;
@@ -96,7 +97,7 @@
 
     &:focus,
     &:hover {
-      background-color: palette(grey, 'x-light');
+      background-color: palette(grey, 'xx-light');
     }
 
     @include media-q('medium') {
@@ -176,33 +177,6 @@
   }
 }
 
-//#book__date--in::before {
-//  content: 'Arrival Date \25B6';
-//  @include media-q('medium') {
-//    content: 'Arrival Date'
-//  }
-//}
-//
-//#book__date--out::before {
-//  content: 'Departure Date \25B6';
-//  @include media-q('medium') {
-//    content: 'Departure Date'
-//  }
-//}
-//
-//#book__date--in,
-//#book__date--out {
-//  text-align: right;
-//
-//  &::before {
-//    padding: 1.6rem 2rem;
-//  }
-//
-//  @include media-q(medium) {
-//    text-align: center;
-//  }
-//}
-//
 #book__submit {
 
 }

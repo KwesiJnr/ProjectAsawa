@@ -86,7 +86,7 @@ var
     // Images
     imagedir = {
         in: source + 'assets/images/**/*',
-        out: dest + 'assets/images',
+        out: dest + 'assets/images/',
 
         imgOpts: {
             cache: false

@@ -1,3 +1,111 @@
 // ==========================================================================
 // FOOTER STYLES
 // ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PropertySortOrder
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: ease-in-out-quad-gradient(to right, #9905d1, #90c);
+  color: $white;
+  font-family: $font-family-utility;
+
+  @include e(prim) {
+    @extend %flex-sb;
+    flex-direction: column;
+    padding-bottom: 2.4rem;
+
+    @include media-q('medium') {
+      padding-top: 2.4rem;
+      padding-bottom: 3.6rem;
+
+      .grid {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+
+  @include e(sec) {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    background-color: $white;
+    color: palette(grey);
+
+    .grid { @extend %flex-sb;
+      flex-direction: row;}
+  }
+
+  @include e(item) {
+    display: inline-block;
+    width: 100%;
+    margin-top: 2.4rem;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    text-align: center;
+
+    @include media-q('medium') {
+      align-self: center;
+    }
+
+    .flex {
+      @extend %flex-sb;
+      margin-top: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      justify-content: center;
+
+      i {
+        margin-right: .6rem;
+      }
+    }
+
+    @include m(hd) {
+      margin: 1.2rem 0;
+      color: $white;
+      font-size: 1.618rem;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.prefooter {
+  //font-family: $font-family-utility;
+  background: ease-in-out-sine-gradient(to bottom, $color-accent, rgba($color-accent, .8));
+
+  @include m(hd) {
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid $white;
+    color: $color-primary;
+    font-size: 2.618rem;
+    line-height: 1;
+    text-align: center;
+  }
+
+  @include m(desc) {
+    padding-top: 2.4rem;
+    padding-bottom: 3.6rem;
+
+    p {
+      margin-bottom: 2.4rem;
+      text-align: center;
+    }
+  }
+}
+
+
+// ==========================================================================
+// Misc
+// ==========================================================================
+.footer__prim {
+  .form {
+    padding-bottom: 2.4rem;
+    border-bottom: 1px dotted $white;
+  }
+
+  .form--input {
+    text-align: center;
+  }
+}

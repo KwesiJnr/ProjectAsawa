@@ -53,21 +53,73 @@
   // Image Module
   // ==========================================================================
   @include e(mod) {
+    margin-left: 3.5%;
     .flex__col--2-3 & {
       display: none;
 
-      @include media-q('medium') {
+
+      @include media-q('large') {
         display: flex;
-        flex-direction: row;
         flex: 1;
-        justify-content: space-between;
+        flex-direction: row;
+
+        flex-direction: column;
+        justify-content: space-around;
+        max-width: 28rem;
 
         > li {
           align-self: flex-end;
         }
       }
+
+      @include m(min) {
+        padding: .8rem;
+        border: 1px solid palette(grey, 'x-light');
+        background-color: palette(grey, 'xx-light');
+        line-height: 1;
+
+      }
     }
   }
+
+  // ==========================================================================
+  // Gellery
+  // ==========================================================================
+  @include e(gallery) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-q('medium') {
+      width: 60%;
+    }
+
+    @include media-q('large') {
+      max-width: 50%;
+    }
+
+    // ==========================================================================
+    // Gallery Item
+    // ==========================================================================
+    @include m(item) {
+      width: 100%;
+    }
+
+    // ==========================================================================
+    // Guide Text
+    // ==========================================================================
+    @include m(text) {
+      margin-top: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+// ==========================================================================
+// LightBox
+// ==========================================================================
+amp-image-lightbox {
+  background-color: $color-primary;
 }
 
 

@@ -70,7 +70,7 @@
         height: auto;
       }
 
-      @include breakpoint(width 1px 768px) {
+      @include media-q('small') {
         padding: 0;
         background: image-url('icons/mobile-icon-notepad.svg') no-repeat center;
         cursor: pointer;
@@ -96,6 +96,110 @@
       width: 9.6rem;
       height: 9rem;
       margin-bottom: 1.2rem;
+    }
+  }
+
+  // ==========================================================================
+  // Social Media Icons
+  // ==========================================================================
+  @include m(social) {
+    @extend %icn-md;
+
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+
+    &.facebook {
+      background: image-url('icons/social/facebook.svg') no-repeat center;
+    }
+
+    &.instagram {
+      background: image-url('icons/social/instagram.svg') no-repeat center;
+    }
+
+    &.pinterest {
+      background: image-url('icons/social/pinterest.svg') no-repeat center;
+    }
+
+    &.twitter {
+      background: image-url('icons/social/twitter.svg') no-repeat center;
+    }
+  }
+
+  // ==========================================================================
+  // Contact
+  // ==========================================================================
+  @include e(contact) {
+    @extend %icn-sm;
+    width: 1.8rem;
+    cursor: default;
+
+    @include media-q('medium') {
+      width: 1.8rem;
+      height: 2.6rem;
+    }
+
+    &.tel {
+      background: image-url('icons/icon-tel.svg') no-repeat center;
+    }
+
+    &.location {
+      background: image-url('icons/icon-dir.svg') no-repeat center;
+    }
+
+    &.email {
+      background: image-url('icons/icon-email.svg') no-repeat center;
+    }
+  }
+
+  // ==========================================================================
+  // Rating
+  // ==========================================================================
+  @include e(rating) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10rem;
+    height: 2rem;
+
+    // 5 Stars
+    &.five-star {
+      background: image-url('icons/rating/5-star.svg') no-repeat center;
+    }
+
+    // 5 Stars
+    &.four-star {
+      background: image-url('icons/rating/4-star.svg') no-repeat center;
+    }
+
+    // 4 Stars
+    &.three-star {
+      background: image-url('icons/rating/3-star.svg') no-repeat center;
+    }
+
+    // 3 Stars
+    &.two-star {
+      background: image-url('icons/rating/2-star.svg') no-repeat center;
+    }
+
+    // 1 Star
+    &.one-star {
+      background: image-url('icons/rating/1-star.svg') no-repeat center;
+    }
+  }
+
+  // ==========================================================================
+  // Affiliate
+  // ==========================================================================
+  @include e(affiliate) {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    background: image-url('logo/elite-logo.svg') no-repeat center;
+
+    + span {
+      display: block;
+      color: $white;
     }
   }
 }

@@ -143,8 +143,39 @@
 // ==========================================================================
 // Box Modal
 // ==========================================================================
-.box--modal {
-  padding: 2.4rem 1.2rem;
-  background-color: palette(grey, 'xx-light');
-  font-family: $font-family-utility;
+.box {
+  @include e(modal) {
+    padding: 2.4rem 1.2rem;
+    background-color: palette(grey, 'xx-light');
+    font-family: $font-family-utility;
+
+    @include m(wide) {
+      margin: 0 auto;
+      max-width: 90%;
+
+      @include media-q('medium') {
+        padding-left: 4.8rem;
+        padding-right: 4.8rem;
+        max-width: 85%;
+      }
+
+      @include media-q('large') {
+        max-width: 65%;
+      }
+
+      & .btn {
+        margin-top: 2.4rem;
+      }
+
+    }
+  }
+}
+
+
+.affiliate {
+  display: none;
+
+  @include media-q('medium') {
+    display: block;
+  }
 }

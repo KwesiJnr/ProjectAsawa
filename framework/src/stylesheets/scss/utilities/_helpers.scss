@@ -1,8 +1,10 @@
 // Special Commands: SCSS_LINT
 // scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
 
-// Screen reader text
 
+@import "mixins";
+
+// Screen reader text
 .srt {
   position: absolute;
   width: 1px;
@@ -59,4 +61,33 @@
 
 %color-secondary {
   color: $color-secondary;
+}
+
+%flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+%icn-sm {
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0;
+  text-transform: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+%icn-md {
+  width: 3.4rem;
+  height: 3.4rem;
+  border: 0;
+}
+
+%icn-sm,
+%icn-md {
+  @include media-q('medium') {
+    width: 4rem;
+    height: 4rem;
+  }
 }

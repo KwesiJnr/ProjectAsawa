@@ -82,3 +82,14 @@ ul,
 ol {
   list-style-type: none;
 }
+
+blockquote {
+  color: palette(grey, 'light');
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+cite {
+  color: $color-secondary;
+  font-size: 1.4rem;
+}

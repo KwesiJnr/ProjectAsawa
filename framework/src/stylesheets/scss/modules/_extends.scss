@@ -2,34 +2,5 @@
 
 .hdln {
   @include m(prim) {
-
-  }
-}
-
-%flex-sb {
-  display: flex;
-  justify-content: space-between;
-}
-
-%icn-sm {
-  width: 2.4rem;
-  height: 2.4rem;
-  border: 0;
-  text-transform: none;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-%icn-md {
-  width: 3.4rem;
-  height: 3.4rem;
-  border: 0;
-}
-
-%icn-sm,
-%icn-md {
-  @include media-q('medium') {
-    width: 4rem;
-    height: 4rem;
   }
 }
