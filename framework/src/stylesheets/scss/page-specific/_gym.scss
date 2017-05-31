@@ -1,0 +1,17 @@
+// ==========================================================================
+// Gym Page Styles
+// ==========================================================================
+.page-gym {
+  .img--row {
+    background: image-url('generic/mobile-head-gym.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-q('medium') {
+      background: image-url('generic/head-gym.jpg') no-repeat;
+    }
+  }
+
+  .panel__hd--unstyled {
+    text-align: left;
+  }
+}

@@ -73,3 +73,12 @@
     @error '"#{$break}" is not a valid breakpoint value. Please re-assess and enter correct value (e.g. "small", "medium" or "large")';
   }
 }
+
+// ==========================================================================
+// Gradient on Images
+// ==========================================================================
+@mixin image-gradient {
+  @include p-el(before, 100%, 100%) {
+    background-image: scrim-gradient(to bottom, rgba($black, .3), rgba($black, .6));
+  }
+}

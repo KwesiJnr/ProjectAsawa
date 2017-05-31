@@ -21,6 +21,10 @@ $ls-min: .6px;
 $ls-mid: 1px;
 $ls-max: 4px;
 
+// Transition
+$trns-type: cubic-bezier(0.36, 0.11, 0.59, 0.84);
+$trns-duration: .5s;
+
 // Call Color-Me-Sass
 @import "../../../../../node_modules/color-me-sass/color-me-sass";
 
@@ -52,7 +56,7 @@ $color-palettes: (
 $ui-colors: (
         default: ($color-secondary, $color-secondary-light, $white),
         success: ($green, #5f5, $white),
-        error: ($redBright, $redCrimson, $white),
+        error: ($redCrimson, $redBright, $white),
         cta: ($color-accent, $color-accent-light, $black),
         hollow: (transparent, rgba($whiteAntiflash, .2), $white)
 );

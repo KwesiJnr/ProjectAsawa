@@ -15,10 +15,13 @@
 
   @include media-q('medium') {
     position: absolute;
-    .page-index & {
-      background: transparent;
-      box-shadow: none;
-    }
+    background: transparent;
+    box-shadow: none;
+    //
+    //.page-index & {
+    //  background: transparent;
+    //  box-shadow: none;
+    //}
   }
 
   // Primary Items
@@ -98,7 +101,7 @@ amp-sidebar {
 
 // Header Primary Items
 .hdr__prim--items {
-  @include media-q('medium'){
+  @include media-q('medium') {
     &::-webkit-scrollbar {
       display: none;
     }
@@ -115,7 +118,7 @@ amp-sidebar {
   background-color: $white;
 
   transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(.36, .11, .59, .84);
+  transition: transform 250ms $trns-type;
 }
 
 // Layer Items

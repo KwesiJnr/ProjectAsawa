@@ -129,7 +129,7 @@
 
 
 // ==========================================================================
-// Item Layers for Menus
+// #Item Layers for Menus
 // ==========================================================================
 .item {
   @include e(layer) {
@@ -140,38 +140,29 @@
   }
 }
 
+
+
+
 // ==========================================================================
-// Box Modal
+// #NODE ITEM
 // ==========================================================================
-.box {
-  @include e(modal) {
-    padding: 2.4rem 1.2rem;
-    background-color: palette(grey, 'xx-light');
-    font-family: $font-family-utility;
-
-    @include m(wide) {
-      margin: 0 auto;
-      max-width: 90%;
-
-      @include media-q('medium') {
-        padding-left: 4.8rem;
-        padding-right: 4.8rem;
-        max-width: 85%;
-      }
-
-      @include media-q('large') {
-        max-width: 65%;
-      }
-
-      & .btn {
-        margin-top: 2.4rem;
-      }
-
+.node {
+  @include e(item) {
+    margin-bottom: 3.6rem;
+    @include m(hd) {
+      font-size: 1.8rem;
     }
   }
 }
 
 
+
+
+
+
+// ==========================================================================
+// #Affiliates
+// ==========================================================================
 .affiliate {
   display: none;
 
@@ -179,3 +170,12 @@
     display: block;
   }
 }
+
+
+// ==========================================================================
+// #MISC
+// ==========================================================================
+.page-index {
+  padding-top: 0;
+}
+

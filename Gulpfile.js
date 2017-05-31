@@ -16,6 +16,7 @@ var
     imagemin = require('gulp-imagemin'),
     imacss = require('gulp-imacss'),
     nano = require('gulp-cssnano'),
+    lazypipe = require('lazypipe'),
     newer = require('gulp-newer'),
     pkg = require('./package.json'),
     please = require('gulp-pleeease'),
@@ -26,6 +27,7 @@ var
     puglint = require('gulp-pug-lint'),
     preprocess = require('gulp-preprocess'),
     rename = require('gulp-rename'),
+    replace = require('gulp-replace'),
     sass = require('gulp-sass'),
     smacss = require('css-declaration-sorter'),
     svgo = require('gulp-svgo'),
@@ -44,7 +46,7 @@ var
     dest = 'framework/build/',
     scsspath = source + 'stylesheets/scss/',
     csspath = dest + 'stylesheets/css',
-    htmlpathout = dest + 'html/**/*',
+    htmlpathout = [dest + 'html/index.html', dest + 'services/**/*'],
 
 
     // Pug
@@ -79,7 +81,13 @@ var
         },
 
         removeUnused: {
-            html: [htmlpathout]
+            html: htmlpathout,
+            ignore: ['[class*="amphtml-sidebar-mask"]']
+        },
+
+        urlFix: {
+            in: dest + 'html/services/**/*.html',
+            out: dest + 'html/services/**/*.html'
         }
     },
 
@@ -185,7 +193,6 @@ gulp.task('html', ['sass'], function () {
     }
     return pages
         .pipe(cachebust())
-        .pipe(stripcomments())
         .pipe(gulp.dest(htmldir.out));
 });
 
@@ -198,6 +205,9 @@ gulp.task('sass', function () {
         .pipe(filesize({title: 'Applying Automaton:'}))
         .pipe(please(cssdir.automaton.options))
         .pipe(filesize({title: 'CSS file-size after Automaton:'}))
+        // .pipe(filesize({title: 'Removing unused css:'}))
+        // .pipe(uncss(htmldir.removeUnused))
+        // .pipe(filesize({title: 'Removed unused complete. File size is now:'}))
         .pipe(filesize({title: 'Applying purge...'}))
         .pipe(purge())
         .pipe(filesize({title: 'CSS file-size after purge:'}));
@@ -212,9 +222,6 @@ gulp.task('sass', function () {
             .pipe(filesize({title: 'Applying nano:'}))
             .pipe(nano())
             .pipe(filesize({title: 'CSS file-size after nano:'}))
-            .pipe(filesize({title: 'Removing unused css:'}))
-            .pipe(uncss(htmldir.removeUnused))
-            .pipe(filesize({title: 'Removed unused complete. File size is now:'}))
             .pipe(gulp.dest(cssdir.out))
             .pipe(browsersync.stream())
     } else {
@@ -223,6 +230,13 @@ gulp.task('sass', function () {
             .pipe(browsersync.stream())
 
     }
+});
+
+// #URL Fixer
+gulp.task('replace', function () {
+    gulp.src(htmldir.out + '/services/**/*.html')
+        .pipe(replace('services/', ''))
+        .pipe(gulp.dest(htmldir.out + '/services'));
 });
 
 // #BrowserSync

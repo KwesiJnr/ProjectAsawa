@@ -2,5 +2,36 @@
   @include e(container) {
     width: 100%;
   }
+
+  @include m(quick) {
+    position: fixed;
+    width: 2.4rem;
+    height: 2.4rem;
+    bottom: 4rem;
+    right: 2rem;
+    border-radius: 100%;
+    padding: 1.4rem;
+    background: image-url('icons/icon-qnav.svg') no-repeat center rgba($black, .5);
+    line-height: 2.4rem;
+    z-index: 10000;
+
+    @include media-q('medium') {
+      right: 4rem;
+    }
+
+    button {
+      display: none;
+
+      @include media-q('medium') {
+        position: absolute;
+        display: block;
+        width: 7.5rem;
+        height: 5rem;
+        left: -75%;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+    }
+  }
 }
 

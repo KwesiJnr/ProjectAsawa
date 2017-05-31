@@ -1,0 +1,13 @@
+// ==========================================================================
+// Spa Page Styles
+// ==========================================================================
+.page-spa {
+  .img--row {
+    background: image-url('generic/mobile-head-spa.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-q('medium') {
+      background: image-url('generic/head-spa.jpg') no-repeat;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+// ==========================================================================
+// #COMPONENT STYLES
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PropertySortOrder
+
+// ==========================================================================
+// #Box Modal
+// ==========================================================================
+.box {
+  @include e(modal) {
+    padding: 2.4rem 1.2rem;
+    background-color: palette(grey, 'xx-light');
+    font-family: $font-family-utility;
+
+    @include m(wide) {
+      margin: 0 auto;
+
+      @include media-q('medium') {
+        padding-left: 4.8rem;
+        padding-right: 4.8rem;
+        width: 85%;
+      }
+
+      @include media-q('large') {
+       width: 117rem;
+      }
+
+      & .btn {
+        margin-top: 2.4rem;
+      }
+
+    }
+  }
+}
+
+// ==========================================================================
+// #MAP
+// ==========================================================================
+.map {
+  width: 100%;
+
+  @include media-q('medium') {
+    width: 60%;
+    padding: 0;
+  }
+
+  @include e(mod) {
+    width: 100%;
+    max-width: 117rem;
+
+    .map {
+      position: relative;
+      padding: 0;
+
+      @include media-q('medium') {
+        //height: 0;
+        padding-bottom: 28.125%; // Half of Aspect Ratio
+        overflow: hidden;
+
+        amp-iframe {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          right: 0;
+
+        }
+      }
+    }
+
+    @include media-q('medium') {
+      .map {
+        width: 60%;
+      }
+
+      .address__box {
+        width: 40%;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// #ADDRESS BOX
+// ==========================================================================
+.address {
+  @include e(box) {
+    @extend %flex-sb;
+
+    flex-direction: column;
+    width: 100%;
+    height: 40rem;
+
+    padding: 2.4rem;
+
+    > .hdln__sec.address__box--hd {
+      @extend %b-color-primary-gradient;
+      text-transform: capitalize;
+
+      margin-top: 0;
+      margin-bottom: 4.8rem;
+      padding: .6rem .4rem 1.2rem;
+    }
+  }
+}
+
+// ==========================================================================
+// #Contact Mod
+// ==========================================================================
+.contact {
+  @include e(section) {
+
+  }
+
+  @include e(mod) {
+    flex-basis: 100%;
+
+    @include media-q('large') {
+      flex-basis: 45%;
+
+      &:nth-child(2) {
+        margin-top: .1rem;
+      }
+
+      &.form__button--wrapper {
+        flex-basis: 100%;
+        margin: auto;
+
+        .btn--error {
+          margin-right: 9.4rem;
+        }
+
+        .btn--default {
+          margin-left: 7.6rem;
+        }
+      }
+    }
+  }
+}

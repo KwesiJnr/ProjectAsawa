@@ -23,12 +23,30 @@
   // ==========================================================================
   @include e(hamburger) {
     @extend %icn-sm;
+
+    position: relative;
     order: -1;
     background: image-url('icons/mobile-icon-hamburger.svg') no-repeat center transparent;
     cursor: pointer;
 
     @include media-q('medium') {
       background: image-url('icons/icon-hamburger.svg') no-repeat center;
+    }
+
+    // Span
+    span {
+      display: none;
+      @include media-q('medium') {
+        display: inline-block;
+        position: absolute;
+        color: $white;
+        top: 30%;
+        left: 4.5rem;
+        font-family: $font-family-utility;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        //cursor: default;
+      }
     }
   }
 
@@ -200,6 +218,67 @@
     + span {
       display: block;
       color: $white;
+    }
+  }
+
+  // ==========================================================================
+  // Icon Modal
+  // ==========================================================================
+  @include e(modal) {
+    padding: 2.4rem 0;
+    background-color: $black;
+    color: $white;
+
+    .grid {
+      @extend %flex-sb;
+
+      flex: 1;
+      flex-direction: row;
+
+      @include media-q('medium') {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+
+    @include m(item) {
+      max-width: 100%;
+      margin: 2.4rem .8rem;
+      font-size: 1.2rem;
+      line-height: 1;
+      text-align: center;
+
+      @include media-q('medium') {
+        font-size: 1.6rem;
+      }
+
+      i {
+        display: block;
+        width: 5.6rem;
+        height: 5.6rem;
+        margin: 0 auto .8rem;
+
+        @include media-q('medium') {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      .towel {
+        background: image-url('icons/gym/icon-towel.svg') no-repeat;
+      }
+
+      .access {
+        background: image-url('icons/gym/icon-access.svg') no-repeat;
+      }
+
+      .trainer {
+        background: image-url('icons/gym/icon-trainer.svg') no-repeat;
+      }
+
+      .satisfaction {
+        background: image-url('icons/gym/icon-satisfaction.svg') no-repeat;
+      }
     }
   }
 }

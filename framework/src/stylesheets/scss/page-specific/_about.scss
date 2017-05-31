@@ -1,0 +1,12 @@
+// ==========================================================================
+// About Page Styles
+// ==========================================================================
+.page-about {
+  .row--image {
+    background: image-url('generic/mobile-head-about.jpg') no-repeat;
+
+    @include media-q('medium') {
+      background: image-url('generic/head-about.jpg') no-repeat;
+    }
+  }
+}

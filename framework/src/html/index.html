@@ -2,6 +2,10 @@
 <html amp lang="en">
 <head>
     <!-- @include ../templates/_meta.html-->
+    <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <title>Home | Asawa Resort
+    </title>
 </head>
 <body class="page-index" id="top">
 <!-- Main Background Image -->
@@ -19,32 +23,8 @@
     </section>
 </div>
 
-<amp-sidebar id="sidebar" layout="nodisplay" side="left">
-    <form action="/" class="dynamic__layer primary" target="_top" novalidate>
-        <button type="reset" class="icn__close" on="tap:sidebar.close" aria-label="Close Sidebar Button"></button>
-
-        <div class="hdr__prim--items">
-            <a href="/" class="menu__item">Home</a>
-            <label class="menu__item item__layer--1 has--sub-lvl"><input type="checkbox">Services
-                <div class="submenu dynamic__layer secondary">
-                    <!-- Submenu Back Key -->
-                    <div class="btn__prev">Back</div>
-                    <button type="reset" class="icn__close" on="tap:sidebar.close"></button>
-
-                    <!-- Submenu Content -->
-                    <div class="layer--items">
-                        <a href="services/reservations/" class="menu__item layer__item--lvl2">Reservations</a>
-                        <a href="services/gym/" class="menu__item layer__item--lvl2">Gym</a>
-                        <a href="services/courier/" class="menu__item layer__item--lvl2">Spa</a>
-                    </div>
-                </div>
-            </label>
-            <a href="about.html" class="menu__item">About</a>
-            <a href="contact.html" class="menu__item">Contact</a>
-        </div>
-    </form>
-</amp-sidebar>
 <!-- @include ../templates/_header.html-->
+
 
 
 <!-- Secondary Header -->
@@ -65,6 +45,22 @@
                 <div class="form__mod">
                     <label for="book__date--out-top" class="form__label book--label">Departure Date</label>
                     <input type="date" value="2017-01-02" class="form--input book--text" id="book__date--out-top">
+                </div>
+
+                <div class="form__mod">
+                    <label for="rooms" class="form__label book--label">Rooms</label>
+                    <select  class="form--input book--text" id="rooms">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
                 </div>
 
                 <!-- Submit -->
@@ -170,7 +166,6 @@
     <div class="grid">
         <h2 class="panel__hd">Gallery</h2>
         <div class="img__gallery">
-
             <amp-image-lightbox layout="nodisplay" id="asawa__viewBox1"></amp-image-lightbox>
             <amp-carousel type="slides" id="asawa-gallery-w-preview" controls layout="responsive" width="640"
                           height="440"

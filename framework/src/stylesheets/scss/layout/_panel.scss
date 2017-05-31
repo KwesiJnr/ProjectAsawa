@@ -48,6 +48,7 @@
     position: relative;
     margin-bottom: 1.8rem;
     padding-bottom: 1.8rem;
+    color: palette(grey);
     font-size: 2.8rem;
     line-height: 1;
     text-transform: uppercase;
@@ -66,6 +67,19 @@
 
       @include breakpoint(max-width 480px) {bottom: -10%}
     }
+
+    @include m(unstyled) {
+      @extend .panel__hd;
+
+      margin-bottom: 0;
+      text-align: left;
+
+      &::after {
+        background: transparent;
+      }
+    }
+
+
   }
 
 
@@ -112,4 +126,24 @@
 
 
   }
+
+
+  // ==========================================================================
+  // Info
+  // ==========================================================================
+  @include e(section) {
+    width: 100%;
+    max-width: 117rem;
+
+    @include media-q('large') {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    h2 {
+      text-align: center;
+    }
+  }
 }
+

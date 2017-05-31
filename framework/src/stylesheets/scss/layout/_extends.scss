@@ -18,13 +18,13 @@
 %panel-padding {
   margin-top: 0;
   padding-top: 4rem;
+  padding-bottom: 4rem;
 
-  @include media-q(small) {
-    padding-bottom: 4rem;
+  @include media-q(min) {
+    padding-bottom: 2rem;
   }
 
   @include media-q(medium) {
     padding-top: 8rem;
-    padding-bottom: 4rem;
   }
 }

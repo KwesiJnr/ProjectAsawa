@@ -1,0 +1,23 @@
+// ==========================================================================
+// Privacy Styles
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PropertySortOrder
+
+.page-privacy {
+  .img--row {
+    background: image-url('generic/mobile-head-privacy.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-q('medium') {
+      background: image-url('generic/head-privacy.jpg') no-repeat;
+    }
+  }
+}
+
+
+.legal {
+  @include e(section) {
+    text-align: justify;
+  }
+}

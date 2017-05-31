@@ -3,6 +3,7 @@
 // ==========================================================================
 // Special Commands: SCSS_LINT
 // scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "../utilities/config";
 
 html {
   font-size: 62.5%;
@@ -19,6 +20,12 @@ body {
   font-family: $font-family-primary;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+
+  //padding-top: 4.8rem;
+  //
+  //@include media-q('medium') {
+  //  padding-top: 14rem;
+  //}
 }
 
 // Base Font Sizes
@@ -64,19 +71,25 @@ button {
 }
 
 button,
-input {
+input,
+select,
+textarea {
   border: 0;
   background-color: transparent;
 }
 
+
 a {
-  color: palette(grey);
+  color: $color-secondary;
   text-decoration: none;
+  transition: all $trns-duration $trns-type;
 
   &:hover {
   color: palette(grey, 'light');
   }
 }
+
+p {line-height: 2;}
 
 ul,
 ol {
@@ -92,4 +105,9 @@ blockquote {
 cite {
   color: $color-secondary;
   font-size: 1.4rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: palette(grey, 'light');
 }

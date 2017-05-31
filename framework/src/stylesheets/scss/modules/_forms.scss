@@ -82,13 +82,14 @@
     }
   }
 
+  // Form Input
   @include m(input) {
     position: relative;
     width: 100%;
     max-width: 600px;
     margin-bottom: 2.4rem;
     padding: 1.6rem 2rem;
-    background-color: $white;
+    background-color: palette(grey, 'x-light');
     color: palette(grey);
     font-family: $font-family-utility;
     font-size: 1.4rem;
@@ -101,7 +102,7 @@
     }
 
     @include media-q('medium') {
-      margin-bottom: 0;
+      margin-bottom: 3.6rem;
       //flex-basis: 45%;
       margin-left: auto;
       margin-right: auto;
@@ -110,13 +111,53 @@
     }
   }
 
+  // #Form Label
   @include e(label) {
-    //font-size: 1.8rem;
+    position: relative;
+    display: block;
+    margin-bottom: .8rem;
+    font-family: $font-family-utility;
     font-weight: $font-weight-bold;
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
+
+    @include m(required) {
+      @extend .form__label;
+
+      @include p-el(after) {
+        position: absolute;
+        content: '*';
+        font-size: 1.4rem;
+        font-weight: $font-weight-normal;
+        color: map_get($ui-colors-grad, 'error');
+      }
+    }
   }
 
   @include m(gotcha) {
     display: none;
+  }
+
+  // #Button Wrapper
+  @include e(button) {
+    @include m(wrapper) {
+      display: flex;
+      flex-direction: column;
+
+      @include media-q('medium') {
+        max-width: 60rem;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  // #Form Select
+  @include m(select) {
+    height: 5.04rem;
+    line-height: 5.04rem;
+    padding-top: 1.3rem;
   }
 }
 
@@ -177,10 +218,8 @@
   }
 }
 
-#book__submit {
-
-}
 
 .form__mod .form--input {
   margin: 0;
+  text-align: right;
 }

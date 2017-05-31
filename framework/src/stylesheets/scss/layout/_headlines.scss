@@ -16,14 +16,15 @@
     }
 
     @include breakpoint(max-width 480px) {
-      font-size: 8rem;
+      font-size: 6.4rem;
     }
   }
 
   @include e(sec) {
     margin-top: 3.6rem;
-    font-size: 3.2rem;
-    line-height: 1.24;
+    font-size: 2.618rem;
+    line-height: 1;
+    text-align: center;
 
     @include media-q(medium) {
       font-size: 2.634rem;

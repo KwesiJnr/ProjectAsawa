@@ -1,0 +1,40 @@
+// ==========================================================================
+// Contact Page Styles
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PropertySortOrder
+
+.page-contact {
+  .row {
+    @include media-q('medium') {
+      max-width: 75%;
+    }
+  }
+
+  //.hdln__sec {
+  //  text-transform: uppercase;
+  //}
+
+  .img--row {
+    background: image-url('generic/mobile-head-contact.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-q('medium') {
+      background: image-url('generic/head-contact.jpg') no-repeat;
+    }
+  }
+
+  .box__modal--wide {
+    //margin: 4.8rem auto;
+    padding-bottom: 0;
+
+    @include media-q('medium') {
+      width: 100%;
+    }
+
+    .address__box {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}

@@ -8,6 +8,7 @@
 @import "../../../../bower_components/breakpoint-sass/stylesheets/breakpoint";
 @import '../../../../bower_components/compass-mixins/lib/compass';
 
+
 // ==========================================================================
 // UTILITIES
 // ==========================================================================
@@ -28,3 +29,13 @@
 // State Rules
 // ==========================================================================
 @import "state/state";
+
+// ==========================================================================
+// OTHER PAGES
+// ==========================================================================
+@import "page-specific/contact";
+@import "page-specific/about";
+@import "page-specific/deals";
+@import "page-specific/gym";
+@import "page-specific/spa";
+@import "page-specific/privacy";
