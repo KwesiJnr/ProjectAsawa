@@ -1,13 +1,13 @@
 // ==========================================================================
-// Deal Page Styles
+// Reservation Page Styles
 // ==========================================================================
-.page-deals {
+.page-reservations {
   .img--row {
-    background: image-url('generic/mobile-head-deals.jpg') no-repeat;
+    background: image-url('generic/mobile-head-reservations.jpg') no-repeat;
     background-size: cover;
 
     @include media-q('medium') {
-      background: image-url('generic/head-deals.jpg') no-repeat;
+      background: image-url('generic/head-reservations.jpg') no-repeat;
     }
   }
 }

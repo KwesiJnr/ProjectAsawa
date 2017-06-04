@@ -31,10 +31,11 @@
       flex-direction: column;
       height: 100%;
       justify-content: space-around;
-    }
+      text-align: justify;
 
-    p {
-      font-size: 1.8rem;
+      p {
+        font-size: 1.8rem;
+      }
     }
   }
 
@@ -79,7 +80,12 @@
       }
     }
 
+    @include m(colored) {
+      @extend %b-color-primary-gradient;
 
+      padding: .6rem .4rem 1.2rem;
+      text-transform: capitalize;
+    }
   }
 
 

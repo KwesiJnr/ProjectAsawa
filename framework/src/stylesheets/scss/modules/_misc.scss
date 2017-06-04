@@ -18,24 +18,7 @@
     }
 
     &:hover {
-      background-color: palette(grey, 'x-light');
-    }
-  }
-}
-
-// ==========================================================================
-// Sidebar
-// ==========================================================================
-.sidebar {
-  @include m(heading) {
-    @extend %align-center;
-
-    margin-bottom: 1.2rem;
-    font-size: 2.618rem;
-    text-decoration: underline;
-
-    @include media-q('medium') {
-      margin-bottom: 0;
+      background-color: palette(grey, 'xx-light');
     }
   }
 }
@@ -91,7 +74,6 @@
       }
     }
 
-
     @include m(hd) {
       margin-bottom: .6rem;
       color: palette(grey);
@@ -127,7 +109,6 @@
   }
 }
 
-
 // ==========================================================================
 // #Item Layers for Menus
 // ==========================================================================
@@ -139,9 +120,6 @@
     }
   }
 }
-
-
-
 
 // ==========================================================================
 // #NODE ITEM
@@ -155,10 +133,50 @@
   }
 }
 
+// ==========================================================================
+// Folded Elements (Accordion )
+// ==========================================================================
 
+.folded {
+  position: relative;
+  display: block;
+  width: 100%;
 
+  .sidebar {
+    min-height: 1px;
+  }
 
+  .form__rsrv--hd {
+    @extend %background-animation;
 
+    margin-top: 1.2rem;
+    padding: 1.2rem;
+    border: 0;
+  }
+
+  section[expanded] h2 .show-more {
+    display: none;
+  }
+
+  section:not([expanded]) h2 .show-less {
+    display: none;
+  }
+
+  @include media-q('medium') {
+    display: none;
+  }
+}
+
+// ==========================================================================
+// Unfolded Elements
+// ==========================================================================
+.unfolded {
+  display: none;
+
+  @include media-q('medium') {
+    display: block;
+  }
+}
 
 // ==========================================================================
 // #Affiliates
@@ -170,7 +188,6 @@
     display: block;
   }
 }
-
 
 // ==========================================================================
 // #MISC

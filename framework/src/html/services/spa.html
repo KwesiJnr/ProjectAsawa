@@ -2,8 +2,12 @@
 <html amp lang="en">
 <head>
     <!-- @include ../../templates/_meta.html-->
-    <title>Spa | Asawa Resort
-    </title>
+    <script async custom-element="amp-image-lightbox"
+            src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+    <title>Spa | Asawa Resort</title>
 </head>
 <body class="page-spa">
 <!-- @include ../../templates/_header.html-->
@@ -14,83 +18,89 @@
 <!-- @include ../../templates/_header.html-->
 
 <section class="grid">
-    <div class="flex__grid--dual  panel--padded">
-        <!-- WeatherVane -->
-        <div class="flex__col--1-3 box__modal">
-            <h3 class="sidebar--heading">Live Weather</h3>
-            <ul class="wthr__child">
-                <!-- Weather Today -->
-                <li class="wthr__today">
-                    <h3 class="wthr__child--hd">Today <span class="mm-dd">(May 2)</span></h3>
-                    <ul class="wthr__child--list">
-                        <li class="icn__wthr">
-                            <amp-img src="../assets/images/weather/sunny.png" alt="Weather Today"
-                                     width="192" height="179" layout="responsive"></amp-img>
-                        </li>
-                        <li class="wthr__desc">
-                            <span class="wthr__temp wthr__temp--tomorrow">19&deg;C</span>
-                            <span class="wthr--actv">
-                                Suggested Activity<br><a href="#" target="_blank">Kayaking</a>
-                            </span>
-                        </li>
-                    </ul>
-                </li>
+    <div class="flex__grid--dual panel--padded">
+        <!-- @include ../../templates/_sidebar.html-->
 
-                <!-- Weather Tomorrow -->
-                <li class="wthr__tomorrow">
-                    <h3 class="wthr__child--hd">Tomorrow <span class="mm-dd">(May 3)</span></h3>
-                    <ul class="wthr__child--list">
-                        <li class="icn__wthr">
-                            <amp-img src="../assets/images/weather/rainy.png"
-                                     alt="Weather Tomorrow" width="192" height="179"
-                                     layout="responsive"></amp-img>
-                        </li>
-                        <li class="wthr__desc">
-                            <span class="wthr__temp wthr__temp--tomorrow">13&deg;C</span>
-                            <span class="wthr--actv">
-                                Suggested Activity<br><a href="#" target="_blank">Billiards</a>
-                            </span>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Page Description -->
         <div class="flex__col--2-3">
-            <div class="panel__section">
-                <h2 class="panel__hd--unstyled">Steam Baths and Spa</h2>
+            <div class="panel__desc">
+                <h2 class="panel__hd">Steam Baths and Spa</h2>
 
-                <p>Thanks to a team of expert professionals and amazing facilities whose technology and design guarantee an
-                    unforgettable experience, our spa is top of its class and leaves you with an unforgettable experience.
+                <p>Thanks to a team of expert professionals and amazing facilities whose technology and design guarantee
+                    an
+                    unforgettable experience, our spa is top of its class and leaves you with an unforgettable
+                    experience.
                     <br><br>
-                    In addition to offering quality services and an exclusive and personalized attention, the Spa features a
+                    In addition to offering quality services and an exclusive and personalized attention, the Spa
+                    features a
                     complete a spinning room, lockers,
-                    changing room, interior swimming pool, Jacuzzi&trade; and steam baths that will transport you to a haven of
-                    tranquillity and pleasure to help you extricate yourself from your daily routine and revitalize your inner
+                    changing room, interior swimming pool, Jacuzzi&trade; and steam baths that will transport you to a
+                    haven of
+                    tranquillity and pleasure to help you extricate yourself from your daily routine and revitalize your
+                    inner
                     body.
                     <br><br>
-                    Exterior swimming pool with jetstreams, water umbrella and individual bubble areas, Waterfalls. Sensations
-                    showers (bucket shower, mist shower, bithermal shower and essence shower).
-                    <br><br>
+                <p>Exterior swimming pool with jetstreams, water umbrella and individual bubble areas, Waterfalls.
+                    Sensations
+                    showers (bucket shower, mist shower, bithermal shower and essence shower).</p>
                 </p>
-            </div>
-            <ul class="img__mod">
-                <li class="img__mod--min">
-                    <amp-img src="../assets/images/pnldesc-img-one.jpg" alt="Beachfront Image" width="230"
-                             height="170" layout="fixed"></amp-img>
-                </li>
 
-                <li class="img__mod--min">
-                    <amp-img src="../assets/images/pnldesc-img-two.jpg" alt="Poolside Image" width="230" height="170"
-                             layout="fixed"></amp-img>
-                </li>
-            </ul>
+
+                <div class="img__gallery panel">
+                    <amp-image-lightbox layout="nodisplay" id="asawa__viewBox1"></amp-image-lightbox>
+                    <amp-carousel type="slides" id="asawa-gallery-w-preview" controls layout="responsive" width="640"
+                                  height="440"
+                                  autoplay delay="6000">
+                        <div class="img__gallery--item">
+                            <amp-img src="../assets/images/gallery/gym/sparoom.jpg" alt="Photo of one our Spa Rooms"
+                                     width="320"
+                                     height="220"
+                                     srcset="../assets/images/gallery/spa/sparoom.jpg 640w,
+                             ../assets/images/gallery/spa/sparoom-2x.jpg 1280w,
+                             ../assets/images/gallery/spa/sparoom-3x.jpg 1920w"
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="1"></amp-img>
+                        </div>
+                        <div class="img__gallery--item">
+
+                            <amp-img src="../assets/images/gallery/spa/couplespa.jpg"
+                                     alt="2-in-one special couple's spa session" width="320"
+                                     height="220"
+                                     srcset="../assets/images/gallery/spa/couplespa.jpg 640w,
+                             ../assets/images/gallery/spa/couplespa-2x.jpg 1280w,
+                             ../assets/images/gallery/spa/couplespa-3x.jpg 1920w"
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="2"></amp-img>
+                        </div>
+                        <div class="img__gallery--item">
+                            <amp-img src="../assets/images/gallery/spa/spices.jpg"
+                                     alt="Photo of some of the spices and ingredients used"
+                                     width="320"
+                                     height="220"
+                                     srcset="../assets/images/gallery/spa/spices.jpg 640w,
+                             ../assets/images/gallery/spa/spices-2x.jpg 1280w"
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="3"></amp-img>
+                        </div>
+                        <div class="img__gallery--item">
+                            <amp-img src="../assets/images/gallery/spa/spa1.jpg" alt="Another couple in a spa session"
+                                     width="320"
+                                     height="220"
+                                     srcset="../assets/images/gallery/spa/spa1.jpg 640w,
+                             ../assets/images/gallery/spa/spa1-2x.jpg 1280w,
+                             ../assets/images/gallery/spa/spa1-3x.jpg 1920w"
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="4"></amp-img>
+                        </div>
+                        <div class="img__gallery--item">
+                            <amp-img src="../assets/images/gallery/spa/womanspa.jpg"
+                                     alt="A woman taking a solo spa session" width="320"
+                                     height="220"
+                                     srcset="../assets/images/gallery/spa/womanspa.jpg 640w,
+                             ../assets/images/gallery/spa/womanspa-2x.jpg 1280w,
+                             ../assets/images/gallery/spa/womanspa-3x.jpg 1920w"
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="5"></amp-img>
+                        </div>
+                    </amp-carousel>
+                </div>
+            </div>
         </div>
     </div>
-</section>
-<section class="grid panel--padded">
-
 </section>
 
 <!-- @include ../../templates/_footer.html-->

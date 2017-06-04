@@ -93,3 +93,10 @@
     height: 4rem;
   }
 }
+
+// Animated Background
+%background-animation {
+  background: linear-gradient(270deg, #9900cc, $color-secondary, #9905d1);
+  background-size: 600% 600%;
+  animation: gradientTransition 40s ease infinite;
+}

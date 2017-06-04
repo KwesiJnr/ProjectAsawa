@@ -1,0 +1,37 @@
+// ==========================================================================
+// Booking Page Styles
+// ==========================================================================
+.page-booking {
+  .img--row {
+    background: image-url('generic/mobile-head-booking.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-q('medium') {
+      background: image-url('generic/head-booking.jpg') no-repeat;
+    }
+  }
+
+  .form__rsrv {
+    height: 100%;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: $black;
+  }
+
+  .form__mod .form--input {
+    @include media-q('medium') {
+      padding-left: 8%;
+    }
+  }
+
+  .form__mod #rooms,
+  .form__mod #adults,
+  .form__mod #children {
+    padding-left: 48%;
+  }
+
+  .form--input#coupon {
+    padding-left: 0;
+  }
+}

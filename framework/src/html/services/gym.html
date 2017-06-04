@@ -6,103 +6,114 @@
     <script async custom-element="amp-image-lightbox"
             src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
     <title>Gym | Asawa Resort
     </title>
 </head>
 <body class="page-gym" id="top">
 <!-- @include ../../templates/_header.html-->
+
 <!-- Top Row Image -->
 <div class="img--row">
     <h2 class="hdln__prim">Gym</h2>
 </div>
 
-<section class="grid panel--padded">
-    <div class="panel__section">
-        <h2 class="panel__hd--unstyled">Your Health & Fitness</h2>
+<section class="grid">
+    <div class="flex__grid--dual panel--padded">
+        <!-- @include ../../templates/_sidebar.html-->
 
-        <p>Let us help you get strong, balanced and flexible – mentally and physically.
-            <br><br>
-            In order to aid you in achieving your fitness goals, we offer 3 free personal training sessions 5
-            days a week and a complete
-            selection of cardio equipment, free weights, weight machines and fitness classes.
-            <br><br>
-        <p>Additionally, at the end of your workout, whether you’re a beginner or a seasoned individual, you
-            will leave our gym feeling positively refreshed and energised, ready to face the day!</p>
+        <div class="flex__col--2-3">
+            <div class="panel__desc">
+                <h2 class="panel__hd">Your Health & Fitness</h2>
 
-        <div class="img__gallery panel">
-            <amp-image-lightbox layout="nodisplay" id="asawa__viewBox1"></amp-image-lightbox>
-            <amp-carousel type="slides" id="asawa-gallery-w-preview" controls layout="responsive" width="640"
-                          height="440"
-                          autoplay delay="6000">
-                <div class="img__gallery--item">
-                    <amp-img src="../assets/images/gallery/gym/gym-treadmill.jpg" alt="Visitors running on treadmill"
-                             width="320"
-                             height="220"
-                             srcset="../assets/images/gallery/gym/gym-treadmill.jpg 640w,
+                <p>Let us help you get strong, balanced and flexible – mentally and physically.
+                    <br><br>
+                    In order to aid you in achieving your fitness goals, we offer 3 free personal training sessions 5
+                    days a week and a complete
+                    selection of cardio equipment, free weights, weight machines and fitness classes.
+                    <br><br>
+                <p>Additionally, at the end of your workout, whether you’re a beginner or a seasoned individual, you
+                    will leave our gym feeling positively refreshed and energised, ready to face the day!</p>
+
+                <div class="img__gallery panel">
+                    <amp-image-lightbox layout="nodisplay" id="asawa__viewBox1"></amp-image-lightbox>
+                    <amp-carousel type="slides" id="asawa-gallery-w-preview" controls layout="responsive" width="640"
+                                  height="440"
+                                  autoplay delay="6000">
+                        <div class="img__gallery--item">
+                            <amp-img src="../assets/images/gallery/gym/gym-treadmill.jpg" alt="Visitors running on treadmill"
+                                     width="320"
+                                     height="220"
+                                     srcset="../assets/images/gallery/gym/gym-treadmill.jpg 640w,
                              ../assets/images/gallery/gym/gym-treadmill-2x.jpg 1280w,
                              ../assets/images/gallery/gym/gym-treadmill-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="1"></amp-img>
-                </div>
-                <div class="img__gallery--item">
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="1"></amp-img>
+                        </div>
+                        <div class="img__gallery--item">
 
-                    <amp-img src="../assets/images/gallery/gym/gym-runner.jpg"
-                             alt="Group of ecstatic people in gym room" width="320"
-                             height="220"
-                             srcset="../assets/images/gallery/gym/gym-runner.jpg 640w,
+                            <amp-img src="../assets/images/gallery/gym/gym-runner.jpg"
+                                     alt="Group of ecstatic people in gym room" width="320"
+                                     height="220"
+                                     srcset="../assets/images/gallery/gym/gym-runner.jpg 640w,
                              ../assets/images/gallery/gym/gym-runner-2x.jpg 1280w,
                              ../assets/images/gallery/gym/gym-runner-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="2"></amp-img>
-                </div>
-                <div class="img__gallery--item">
-                    <amp-img src="../assets/images/gallery/gym/gym-powerball.jpg" alt="Powerball and Treadmill backdrop"
-                             width="320"
-                             height="220"
-                             srcset="../assets/images/gallery/gym/gym-powerball.jpg 640w,
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="2"></amp-img>
+                        </div>
+                        <div class="img__gallery--item">
+                            <amp-img src="../assets/images/gallery/gym/gym-powerball.jpg" alt="Powerball and Treadmill backdrop"
+                                     width="320"
+                                     height="220"
+                                     srcset="../assets/images/gallery/gym/gym-powerball.jpg 640w,
                              ../assets/images/gallery/gym/gym-powerball-2x.jpg 1280w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="3"></amp-img>
-                </div>
-                <div class="img__gallery--item">
-                    <amp-img src="../assets/images/gallery/gym/gym-pool.jpg" alt="Gym at night with pool" width="320"
-                             height="220"
-                             srcset="../assets/images/gallery/gym/gym-pool.jpg 640w,
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="3"></amp-img>
+                        </div>
+                        <div class="img__gallery--item">
+                            <amp-img src="../assets/images/gallery/gym/gym-pool.jpg" alt="Gym at night with pool" width="320"
+                                     height="220"
+                                     srcset="../assets/images/gallery/gym/gym-pool.jpg 640w,
                              ../assets/images/gallery/gym/gym-pool-2x.jpg 1280w,
                              ../assets/images/gallery/gym/gym-pool-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="4"></amp-img>
-                </div>
-                <div class="img__gallery--item">
-                    <amp-img src="../assets/images/gallery/gym/gym-ride.jpg" alt="Active treadmill users" width="320"
-                             height="220"
-                             srcset="../assets/images/gallery/gym/gym-ride.jpg 640w,
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="4"></amp-img>
+                        </div>
+                        <div class="img__gallery--item">
+                            <amp-img src="../assets/images/gallery/gym/gym-ride.jpg" alt="Active treadmill users" width="320"
+                                     height="220"
+                                     srcset="../assets/images/gallery/gym/gym-ride.jpg 640w,
                              ../assets/images/gallery/gym/gym-ride-2x.jpg 1280w,
                              ../assets/images/gallery/gym/gym-ride-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="5"></amp-img>
-                </div>
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="5"></amp-img>
+                        </div>
 
-                <div class="img__gallery--item">
-                    <amp-img src="../assets/images/gallery/gym/gym-gear.jpg" alt="Gym gear beside the gym pool"
-                             width="320" height="220"
-                             srcset="../assets/images/gallery/gym/gym-gear.jpg 640w,
+                        <div class="img__gallery--item">
+                            <amp-img src="../assets/images/gallery/gym/gym-gear.jpg" alt="Gym gear beside the gym pool"
+                                     width="320" height="220"
+                                     srcset="../assets/images/gallery/gym/gym-gear.jpg 640w,
                              ../assets/images/gallery/gym/gym-gear-2x.jpg 1280w,
                              ../assets/images/gallery/gym/gym-gear-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="5"></amp-img>
-                </div>
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="5"></amp-img>
+                        </div>
 
-                <div class="img__gallery--item">
-                    <amp-img src="../assets/images/gallery/gym/gym.jpg" alt="Active treadmill users" width="320"
-                             height="220"
-                             srcset="../assets/images/gallery/gym/gym.jpg 640w,
+                        <div class="img__gallery--item">
+                            <amp-img src="../assets/images/gallery/gym/gym.jpg" alt="Active treadmill users" width="320"
+                                     height="220"
+                                     srcset="../assets/images/gallery/gym/gym.jpg 640w,
                              ../assets/images/gallery/gym/gym-2x.jpg 1280w,
                              ../assets/images/gallery/gym/gym-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="5"></amp-img>
+                                     layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="5"></amp-img>
+                        </div>
+                    </amp-carousel>
                 </div>
-            </amp-carousel>
+            </div>
         </div>
     </div>
 </section>
 
+<hr class="grid hr">
+
 <section class="grid panel">
     <div class="panel__section">
-        <h2 class="panel__hd--unstyled">Facilities</h2>
+        <h2 class="panel__hd">Facilities</h2>
         <div>
             <p>All guests over the age of 16 who visit the Asawa Resort are encouraged to make use of our free in-house
                 fitness
@@ -120,7 +131,7 @@
 
 <section class="grid panel">
     <div class="panel__section">
-        <h2 class="panel__hd--unstyled">Training</h2>
+        <h2 class="panel__hd">Training</h2>
         <div>
             <p>What if you are in need of a private gym session with a personal trainer? Five days a week, between the
                 hours of 6am to 4pm, we employ the services of leading personal trainers to guide you in your training

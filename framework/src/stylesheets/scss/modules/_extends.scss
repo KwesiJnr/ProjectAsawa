@@ -4,3 +4,30 @@
   @include m(prim) {
   }
 }
+
+
+// ==========================================================================
+// FORM
+// ==========================================================================
+%modular-form {
+  height: 100%; //
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+
+  @include m(motor) {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  @include m(mod) {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2.4rem;
+    color: palette(grey);
+    font-family: $font-family-utility;
+    text-align: center;
+  }
+}

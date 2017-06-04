@@ -58,10 +58,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 32rem;
+    height: 30rem;
 
     @include media-q('medium') {
-      height: 48rem;
+      height: 40rem;
     }
 
     > .hdln__prim {

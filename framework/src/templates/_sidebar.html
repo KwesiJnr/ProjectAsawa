@@ -1,0 +1,150 @@
+<amp-accordion class="folded">
+    <section class="flex__col--1-3 sidebar">
+        <h2 class="form__rsrv--hd">
+            <span class="show-more">&plus; </span>
+            <span class="show-less">&minus; </span>
+            Book Now</h2>
+        <form action-xhr="https://formspree.io/your@email.com" target="_blank" method="post"
+              class="form__rsrv form__sidebar">
+
+            <div class="grid">
+                <div class="form__rsrv--motor">
+                    <!-- Date In -->
+                    <div class="form__mod">
+                        <label for="book__date--in-top" class="form__label--required book--label">Arrival Date</label>
+                        <input type="date" value="2017-01-01" class="form--input book--text" id="book__date--in-top" aria-required="true" required>
+                    </div>
+
+                    <!-- Date Out -->
+                    <div class="form__mod">
+                        <label for="book__date--out-top" class="form__label--required book--label">Departure Date</label>
+                        <input type="date" value="2017-01-02" class="form--input book--text" id="book__date--out-top" aria-required="true" required>
+                    </div>
+
+                    <!-- No. of Rooms -->
+                    <div class="form__mod">
+                        <label for="rooms" class="form__label book--label">Rooms</label>
+                        <select class="form--input book--text" id="rooms">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+
+                    <!-- No. of Adults -->
+                    <div class="form__mod">
+                        <label for="adults" class="form__label--required book--label">Adults</label>
+                        <select class="form--input book--text" id="adults">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+                    <!-- No. of Children -->
+                    <div class="form__mod">
+                        <label for="children" class="form__label--required book--label">Children</label>
+                        <select class="form--input book--text" id="children">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="form__mod book__submit book__submit--rounded btn btn--cta">
+                        <label for="book__submit-top" class="srt">Get Rates</label>
+                        <input type="submit" value="Get Rates" id="book__submit-top"
+                               aria-label="Button to get rates">
+                    </div>
+
+                    <small>* Please contact our <a href="../contact.html">Reservations Department</a> if your requirements exceed default quantities.</small>
+                    <!-- Admin Features -->
+                    <input type="hidden" name="_next" value="/appreciation/reservations.html"/>
+                    <input type="text" name="_gotcha" class="form--gotcha"/> <!-- Gotcha for SpamBots -->
+                </div>
+            </div>
+        </form>
+    </section>
+</amp-accordion>
+
+<!-- Desktop -->
+<div class="unfolded">
+    <section class="flex__col--1-3 sidebar">
+
+        <form action-xhr="https://formspree.io/your@email.com" target="_blank" method="post"
+              class="form__rsrv form__sidebar">
+            <h2 class="form__rsrv--hd">Book Now</h2>
+
+            <div class="grid">
+                <div class="form__rsrv--motor">
+                    <!-- Date In -->
+                    <div class="form__mod">
+                        <label for="book__date--in-top" class="form__label--required book--label">Arrival Date</label>
+                        <input type="date" value="2017-01-01" class="form--input book--text" id="book__date--in-top" aria-required="true">
+                    </div>
+
+                    <!-- Date Out -->
+                    <div class="form__mod">
+                        <label for="book__date--out-top" class="form__label--required book--label">Departure Date</label>
+                        <input type="date" value="2017-01-02" class="form--input book--text" id="book__date--out-top" aria-required="true">
+                    </div>
+
+                    <!-- No. of Rooms -->
+                    <div class="form__mod">
+                        <label for="rooms" class="form__label book--label">Rooms</label>
+                        <select class="form--input book--text" id="rooms">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <!-- No. of Adults -->
+                    <div class="form__mod">
+                        <label for="adults" class="form__label--required book--label">Adults</label>
+                        <select class="form--input book--text" id="adults">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <!-- No. of Children -->
+                    <div class="form__mod">
+                        <label for="children" class="form__label book--label">Children</label>
+                        <select class="form--input book--text" id="children">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="form__mod book__submit book__submit--rounded btn btn--cta">
+                        <label for="book__submit-top" class="srt">Get Rates</label>
+                        <input type="submit" value="Get Rates" id="book__submit-top"
+                               aria-label="Button to get rates">
+                    </div>
+
+                    <small>* Please contact our <a href="../contact.html">Reservations Department</a> if your requirements exceed default quantities.</small>
+
+                    <!-- Admin Features -->
+                    <input type="hidden" name="_next" value="/appreciation/reservations.html"/>
+                    <input type="text" name="_gotcha" class="form--gotcha"/> <!-- Gotcha for SpamBots -->
+                </div>
+            </div>
+        </form>
+    </section>
+</div>

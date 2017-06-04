@@ -9,7 +9,7 @@
 // ==========================================================================
 .box {
   @include e(modal) {
-    padding: 2.4rem 1.2rem;
+    padding: 2rem;
     background-color: palette(grey, 'xx-light');
     font-family: $font-family-utility;
 
@@ -23,7 +23,7 @@
       }
 
       @include media-q('large') {
-       width: 117rem;
+        width: 117rem;
       }
 
       & .btn {
@@ -32,6 +32,67 @@
 
     }
   }
+}
+
+// ==========================================================================
+// #Circle Modal
+// ==========================================================================
+.circle {
+  @include e(modal) {
+    @extend %flex-sb;
+    flex-direction: column;
+
+    @include media-q('medium') {
+      flex-direction: row;
+    }
+
+    @include m(item) {
+      display: block;
+      width: 20rem;
+      height: 20rem;
+      margin: 2.4rem auto;
+      border-radius: 100%;
+
+      h2 {
+        line-height: 20rem;
+        text-align: center;
+      }
+
+      @include media-q('medium') {
+        width: 40rem;
+        height: 40rem;
+        display: inline-block;
+        margin: auto 4.8rem;
+
+        h2 {
+          line-height: 40rem;
+        }
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Sidebar
+// ==========================================================================
+.sidebar {
+  background-color: transparent;
+  color: $white;
+
+
+  // Heading
+  @include m(heading) {
+    @extend %align-center;
+
+    margin-bottom: 1.2rem;
+    font-size: 2.618rem;
+    text-decoration: underline;
+
+    @include media-q('medium') {
+      margin-bottom: 0;
+    }
+  }
+
 }
 
 // ==========================================================================
@@ -95,12 +156,9 @@
     padding: 2.4rem;
 
     > .hdln__sec.address__box--hd {
-      @extend %b-color-primary-gradient;
-      text-transform: capitalize;
-
       margin-top: 0;
       margin-bottom: 4.8rem;
-      padding: .6rem .4rem 1.2rem;
+
     }
   }
 }
@@ -135,6 +193,24 @@
           margin-left: 7.6rem;
         }
       }
+    }
+  }
+}
+
+
+
+// ==========================================================================
+// #MULTIBOX
+// ==========================================================================
+
+
+// ==========================================================================
+// MISCELLANEOUS
+// ==========================================================================
+amp-accordion {
+  .sidebar {
+    @include media-q('medium') {
+      display: none;
     }
   }
 }

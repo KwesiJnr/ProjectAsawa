@@ -6,9 +6,8 @@
 
 .form {
   @include e(rsrv) {
-    padding-top: 2.4rem;
-    padding-bottom: 2.4rem;
-    background: ease-in-out-quad-gradient(to right, #9905d1, #9900cc);
+    @extend %modular-form;
+    @extend %background-animation;
 
     @include media-q('large') {
       padding-top: 4rem;
@@ -25,12 +24,7 @@
     }
 
     @include m(motor) {
-      display: flex;
-      flex-wrap: nowrap;
-      width: 100%;
-      //align-items: baseline;
-      flex-direction: column;
-      flex-grow: 1;
+      @extend %modular-form--motor;
 
       @include media-q('medium') {
         width: 100%;
@@ -46,30 +40,22 @@
       }
     }
 
-
-
     @include m(hd) {
-      //font-family: $font-family-tertiary;
       margin-bottom: 1.2rem;
       color: $white;
       font-size: 2.346rem;
       line-height: 1;
+      text-align: center;
 
       @include media-q('medium') {
         flex-basis: 100%;
         margin-bottom: 2.4rem;
-        text-align: center
       }
     }
   }
 
   @include e(mod) {
-    position: relative;
-    width: 100%;
-    margin-bottom: 2.4rem;
-    color: palette(grey);
-    font-family: $font-family-utility;
-    text-align: center;
+    @extend %modular-form--mod;
 
     @include media-q('medium') {
       margin-bottom: 0;
@@ -80,13 +66,19 @@
       width: auto;
       align-self: center;
     }
+
+    #rooms,
+    #adults,
+    #children {
+      padding-left: 47%; // to fix misalignment of numbers
+    }
   }
 
   // Form Input
   @include m(input) {
     position: relative;
     width: 100%;
-    max-width: 600px;
+
     margin-bottom: 2.4rem;
     padding: 1.6rem 2rem;
     background-color: palette(grey, 'x-light');
@@ -102,6 +94,7 @@
     }
 
     @include media-q('medium') {
+      max-width: 600px;
       margin-bottom: 3.6rem;
       //flex-basis: 45%;
       margin-left: auto;
@@ -159,56 +152,86 @@
     line-height: 5.04rem;
     padding-top: 1.3rem;
   }
+
+  // #Sidebar Form {
+  @include e(sidebar) {
+    .form__rsrv--motor {
+      flex-direction: column;
+      max-width: 100%;
+    }
+
+    .form__mod {
+      @extend %modular-form--mod;
+    }
+
+    .book--text {
+      border: 0;
+    }
+
+    .book__submit--rounded {
+      border-radius: 0;
+    }
+
+    small {
+      color: $white;
+      @include media-q('medium') {
+        margin-bottom: 2.4rem;
+      }
+
+      a {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .book {
   @include m(text) {
     padding-left: calc(100% - 14rem);
     background-color: $white;
+    color: $color-secondary;
     font-weight: $font-weight-light;
 
-      @include media-q('medium') {
-        padding: 2.8rem 3.6rem .8rem 7.2rem;
-        border-left: 1px dotted palette(grey, 'light');
-        color: palette(grey, 'light');
-        font-size: 16px;
-        font-weight: $font-weight-light;
-        text-align: center;
-      }
+    @include media-q('medium') {
+      padding: 2.8rem 3.6rem .8rem 7.2rem;
+      border-left: 1px dotted palette(grey, 'light');
 
+      font-size: 16px;
+      font-weight: $font-weight-light;
+      text-align: center;
+    }
 
   }
 
   @include m(label) {
     position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
+    width: 100%;
+    top: .6rem;
+    left: 0;
+    line-height: 1;
+    text-align: center;
     z-index: 1;
-
-    @include media-q('medium') {
-      top: .6rem;
-      left: 50%;
-      line-height: 1;
-      transform: translateX(-50%);
-    }
   }
 
   @include e(submit) {
 
     margin-bottom: 0;
+    max-width: 60rem;
 
-    @include media-q(medium) {
-      width: auto;
-      height: 5.6rem;
-      border-top-right-radius: 100rem;
-      border-bottom-right-radius: 100rem;
-      align-self: center;
-      //padding: 0 3.6rem;
-      //line-height: 1.5;
+    @include m(rounded) {
+      @include media-q('medium') {
+        width: auto;
+        height: 5.6rem;
+        border-top-right-radius: 100rem;
+        border-bottom-right-radius: 100rem;
+        align-self: center;
+      }
     }
 
     input {
+      width: 100%; // make up for clicking on div wrapper so as to make entire button submittable
+      height: 100%;
       color: palette(grey);
       font-family: $font-family-utility;
       font-weight: $font-weight-bold;
@@ -218,8 +241,16 @@
   }
 }
 
-
+// ==========================================================================
+// MISCELLANEOUS
+// ==========================================================================
 .form__mod .form--input {
-  margin: 0;
-  text-align: right;
+  display: block;
+  margin: 0 auto;
+  padding: 2.8rem 0 .8rem 5%;
+  text-align: center;
+
+  @include media-q('medium') {
+    padding-left: 20%;
+  }
 }

@@ -1,3 +1,17 @@
+
+// Calculate grid columns
+@for $i from 1 through $g-col-c {
+  $cont: g-context($g-col-w, $g-col-c, $g-gutter-w);
+  $tar: ($g-col-w * $i) + ($g-gutter-w * ($i - 1));
+
+  // generate column modifier classes
+  .grid__col--#{$i} {
+    width: percentage($tar / $cont);
+  }
+}
+
+
+
 // ==========================================================================
 // BEM Naming Functions
 // ==========================================================================
@@ -58,7 +72,7 @@
       @content;
     }
   } @else if $break == 'small' {
-    @media (min-width: $breakpoint-sm + 1) and (max-width: $breakpoint-md){
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md){
       @content;
     }
   } @else if $break == 'medium' {

@@ -2,28 +2,36 @@
 // Grid Columns
 // ==========================================================================
 
-// Calculate grid columns
-@for $i from 1 through $g-col-c {
-  $cont: g-context($g-col-w, $g-col-c, $g-gutter-w);
-  $tar: ($g-col-w * $i) + ($g-gutter-w * ($i - 1));
-
-  // generate column modifier classes
-  .grid__col--#{$i} {
-    width: percentage($tar / $cont);
-  }
-}
 
 .grid {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
+
+
+  // Make nested grids 100% width
+  [class *= "grid__col--"] > & {
+    width: 100%;
+  }
+
+  // Set max-width for grid-container
+  @include media-q(large) {
+    max-width: $g-max-w;
+  }
 }
 
+
+
+
+
+
+
+// ==========================================================================
+// Flexible Navigation
+// ==========================================================================
 .flex {
   @extend %flex-sb;
-  // ==========================================================================
-  // Flexible Navigation
-  // ==========================================================================
+
   @include e(nav) {
     @extend %flex-sb;
 
@@ -46,15 +54,13 @@
   @include e(col) {
     @include m(#{'1-3'}) {
       flex-basis: 100%;
-      margin-top: 2.4rem;
-      min-height: 28rem; // IE BugFix
+      min-height: 14rem; // IE BugFix
 
       @include media-q('medium') {
         flex: 2.5;
         justify-content: center;
-        min-height: 72rem; // IE BugFix
-        max-height: 72rem;
-        max-width: 28rem;
+        height: 72rem; // IE BugFix
+        max-width: 26rem;
       }
     }
 

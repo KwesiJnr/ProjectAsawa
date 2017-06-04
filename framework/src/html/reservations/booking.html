@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html amp lang="en">
+<head>
+    <!-- @include ../../templates/_meta.html-->
+
+    <title>Booking | Asawa Resort
+    </title>
+</head>
+<body class="page-booking">
+<!-- @include ../../templates/_header.html-->
+
+<div class="img--row">
+    <h2 class="hdln__prim">Booking</h2>
+</div>
+
+<section class="grid panel--padded">
+    <form action-xhr="https://formspree.io/your@email.com" target="_blank" method="post"
+          class="form__rsrv form__sidebar">
+        <h2 class="form__rsrv--hd">Book Now</h2>
+
+        <div class="grid">
+            <div class="form__rsrv--motor">
+                <!-- Date In -->
+                <div class="form__mod">
+                    <label for="book__date--in-top" class="form__label--required book--label">Arrival Date</label>
+                    <input type="date" value="2017-01-01" class="form--input book--text" id="book__date--in-top" aria-required="true" required>
+                </div>
+
+                <!-- Date Out -->
+                <div class="form__mod">
+                    <label for="book__date--out-top" class="form__label--required book--label">Departure Date</label>
+                    <input type="date" value="2017-01-02" class="form--input book--text" id="book__date--out-top" aria-required="true" required>
+                </div>
+
+                <!-- No. of Rooms -->
+                <div class="form__mod">
+                    <label for="rooms" class="form__label book--label">Rooms</label>
+                    <select class="form--input book--text" id="rooms">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- No. of Adults -->
+                <div class="form__mod">
+                    <label for="adults" class="form__label--required book--label">Adults</label>
+                    <select class="form--input book--text" id="adults">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- No. of Children -->
+                <div class="form__mod">
+                    <label for="children" class="form__label book--label">Children</label>
+                    <select class="form--input book--text" id="children">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+
+                <!-- No. of Children -->
+                <div class="form__mod">
+                    <label for="coupon" class="form__label book--label">Coupon Code</label>
+                    <input type="text" id="coupon" class="form--input book--text" placeholder="e.g. ASR-40FREE">
+                </div>
+
+                <!-- Submit -->
+                <div class="form__mod book__submit book__submit--rounded btn btn--cta">
+                    <label for="book__submit-top" class="srt">Book</label>
+                    <input type="submit" value="Book" id="book__submit-top"
+                           aria-label="Button to get rates">
+                </div>
+
+                <div class="form__mod">
+                    <small>* Please contact our <a href="../contact.html">Reservations Department</a> if your
+                        requirements exceed default quantities.
+                    </small>
+                </div>
+
+                <!-- Admin Features -->
+                <input type="hidden" name="_next" value="/appreciation/reservations.html"/>
+                <input type="text" name="_gotcha" class="form--gotcha"/> <!-- Gotcha for SpamBots -->
+            </div>
+        </div>
+    </form>
+</section>
+
+
+<!-- @include ../../templates/_footer.html-->
+</body>
+</html>
