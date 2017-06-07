@@ -18,6 +18,7 @@ var
     nano = require('gulp-cssnano'),
     lazypipe = require('lazypipe'),
     newer = require('gulp-newer'),
+    php = require('gulp-connect-php'),
     pkg = require('./package.json'),
     please = require('gulp-pleeease'),
     plumber = require('gulp-plumber'),
@@ -234,6 +235,24 @@ gulp.task('browsersync', function () {
     browsersync(bsOpts);
 });
 
+gulp.task('php-proxy', function () {
+    php.server({base: dest, port: 8010, keepalive: true})
+});
+
+gulp.task('bull', function () {
+    browsersync({
+        startPath: '/index.php',
+        proxy: 'test.dev',
+        open: false,
+        notify: true
+    })
+});
+
+gulp.task('runphp', ['bull', 'wach']);
+
+gulp.task('wach', function () {
+    gulp.watch(dest + '**/*.php').on('change', reload);
+})
 
 // #Fonts
 gulp.task('fonts', function () {
