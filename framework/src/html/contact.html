@@ -10,7 +10,7 @@
 <body class="page-contact" id="top">
 <!-- @include ../templates/_header.html-->
 <div class="img--row">
-    <h2 class="hdln__prim">Contact</h2>
+    <h2 class="hdln__prim center">Contact</h2>
 </div>
 <section class="grid">
     <p class="hdln__sec">Find Directions or Get In Touch</p>
@@ -51,7 +51,7 @@
     <hr class="hr">
 
     <!-- Query Form -->
-    <div class="panel--padded panel__section">
+    <div class="panel--padded panel__section" id="contact--query">
         <h2 class="panel__hd--unstyled">Need To Reach Us?</h2>
         <p>Please complete the box below and press the "<b>Submit Query</b>" button to drop us an email. We normally respond
             within 2 Business Days. If
@@ -64,7 +64,7 @@
         <div class="contact__mod">
             <label class="form__label--required" for="dept">Department</label>
             <select name="department" id="dept" class="form--input form--select" required>
-                <option value="Select A Department">Select A Department</option>
+                <option value="Select A Department" aria-invalid="true">Select A Department</option>
                 <option value="Select A Department">General Enquiry</option>
                 <option value="Select A Department">Human Resources</option>
                 <option value="Select A Department">Reservations</option>

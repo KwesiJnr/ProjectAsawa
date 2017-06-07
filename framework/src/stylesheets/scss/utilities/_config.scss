@@ -50,6 +50,11 @@ $color-palettes: (
                 light: lighten($grey, 30%),
                 base: $grey,
                 dark: darken($grey, 10%)
+        ),
+        black: (
+                light: lighten($black, 10%),
+                base: $black,
+                dark: darken($black, 15%)
         )
 );
 
@@ -62,11 +67,11 @@ $ui-colors: (
 );
 
 $ui-colors-grad: (
-    default: $color-secondary-light,
-    success: #55FF55,
-    error: #dc143c,
-    cta: $yellowLight,
-    hollow: $whiteAntiflash
+        default: $color-secondary-light,
+        success: #55FF55,
+        error: #dc143c,
+        cta: $yellowLight,
+        hollow: $whiteAntiflash
 );
 
 // Grid (All multiples of 24px, the baseline

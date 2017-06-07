@@ -10,4 +10,138 @@
       background: image-url('generic/head-deals.jpg') no-repeat;
     }
   }
+
+  .node {
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include media-q('medium') {
+      flex-direction: row;
+    }
+  }
+
+  .node__item {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7.2rem;
+    max-width: 36rem;
+
+    h2 {
+      margin-top: 1.2rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    @include p-el(after) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -3.6rem;
+      border-bottom: 1px solid palette(grey, 'xx-light');
+    }
+
+    @include media-q('medium') {
+      width: 45%;
+      margin-left: 2.4rem;
+      margin-right: 0;
+    }
+
+    @include breakpoint(width 769px 1199px) {
+      &:nth-child(2n + 1) {
+        margin-left: 0;
+      }
+    }
+
+    @include media-q('large') {
+      width: 30%;
+
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+    }
+
+    &.borderless:after {
+      border: 0;
+    }
+  }
+
+  .img__mod--min {
+    padding: 0;
+  }
+}
+
+// ==========================================================================
+// Full Deals Page
+// ==========================================================================
+.page-deals-offer {
+  .hdln__prim {
+    font-size: 4rem;
+    text-transform: lowercase;
+    line-height: 1.2;
+  }
+
+  .terms {
+    small {
+      font-family: $font-family-utility;
+      font-size: 1.2rem;
+    }
+  }
+
+
+  // ==========================================================================
+  // Deal Images
+  // ==========================================================================
+  .text-hdln {
+    background: $black;
+
+    h2 {
+      padding: 2.4rem 0;
+      background: $color-primary;
+
+      @include media-q('medium') {
+        max-width: 70%;
+      }
+    }
+  }
+
+  // Three for 2
+  .three-nights-for-2 {
+    background: image-url('deals/mobile-head-deal-342.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-q('medium') {
+      background: image-url('deals/head-deal-342.jpg') no-repeat;
+    }
+  }
+
+  // Royal SPa Package
+  .royal-spa-package {
+    background: image-url('deals/mobile-head-deal-royal-spa.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-q('medium') {
+      background: image-url('deals/head-deal-royal-spa.jpg') no-repeat;
+    }
+  }
+
+  // GH¢100 Credit Stay for 2
+  .stay-for-2-cred-100 {
+    background: image-url('deals/mobile-head-deal-stay-for-2.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-q('medium') {
+      background: image-url('deals/head-deal-stay-for-2.jpg') no-repeat;
+    }
+  }
+
+  // All-Inclusive Family Escape
+  .all-family-escape {
+    background: image-url('deals/mobile-head-deal-family.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-q('medium') {
+      background: image-url('deals/head-deal-family.jpg') no-repeat;
+    }
+  }
 }

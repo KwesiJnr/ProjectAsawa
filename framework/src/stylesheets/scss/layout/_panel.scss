@@ -49,7 +49,7 @@
     position: relative;
     margin-bottom: 1.8rem;
     padding-bottom: 1.8rem;
-    color: palette(grey);
+    color: palette(grey, 'dark');
     font-size: 2.8rem;
     line-height: 1;
     text-transform: uppercase;
@@ -73,7 +73,6 @@
       @extend .panel__hd;
 
       margin-bottom: 0;
-      text-align: left;
 
       &::after {
         background: transparent;

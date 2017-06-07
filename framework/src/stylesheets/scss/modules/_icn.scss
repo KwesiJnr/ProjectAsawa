@@ -86,6 +86,8 @@
       @include media-q('medium') {
         width: auto;
         height: auto;
+        padding: 1.2rem 2.4rem;
+        margin-left: -4%; // compensate for flex misalignment
       }
 
       @include media-q('small') {

@@ -12,7 +12,6 @@
       background: image-url('generic/index-background-768.jpg') no-repeat;
       @include image-gradient;
 
-
       @include media-q('medium') {
         //height: 90vh;
         background: image-url('generic/index-background-1200.jpg') no-repeat;
@@ -69,10 +68,11 @@
       top: 50%;
       left: 50%;
       width: 100%;
-      text-align: center;
       transform: translateX(-50%);
 
-      @include media-q('medium') {transform: translate(-50%, -25%);}
+      @include media-q('medium') {
+        transform: translate(-50%, -25%);
+      }
     }
   }
 
@@ -81,31 +81,11 @@
   // ==========================================================================
   @include e(mod) {
     margin-left: 3.5%;
-    .flex__col--2-3 & {
-      display: none;
 
-
-      @include media-q('large') {
-        display: flex;
-        flex: 1;
-        flex-direction: row;
-
-        flex-direction: column;
-        justify-content: space-around;
-        max-width: 28rem;
-
-        > li {
-          align-self: flex-end;
-        }
-      }
-
-      @include m(min) {
-        padding: .8rem;
-        border: 1px solid palette(grey, 'x-light');
-        background-color: palette(grey, 'xx-light');
-        line-height: 1;
-
-      }
+    @include m(min) {
+      padding: .8rem;
+      background-color: $black;
+      line-height: .8;
     }
   }
 

@@ -90,12 +90,18 @@
         	border: 0;
         	overflow: hidden;
         }
-        amp-sidebar .dynamic__layer:after,.panel__hd:after,.panel__hd--unstyled:after,.btn__prev:before,.form__label--required:after,.img__main--bckgrnd:before,.img--row:before,.wthr__child > li:first-child:after,amp-sidebar .has--sub-lvl:after {
+        amp-sidebar .dynamic__layer:after,.panel__hd:after,.panel__hd--unstyled:after,.btn__prev:before,.form__label--required:after,.img__main--bckgrnd:before,.img--row:before,.wthr__child > li:first-child:after,amp-sidebar .has--sub-lvl:after,.page-deals .node__item:after {
         	position: absolute;
         	content: '';
         }
-        .panel--centered,.panel--padded--centered,.panel__hd,.panel__hd--unstyled,.sidebar--heading,.wthr__child {
+        .center,.panel--centered,.panel--padded--centered,.panel__hd,.panel__hd--unstyled,.sidebar--heading,.wthr__child {
         	text-align: center;
+        }
+        .left {
+        	text-align: left;
+        }
+        .right {
+        	text-align: right;
         }
         [class*="amphtml-sidebar-mask"] {
         	background-color: #90c;
@@ -105,7 +111,7 @@
         amp-sidebar .dynamic__layer:after,.panel__hd--colored {
         	background: linear-gradient(hsl(285, 100%, 40%) 0%, hsl(284.6, 98.7%, 40.5%) 19%, hsl(284.3, 97.8%, 40.9%) 34%, hsl(284.1, 97.1%, 41.2%) 47%, hsl(283.9, 96.6%, 41.4%) 56.5%, hsl(283.8, 96.2%, 41.6%) 65%, hsl(283.7, 95.9%, 41.7%) 73%, hsl(283.6, 95.7%, 41.8%) 80.2%, hsl(283.6, 95.5%, 41.9%) 86.1%, hsl(283.6, 95.4%, 41.9%) 91%, hsl(283.5, 95.4%, 41.9%) 95.2%, hsl(283.5, 95.3%, 42%) 98.2%, hsl(283.5, 95.3%, 42%) 100%);
         }
-        .footer__prim,.footer__item .flex,.flex,.flex__nav,.flex__grid--dual,.flex__footer--social,.main--bckgrnd--inner,.circle__modal,.address__box,.icn__modal .grid,.wthr__child {
+        .footer__prim,.footer__item .flex,.flex,.flex__nav,.flex__grid--dual,.flex__footer--social,.main--bckgrnd--inner,.circle__modal,.address__box,.icn__modal .grid,.wthr__child,.node {
         	display: -webkit-box;
         	display: -ms-flexbox;
         	display: flex;
@@ -152,7 +158,7 @@
         body {
         	margin: 0;
         	background-color: #fff;
-        	color: #333333;
+        	color: #0d0d0d;
         	font-size: 16px;
         	font-family: "Playfair Display", serif;
         	line-height: 1.5;
@@ -431,7 +437,7 @@
         	font-family: "Noto sans";
         	src: url('../../assets/fonts/noto sans/noto-sans.eot') format('embedded-opentype'), url('../../assets/fonts/noto sans/noto-sans.svg') format('svg'), url('../../assets/fonts/noto sans/noto-sans.ttf') format('truetype'), url('../../assets/fonts/noto sans/noto-sans.woff') format('woff'), url('../../assets/fonts/noto sans/noto-sans.woff2') format('woff2'), url('../../assets/fonts/noto sans/noto-sans-italic.ttf') format('truetype'), url('../../assets/fonts/noto sans/noto-sans-italic.woff') format('woff'), url('../../assets/fonts/noto sans/noto-sans-italic.woff2') format('woff2'), url('../../assets/fonts/noto sans/noto-sans-bold.ttf') format('truetype'), url('../../assets/fonts/noto sans/noto-sans-bold.woff') format('woff'), url('../../assets/fonts/noto sans/noto-sans-bold.woff2') format('woff2'), url('../../assets/fonts/noto sans/noto-sans-bold-italic.ttf') format('truetype'), url('../../assets/fonts/noto sans/noto-sans-bold-italic.woff') format('woff'), url('../../assets/fonts/noto sans/noto-sans-bold-italic.woff2') format('woff2');
         }
-        .hdln__prim {
+        .hdln__prim,.hdln__prim--long {
         	line-height: .8;
         	color: #fff;
         	font-family: "WCManoNegraBta", cursive;
@@ -687,6 +693,11 @@
         	-ms-flex-direction: column;
         	flex-direction: column;
         }
+        .hdln__prim--long {
+        	font-size: 26.18px;
+        	font-size: 2.618rem;
+        	line-height: 1.5;
+        }
         .hdln__sec {
         	margin-top: 36px;
         	margin-top: 3.6rem;
@@ -729,7 +740,7 @@
         	margin-bottom: 1.8rem;
         	padding-bottom: 18px;
         	padding-bottom: 1.8rem;
-        	color: #555;
+        	color: #3c3c3c;
         	font-size: 28px;
         	font-size: 2.8rem;
         	line-height: 1;
@@ -748,7 +759,6 @@
         }
         .panel__hd--unstyled {
         	margin-bottom: 0;
-        	text-align: left;
         }
         .panel__hd--unstyled:after {
         	background: transparent;
@@ -1034,6 +1044,7 @@
         	margin-bottom: 1.2rem;
         	font-size: 26.18px;
         	font-size: 2.618rem;
+        	color: #3c3c3c;
         	text-decoration: underline;
         }
         .map {
@@ -1067,6 +1078,11 @@
         .contact__mod {
         	-ms-flex-preferred-size: 100%;
         	flex-basis: 100%;
+        }
+        .dotted-list {
+        	padding-left: 36px;
+        	padding-left: 3.6rem;
+        	list-style-type: square;
         }
         .hr {
         	height: 1px;
@@ -1422,27 +1438,22 @@
         	height: 100%;
         	background-image: linear-gradient(to bottom, hsla(0, 0%, 20%, 0.3) 0%, hsla(0, 0%, 20%, 0.379) 19%, hsla(0, 0%, 20%, 0.438) 34%, hsla(0, 0%, 20%, 0.485) 47%, hsla(0, 0%, 20%, 0.517) 56.5%, hsla(0, 0%, 20%, 0.542) 65%, hsla(0, 0%, 20%, 0.562) 73%, hsla(0, 0%, 20%, 0.578) 80.2%, hsla(0, 0%, 20%, 0.587) 86.1%, hsla(0, 0%, 20%, 0.594) 91%, hsla(0, 0%, 20%, 0.598) 95.2%, hsla(0, 0%, 20%, 0.599) 98.2%, hsla(0, 0%, 20%, 0.6) 100%);
         }
-        .img--row > .hdln__prim {
+        .img--row > .hdln__prim,.img--row > .hdln__prim--long {
         	position: absolute;
         	top: 50%;
         	left: 50%;
         	width: 100%;
-        	text-align: center;
         	-webkit-transform: translateX(-50%);
         	transform: translateX(-50%);
         }
         .img__mod {
         	margin-left: 3.5%;
         }
-        .flex__col--2-3 .img__mod {
-        	display: none;
-        }
-        .flex__col--2-3 .img__mod--min {
+        .img__mod--min {
         	padding: 8px;
         	padding: .8rem;
-        	border: 1px solid #c8c8c8;
-        	background-color: #eeeeee;
-        	line-height: 1;
+        	background-color: #333333;
+        	line-height: .8;
         }
         .img__gallery {
         	display: block;
@@ -1536,12 +1547,17 @@
         	flex-direction: column;
         }
         .node__item {
+        	position: relative;
         	margin-bottom: 36px;
         	margin-bottom: 3.6rem;
         }
         .node__item--hd {
         	font-size: 18px;
         	font-size: 1.8rem;
+        }
+        .node__item--desc {
+        	font-size: 14px;
+        	font-size: 1.4rem;
         }
         .folded {
         	position: relative;
@@ -1572,6 +1588,9 @@
         }
         .page-index {
         	padding-top: 0;
+        }
+        .heart {
+        	color: #dc143c;
         }
         .nav__container {
         	width: 100%;
@@ -1680,6 +1699,81 @@
         	background: url('../../assets/images/generic/mobile-head-deals.jpg') no-repeat;
         	background-size: cover;
         }
+        .page-deals .node {
+        	-webkit-box-orient: vertical;
+        	-webkit-box-direction: normal;
+        	-ms-flex-direction: column;
+        	flex-direction: column;
+        	-ms-flex-wrap: wrap;
+        	flex-wrap: wrap;
+        }
+        .page-deals .node__item {
+        	width: 90%;
+        	margin-left: auto;
+        	margin-right: auto;
+        	margin-bottom: 72px;
+        	margin-bottom: 7.2rem;
+        	max-width: 360px;
+        	max-width: 36rem;
+        }
+        .page-deals .node__item h2 {
+        	margin-top: 12px;
+        	margin-top: 1.2rem;
+        	font-size: 20px;
+        	font-size: 2rem;
+        	text-transform: uppercase;
+        }
+        .page-deals .node__item:after {
+        	width: "null";
+        	height: "null";
+        	position: absolute;
+        	left: 0;
+        	right: 0;
+        	bottom: -36px;
+        	bottom: -3.6rem;
+        	border-bottom: 1px solid #eeeeee;
+        }
+        .page-deals .node__item.borderless:after {
+        	border: 0;
+        }
+        .page-deals .img__mod--min {
+        	padding: 0;
+        }
+        .page-deals-offer .hdln__prim,.page-deals-offer .hdln__prim--long {
+        	font-size: 40px;
+        	font-size: 4rem;
+        	text-transform: lowercase;
+        	line-height: 1.2;
+        }
+        .page-deals-offer .terms small {
+        	font-family: "Noto Sans", sans-serif;
+        	font-size: 12px;
+        	font-size: 1.2rem;
+        }
+        .page-deals-offer .text-hdln {
+        	background: #333333;
+        }
+        .page-deals-offer .text-hdln h2 {
+        	padding: 24px 0;
+        	padding: 2.4rem 0;
+        	background: #90c;
+        }
+        .page-deals-offer .three-nights-for-2 {
+        	background: url('../../assets/images/deals/mobile-head-deal-342.jpg') no-repeat;
+        	background-size: cover;
+        }
+        .page-deals-offer .royal-spa-package {
+        	background: url('../../assets/images/deals/mobile-head-deal-royal-spa.jpg') no-repeat;
+        	background-size: cover;
+        }
+        .page-deals-offer .stay-for-2-cred-100 {
+        	background: url('../../assets/images/deals/mobile-head-deal-stay-for-2.jpg') no-repeat;
+        	background-size: cover;
+        }
+        .page-deals-offer .all-family-escape {
+        	background: url('../../assets/images/deals/mobile-head-deal-family.jpg') no-repeat;
+        	background-size: cover;
+        }
         .page-gym .img--row {
         	background: url('../../assets/images/generic/mobile-head-gym.jpg') no-repeat;
         	background-size: cover;
@@ -1782,9 +1876,12 @@
         		margin-left: 5%;
         		margin-top: 0;
         	}
-        	.hdln__prim {
+        	.hdln__prim,.hdln__prim--long {
         		font-size: 13.09rem;
         		line-height: 1;
+        	}
+        	.hdln__prim--long {
+        		font-size: 4.236rem !important;
         	}
         	.hdln__sec {
         		font-size: 2.634rem;
@@ -1971,6 +2068,8 @@
         	.icn__check.btn--hollow {
         		width: auto;
         		height: auto;
+        		padding: 1.2rem 2.4rem;
+        		margin-left: -4%;
         	}
         	.icn__wthr {
         		width: 9.6rem;
@@ -2002,7 +2101,7 @@
         	.img--row {
         		height: 40rem;
         	}
-        	.img--row > .hdln__prim {
+        	.img--row > .hdln__prim,.img--row > .hdln__prim--long {
         		-webkit-transform: translate(-50%, -25%);
         		transform: translate(-50%, -25%);
         	}
@@ -2081,6 +2180,32 @@
         	.page-deals .img--row {
         		background: url('../../assets/images/generic/head-deals.jpg') no-repeat;
         	}
+        	.page-deals .node {
+        		-webkit-box-orient: horizontal;
+        		-webkit-box-direction: normal;
+        		-ms-flex-direction: row;
+        		flex-direction: row;
+        	}
+        	.page-deals .node__item {
+        		width: 45%;
+        		margin-left: 2.4rem;
+        		margin-right: 0;
+        	}
+        	.page-deals-offer .text-hdln h2 {
+        		max-width: 70%;
+        	}
+        	.page-deals-offer .three-nights-for-2 {
+        		background: url('../../assets/images/deals/head-deal-342.jpg') no-repeat;
+        	}
+        	.page-deals-offer .royal-spa-package {
+        		background: url('../../assets/images/deals/head-deal-royal-spa.jpg') no-repeat;
+        	}
+        	.page-deals-offer .stay-for-2-cred-100 {
+        		background: url('../../assets/images/deals/head-deal-stay-for-2.jpg') no-repeat;
+        	}
+        	.page-deals-offer .all-family-escape {
+        		background: url('../../assets/images/deals/head-deal-family.jpg') no-repeat;
+        	}
         	.page-gym .img--row {
         		background: url('../../assets/images/generic/head-gym.jpg') no-repeat;
         	}
@@ -2134,6 +2259,9 @@
         	.flex__footer--social {
         		max-width: 60%;
         	}
+        	.hdln__prim--long {
+        		font-size: 5.6rem !important;
+        	}
         	.main--bckgrnd--inner {
         		max-width: 76.8rem;
         	}
@@ -2175,35 +2303,21 @@
         	.img__main--bckgrnd {
         		background: url('../../assets/images/generic/index-background-1920.jpg') no-repeat;
         	}
-        	.flex__col--2-3 .img__mod {
-        		display: -webkit-box;
-        		display: -ms-flexbox;
-        		display: flex;
-        		-webkit-box-flex: 1;
-        		-ms-flex: 1;
-        		flex: 1;
-        		-webkit-box-orient: horizontal;
-        		-webkit-box-direction: normal;
-        		-ms-flex-direction: row;
-        		flex-direction: row;
-        		flex-direction: column;
-        		-ms-flex-pack: distribute;
-        		justify-content: space-around;
-        		max-width: 28rem;
-        	}
-        	.flex__col--2-3 .img__mod > li {
-        		-ms-flex-item-align: end;
-        		align-self: flex-end;
-        	}
         	.img__gallery {
         		max-width: 50%;
+        	}
+        	.page-deals .node__item {
+        		width: 30%;
+        	}
+        	.page-deals .node__item:nth-child(3n + 1) {
+        		margin-left: 0;
         	}
         }
         
         
         @media (max-width: 480px) {
         
-        	.hdln__prim {
+        	.hdln__prim,.hdln__prim--long {
         		font-size: 6.4rem;
         	}
         	.panel__hd,.panel__hd--unstyled {
@@ -2261,8 +2375,16 @@
         		background: url('../../assets/images/generic/index-background-768-land.jpg') no-repeat;
         		background-size: cover;
         	}
-        	.img__main--bckgrnd .hdln__prim {
+        	.img__main--bckgrnd .hdln__prim,.img__main--bckgrnd .hdln__prim--long {
         		font-size: 10vmax;
+        	}
+        }
+        
+        
+        @media (min-width: 769px) and (max-width: 1199px) {
+        
+        	.page-deals .node__item:nth-child(2n + 1) {
+        		margin-left: 0;
         	}
         }
         
@@ -2287,14 +2409,15 @@
 
                     <!-- Submenu Content -->
                     <div class="layer--items">
-                        <a href="services/reservations.html" class="menu__item layer__item--lvl2">Reservations</a>
-                        <a href="services/gym.html" class="menu__item layer__item--lvl2">Gym</a>
-                        <a href="services/spa.html" class="menu__item layer__item--lvl2">Spa</a>
+                        <a href="/services/gym.html" class="menu__item layer__item--lvl2">Gym</a>
+                        <a href="/services/spa.html" class="menu__item layer__item--lvl2">Spa</a>
                     </div>
                 </div>
             </label>
-            <a href="about.html" class="menu__item">Our Company</a>
-            <a href="contact.html" class="menu__item">Contact</a>
+            <a href="/reservations/deals.html" class="menu__item">Deals</a>
+            <a href="/reservations/booking.html" class="menu__item">Booking</a>
+            <a href="/about.html" class="menu__item">Our Company</a>
+            <a href="/contact.html" class="menu__item">Contact</a>
         </div>
     </form>
 </amp-sidebar>
@@ -2312,7 +2435,7 @@
 
                 <!-- Right Navigation -->
                 <div class="btn btn__primary btn--hollow icn__check">
-                    <a href="reservations/deals.html">Deals</a>
+                    <a href="/reservations/deals.html">Deals</a>
                 </div>
             </div>
         </section>
@@ -2322,7 +2445,7 @@
 <!-- Top Row Image -->
 <!-- Top Row Image -->
 <div class="img--row">
-    <h2 class="hdln__prim">About Us</h2>
+    <h2 class="hdln__prim center">About Us</h2>
 </div>
 
 <section class="grid panel--padded">
@@ -2417,7 +2540,7 @@
             <div class="footer__item">
                 <div class="flex">
                     <i class="icn__contact tel"></i>
-                    <span>+233 545 727 374</span>
+                    <span>+233 544 524 830</span>
                 </div>
 
                 <div class="flex">
@@ -2451,7 +2574,7 @@
             </small>
 
             <small>
-                <a href="legal/privacy.html">Privacy Policy</a>
+                <a href="/legal/privacy.html">Privacy Policy</a>
             </small>
         </div>
     </section>

@@ -41,6 +41,19 @@
   text-align: right;
 }
 
+
+.left {
+  @extend %align-left;
+}
+
+.right {
+  @extend %align-right
+}
+
+.center {
+  @extend %align-center;
+}
+
 %b-color-primary {
   background-color: $color-primary;
 }

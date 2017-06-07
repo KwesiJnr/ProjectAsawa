@@ -18,6 +18,20 @@
     @include breakpoint(max-width 480px) {
       font-size: 6.4rem;
     }
+
+    @include m(long) {
+      @extend .hdln__prim;
+      font-size: 2.618rem;
+      line-height: 1.5;
+
+      @include media-q('medium') {
+        font-size: 4.236rem !important;
+      }
+
+      @include media-q('large') {
+        font-size: 5.6rem !important;
+      }
+    }
   }
 
   @include e(sec) {

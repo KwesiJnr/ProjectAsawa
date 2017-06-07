@@ -83,12 +83,8 @@ var
         removeUnused: {
             html: htmlpathout,
             ignore: ['[class*="amphtml-sidebar-mask"]']
-        },
-
-        urlFix: {
-            in: dest + 'html/services/**/*.html',
-            out: dest + 'html/services/**/*.html'
         }
+
     },
 
     // Images
@@ -232,12 +228,6 @@ gulp.task('sass', function () {
     }
 });
 
-// #URL Fixer
-gulp.task('replace', function () {
-    gulp.src(htmldir.out + '/services/**/*.html')
-        .pipe(replace('services/', ''))
-        .pipe(gulp.dest(htmldir.out + '/services'));
-});
 
 // #BrowserSync
 gulp.task('browsersync', function () {
