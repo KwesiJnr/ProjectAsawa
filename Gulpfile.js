@@ -8,6 +8,7 @@ var
     cache = require('gulp-cache'),
     cached = require('gulp-cached'),
     cachebust = require('gulp-cache-bust'),
+    copy = require('gulp-copy'),
     del = require('del'),
     concat = require('gulp-concat'),
     gradientease = require('postcss-easing-gradients'),
@@ -36,7 +37,6 @@ var
     filesize = require('gulp-size'),
     uglify = require('gulp-uglify'),
     uncss = require('gulp-uncss');
-
 
 
 // Directory
@@ -72,6 +72,7 @@ var
         out: dest + 'html',
         watch: [source + 'html/**/*', source + 'templates/**/*'],
         rel: [dest + 'html/**/*'],
+        phpOut: dest + 'php',
 
         processOpts: {
             context: {
@@ -144,15 +145,22 @@ var
 
     // BrowserSync
     bsOpts = {
-        server: {
-            baseDir: [dest, dest + 'html'],
-            index: 'index.html'
-        },
+        // server: {
+        //     baseDir: [dest, dest + 'html'],
+        //     index: 'index.html'
+        // },
+        proxy: '127.0.0.1:8010',
+        port: 8888,
         open: false,
-        notify: true,
-        browser: 'chrome',
-        reloadDelay: 500,
-        online: false
+        //reloadDelay: 500,
+        //online: false
+    },
+
+    // PHP Options
+    phpOpts = {
+        base: dest,
+        port: 8010,
+        keepalive: true
     },
 
     // Fonts
@@ -193,6 +201,15 @@ gulp.task('html', ['sass'], function () {
         .pipe(gulp.dest(htmldir.out));
 });
 
+// #PHPFIles
+gulp.task('php-files', ['html'], function () {
+    gulp.src(dest + 'html/**/*')
+        .pipe(newer(htmldir.phpOut))
+        .pipe(rename({extname: '.php'}))
+        .pipe(filesize({title: 'Files renamed to PHP'}))
+        .pipe(gulp.dest(dest + 'php'));
+});
+
 //#CSS
 gulp.task('sass', function () {
     var files = gulp.src(cssdir.in);
@@ -229,30 +246,16 @@ gulp.task('sass', function () {
     }
 });
 
+// #PHPServer
+gulp.task('connect-server', function () {
+    php.server(phpOpts);
+});
 
 // #BrowserSync
-gulp.task('browsersync', function () {
+gulp.task('browsersync', ['connect-server'], function () {
     browsersync(bsOpts);
 });
 
-gulp.task('php-proxy', function () {
-    php.server({base: dest, port: 8010, keepalive: true})
-});
-
-gulp.task('bull', function () {
-    browsersync({
-        startPath: '/index.php',
-        proxy: 'test.dev',
-        open: false,
-        notify: true
-    })
-});
-
-gulp.task('runphp', ['bull', 'wach']);
-
-gulp.task('wach', function () {
-    gulp.watch(dest + '**/*.php').on('change', reload);
-})
 
 // #Fonts
 gulp.task('fonts', function () {
@@ -286,15 +289,15 @@ gulp.task('clean', ['clear'], function () {
 // ==========================================================================
 // #Default Tasks
 // ==========================================================================
-gulp.task('default', ['html', 'sass', 'imagemin', 'fonts', 'browsersync'], function () {
+gulp.task('default', ['html', 'sass', 'imagemin', 'php-files', 'fonts', 'browsersync'], function () {
     // HTML task + watch
-    gulp.watch(htmldir.watch, ['html', reload]);
+    gulp.watch(htmldir.watch, ['html', 'php-files', reload]);
 
     // Font_Watch
     gulp.watch(fontdir.in, ['fonts']);
 
-    //CSS Watch and include into html (compromise for browserSync CSS Injection
-    gulp.watch(cssdir.watch, ['sass', 'html', reload]);
+    //CSS Watch and include into HTML && PHP (compromise for browserSync CSS Injection
+    gulp.watch(cssdir.watch, ['sass', 'html', 'php-files', reload]);
 
     // Image_Watch
     gulp.watch(imagedir.in, ['imagemin']);

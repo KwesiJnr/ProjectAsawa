@@ -1,5 +1,5 @@
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-<link rel="canonical" href="index.html" />
+<link rel="canonical" href="index.php" />
 <script type="application/ld+json">
 {
 "@context": "http://schema.org",
