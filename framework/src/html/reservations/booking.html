@@ -1,7 +1,16 @@
 <!DOCTYPE html>
-<html amp lang="en">
+<html lang="en">
 <head>
-    <!-- @include ../../templates/_meta.html-->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
+
+    <meta name="description"
+          content="Asawa Resort, world-leading resort with top-notch service and state-of-the-art equipment to make your stay sensational. Ghana's finest!">
+
+    <!-- inject:css -->
+    <!-- endinject -->
 
     <title>Booking | Asawa Resort
     </title>
@@ -14,8 +23,9 @@
 </div>
 <!-- TODO: create non-AMP version of site for booking page-->
 
+
 <section class="grid panel--padded">
-    <form action-xhr="https://formspree.io/your@email.com" target="_blank" method="post"
+    <form method="post" action-xhr="form-xhr.php"
           class="form__rsrv form__sidebar">
         <h2 class="form__rsrv--hd">Book Now</h2>
 
@@ -86,9 +96,7 @@
                     </small>
                 </div>
 
-                <!-- Admin Features -->
-                <input type="hidden" name="_next" value="/appreciation/reservations.html"/>
-                <input type="text" name="_gotcha" class="form--gotcha"/> <!-- Gotcha for SpamBots -->
+
             </div>
         </div>
     </form>

@@ -12,6 +12,7 @@ var
     concat = require('gulp-concat'),
     gradientease = require('postcss-easing-gradients'),
     ignore = require('gulp-ignore'),
+    inject = require('gulp-inject'),
     htmlclean = require('gulp-htmlclean'),
     imagemin = require('gulp-imagemin'),
     imacss = require('gulp-imacss'),
@@ -37,7 +38,6 @@ var
     uncss = require('gulp-uncss');
 
 
-
 // Directory
 var
     devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production'),
@@ -45,8 +45,10 @@ var
     source = 'framework/src/',
     dest = 'framework/build/',
     scsspath = source + 'stylesheets/scss/',
-    csspath = dest + 'stylesheets/css',
-    htmlpathout = [dest + 'html/index.html', dest + 'services/**/*'],
+    csspath = dest + 'stylesheets/css/',
+    htmlpathout = dest + 'html/**/*',
+    noampin = dest + 'html' + ['/reservations/*.html'],
+    noampout = noampin.slice(0, -6),
 
 
     // Pug
@@ -71,6 +73,7 @@ var
         out: dest + 'html',
         watch: [source + 'html/**/*', source + 'templates/**/*'],
         rel: [dest + 'html/**/*'],
+
 
         processOpts: {
             context: {
@@ -174,6 +177,12 @@ gulp.task('pug', function () {
         .pipe(gulp.dest(jade.out));
 });
 
+// #Inject
+gulp.task('cssServe', ['html'], function () {
+    return gulp.src(noampin)
+        .pipe(inject(gulp.src(csspath + '*.css', {read: false}), {relative: true}))
+        .pipe(gulp.dest(noampout))
+});
 
 // #HTML
 gulp.task('html', ['sass'], function () {
@@ -267,9 +276,10 @@ gulp.task('clean', ['clear'], function () {
 // ==========================================================================
 // #Default Tasks
 // ==========================================================================
-gulp.task('default', ['html', 'sass', 'imagemin', 'fonts', 'browsersync'], function () {
+gulp.task('default', ['html', 'sass', 'imagemin', 'fonts', 'browsersync', 'cssServe'], function () {
     // HTML task + watch
-    gulp.watch(htmldir.watch, ['html', reload]);
+    gulp.watch(htmldir.watch, ['html', 'cssServe', reload]);
+
 
     // Font_Watch
     gulp.watch(fontdir.in, ['fonts']);

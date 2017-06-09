@@ -3,12 +3,19 @@
     <button>To Top</button>
 </a>
 
+<amp-user-notification id="enable-javascript" layout="nodisplay">
+    <div class="msg">
+        <p class="msg__enable-javascript">For best site experience, please consider enabling Javascript in your browser</p>
+        <button on="tap:enable-javascript.dismiss" class="btn btn--cta">Dismiss</button>
+        <a href="http://www.enable-javascript.com/" target="_blank">Help me</a>
+    </div>
+</amp-user-notification>
 
 <footer class="footer">
     <section class="footer__prim">
         <div class="grid">
             <!-- NewsLetter -->
-            <form action="/" target="_top" class="form footer__item">
+            <form action="/" method="post" target="_top" class="form footer__item">
                 <h3 class="footer__item--hd">Join Our Mailing List</h3>
                 <label for="nwsl_usr_email" class="srt">Email Address</label>
                 <input type="email" id="nwsl_usr_email" class="form--input" placeholder="E-mail e.g. example@asawa.com">
