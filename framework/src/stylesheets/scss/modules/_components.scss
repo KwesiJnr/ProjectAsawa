@@ -207,10 +207,50 @@
 }
 
 
+// ==========================================================================
+// #NOTIFICATION
+// ==========================================================================
+.notification {
+  @include e(wide) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1.2rem;
+    background: $white;
+    font-size: 1.4rem;
+
+
+    @include media-q('medium') {
+      flex-direction: row;
+    }
+
+    button {
+      margin: 1.2rem 0;
+
+      @include media-q('medium') {
+        margin: 0 1.2rem;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.25;
+    }
+  }
+}
+
+amp-user-notification {
+  box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .1);
+}
+
 
 // ==========================================================================
 // #MULTIBOX
 // ==========================================================================
+
+
 
 
 // ==========================================================================

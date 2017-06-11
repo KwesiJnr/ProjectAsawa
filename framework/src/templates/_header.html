@@ -11,7 +11,7 @@
                     <div class="btn__prev">Back</div>
                     <button type="reset" class="icn__close" on="tap:sidebar.close"></button>
 
-                    <!-- Submenu Content -->
+                    <!-- Submenu Content (Services) -->
                     <div class="layer--items">
                         <a href="/services/gym.html" class="menu__item layer__item--lvl2">Gym</a>
                         <a href="/services/spa.html" class="menu__item layer__item--lvl2">Spa</a>
@@ -20,6 +20,21 @@
             </label>
             <a href="/reservations/deals.html" class="menu__item">Deals</a>
             <a href="/reservations/booking.html" class="menu__item">Booking</a>
+
+            <label class="menu__item item__layer--1 has--sub-lvl"><input type="checkbox">Pricing
+                <div class="submenu dynamic__layer secondary">
+                    <!-- Submenu Back Key -->
+                    <div class="btn__prev">Back</div>
+                    <button type="reset" class="icn__close" on="tap:sidebar.close"></button>
+
+                    <!-- Submenu Content (Pricing) -->
+                    <div class="layer--items">
+                        <a href="/pricing/rates.html" class="menu__item layer__item--lvl2">Rates</a>
+                        <a href="/pricing/compare.html" class="menu__item layer__item--lvl2">Compare</a>
+                    </div>
+                </div>
+            </label>
+
             <a href="/about.html" class="menu__item">Our Company</a>
             <a href="/contact.html" class="menu__item">Contact</a>
         </div>
@@ -38,7 +53,7 @@
                 <button class="icn__hamburger" id="menu__toggle" on="tap:sidebar.toggle" role="button"><span class="">Menu</span></button>
 
                 <!-- Right Navigation -->
-                <div class="btn btn__primary btn--hollow icn__check">
+                <div class="btn btn__primary btn--hollow icn__deals">
                     <a href="/reservations/deals.html">Deals</a>
                 </div>
             </div>

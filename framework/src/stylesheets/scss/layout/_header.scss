@@ -11,7 +11,7 @@
   width: 100%;
   margin: 0;
   background-color: $white;
-  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 .4rem .2rem rgba(0, 0, 0, .1);
 
   @include media-q('medium') {
     position: absolute;

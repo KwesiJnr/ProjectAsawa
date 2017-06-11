@@ -1,0 +1,13 @@
+// ==========================================================================
+// #Rates Page
+// ==========================================================================
+.page-rates {
+  .img--row {
+    background: image-url('generic/mobile-head-rates.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-q('medium') {
+      background: image-url('generic/head-rates.jpg') no-repeat;
+    }
+  }
+}

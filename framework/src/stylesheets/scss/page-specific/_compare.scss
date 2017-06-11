@@ -1,0 +1,14 @@
+// ==========================================================================
+// #Compare Page
+// ==========================================================================
+
+.page-compare {
+  .img--row {
+    background: image-url('generic/mobile-head-compare.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-q('medium') {
+      background: image-url('generic/head-compare.jpg') no-repeat;
+    }
+  }
+}

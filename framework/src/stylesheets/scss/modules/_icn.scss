@@ -31,6 +31,8 @@
 
     @include media-q('medium') {
       background: image-url('icons/icon-hamburger.svg') no-repeat center;
+      width: 4rem;
+      height: 4rem;
     }
 
     // Span
@@ -65,9 +67,9 @@
   }
 
   // ==========================================================================
-  // #Check
+  // #Deals
   // ==========================================================================
-  @include e(check) {
+  @include e(deals) {
     width: 2.4rem;
     height: 2.4rem;
 
@@ -222,6 +224,69 @@
       color: $white;
     }
   }
+
+
+  // ==========================================================================
+  // #Check and #Uncheck
+  // ==========================================================================
+  @include e(compare) {
+    @extend %icn-sm;
+
+    width: 2rem;
+    height: 2rem;
+
+    cursor: default;
+
+    &.check {
+      background: image-url('icons/icon-tick.svg') no-repeat center;
+    }
+
+    &.uncheck {
+      background: image-url('icons/icon-untick.svg') no-repeat center;
+    }
+  }
+
+  // ==========================================================================
+  // #SPECIAL
+  // ==========================================================================
+  @include e(special) {
+    @extend %icn-md;
+
+    width: 4rem;
+    height: 4rem;
+
+    @include media-q('medium') {
+      width: 5.6rem;
+      height: 5.6rem;
+    }
+    cursor: default;
+
+
+    &.terrace {
+      background: image-url('icons/special/icon-terrace.svg') no-repeat center;
+    }
+
+    &.services {
+      background: image-url('icons/special/icon-service.svg') no-repeat center;
+    }
+
+    &.parasol {
+      background: image-url('icons/special/icon-parasol.svg') no-repeat center;
+    }
+
+    &.kitchen {
+      background: image-url('icons/special/icon-kitchen.svg') no-repeat center;
+    }
+
+    &.bedroom {
+      background: image-url('icons/special/icon-bedroom.svg') no-repeat center;
+    }
+
+    &.bathroom {
+      background: image-url('icons/special/icon-bathroom.svg') no-repeat center;
+    }
+  }
+
 
   // ==========================================================================
   // Icon Modal

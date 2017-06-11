@@ -94,18 +94,16 @@
 }
 
 %icn-md {
+  @extend %icn-sm;
   width: 3.4rem;
   height: 3.4rem;
-  border: 0;
-}
 
-%icn-sm,
-%icn-md {
   @include media-q('medium') {
     width: 4rem;
     height: 4rem;
   }
 }
+
 
 // Animated Background
 %background-animation {
