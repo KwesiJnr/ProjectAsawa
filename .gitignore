@@ -12,3 +12,4 @@ config.rb
 /framework/build/assets/fonts/
 /framework/build/assets/images/
 /bower_components/
+/framework/build/

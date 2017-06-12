@@ -72,11 +72,12 @@
   @include e(deals) {
     width: 2.4rem;
     height: 2.4rem;
+    color: transparent;
 
 
     @include media-q(medium) {
       border: 1px solid $white;
-      //background-image: none;
+      color: $white;
 
       a {
         display: inline-block;
@@ -99,8 +100,9 @@
       }
     }
 
-    a {
-      display: none;
+    &:hover {
+      background: $white;
+      color: $black;
     }
   }
 

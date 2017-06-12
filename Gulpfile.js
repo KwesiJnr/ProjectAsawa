@@ -16,8 +16,10 @@ var
     htmlclean = require('gulp-htmlclean'),
     imagemin = require('gulp-imagemin'),
     imacss = require('gulp-imacss'),
+    inline = require('gulp-inline'),
     nano = require('gulp-cssnano'),
     lazypipe = require('lazypipe'),
+    minifyHTML = require('gulp-htmlmin'),
     newer = require('gulp-newer'),
     pkg = require('./package.json'),
     please = require('gulp-pleeease'),
@@ -45,8 +47,9 @@ var
     source = 'framework/src/',
     dest = 'framework/build/',
     scsspath = source + 'stylesheets/scss/',
+    htmlpath = source + 'html/',
     csspath = dest + 'stylesheets/css/',
-    htmlpathout = dest + 'html/**/*',
+    htmlpathout = dest + 'html/**/*.html',
     noampin = dest + 'html' + ['/reservations/*.html'],
     noampout = noampin.slice(0, -6),
 
@@ -69,9 +72,9 @@ var
 
     // HTML
     htmldir = {
-        in: source + 'html/**/*',
+        in: source + 'html/**/*.html',
         out: dest + 'html',
-        watch: [source + 'html/**/*', source + 'templates/**/*'],
+        watch: [source + 'html/**/*.html', source + 'templates/**/*'],
         rel: [dest + 'html/**/*'],
 
 
@@ -84,8 +87,14 @@ var
         },
 
         removeUnused: {
-            html: htmlpathout,
+            html: [htmlpathout],
             ignore: ['[class*="amphtml-sidebar-mask"]']
+        },
+
+        minifyOpts: {
+            collapseWhitespace: true,
+            removeComments: true,
+            removeEmptyAttributes: true,
         }
 
     },
@@ -131,7 +140,7 @@ var
             minDir: csspath + 'min',
 
             options: {
-                autoprefixer: {browsers: ['last 2 versions', '> 2%']},
+                autoprefixer: {browsers: ['last 3 versions', '> 2%']},
                 rem: ['16px'],
                 pseudoElements: true,
                 mqpacker: true,
@@ -152,9 +161,7 @@ var
         },
         open: false,
         notify: true,
-        browser: 'chrome',
-        reloadDelay: 500,
-        online: false
+        reloadDelay: 200
     },
 
     // Fonts
@@ -178,23 +185,68 @@ gulp.task('pug', function () {
 });
 
 // #Inject
-gulp.task('cssServe', ['html'], function () {
-    return gulp.src(noampin)
-        .pipe(inject(gulp.src(csspath + '*.css', {read: false}), {relative: true}))
-        .pipe(gulp.dest(noampout))
+gulp.task('cssServe', ['sass'], function () {
+    source = gulp.src(noampin);
+    if (devBuild) {
+        source
+            .pipe(inject(gulp.src([csspath + 'styles.css'], {read: false}), {relative: true, removeTags: true}))
+            .pipe(gulp.dest(noampout))
+    } else {
+        source
+            .pipe(inject(gulp.src([csspath + 'styles.min.css'], {read: false}), {relative: true, removeTags: true}))
+            .pipe(gulp.dest(noampout))
+    }
 });
 
-// #HTML
-gulp.task('html', ['sass'], function () {
-    var pages = gulp.src(htmldir.in)
-        .pipe(preprocess(htmldir.processOpts));
+//#unCSS
+gulp.task('cocktail', ['sass'], function () {
+    return gulp.src(csspath + '*.min.css')
+        .pipe(uncss(htmldir.removeUnused))
+        .pipe(gulp.dest(cssdir.out));
+});
 
+//#inline
+gulp.task('inlineCSS', ['sass'], function () {
+    var source = gulp.src(htmlpathout);
+    if (devBuild) {
+        source.pipe(inject(
+            gulp.src([csspath + 'styles.css']),
+            {
+                name: 'styles',
+                transform: function (filePath, file) {
+                    return file.contents.toString('utf8')
+                },
+                removeTags: true
+            }))
+            .pipe(gulp.dest(htmldir.out))
+    } else {
+        source.pipe(inject(
+            gulp.src([csspath + 'styles.min.css']),
+            {
+                name: 'styles.min',
+                transform: function (filePath, file) {
+                    return file.contents.toString('utf8')
+                },
+                removeTags: true
+            }))
+            .pipe(gulp.dest(htmldir.out))
+    }
+
+});
+
+
+// #HTML
+gulp.task('html', function () {
+    var pages = gulp.src([htmldir.in]);
+    pages
+        .pipe(plumber())
+        .pipe(preprocess(htmldir.processOpts));
 
     if (!devBuild) {
         pages = pages
             .pipe(filesize({title: 'HTML size in:'}))
-            .pipe(htmlclean())
-            .pipe(filesize({title: 'HTML size out:'}));
+            //.pipe(htmlclean())
+            .pipe(filesize({title: 'HTML size out:'}))
     }
     return pages
         .pipe(cachebust())
@@ -202,20 +254,20 @@ gulp.task('html', ['sass'], function () {
 });
 
 //#CSS
-gulp.task('sass', function () {
+gulp.task('sass', ['html'], function () {
     var files = gulp.src(cssdir.in);
     files = files
         .pipe(sass(cssdir.sassOpts))
         .pipe(postcss([gradientease()]))
         .pipe(filesize({title: 'Applying Automaton:'}))
         .pipe(please(cssdir.automaton.options))
-        .pipe(filesize({title: 'CSS file-size after Automaton:'}))
-        // .pipe(filesize({title: 'Removing unused css:'}))
-        // .pipe(uncss(htmldir.removeUnused))
-        // .pipe(filesize({title: 'Removed unused complete. File size is now:'}))
+        .pipe(filesize({title: 'CSS filesize after Automaton:'}))
         .pipe(filesize({title: 'Applying purge...'}))
         .pipe(purge())
-        .pipe(filesize({title: 'CSS file-size after purge:'}));
+        .pipe(filesize({title: 'CSS filesize after uncss:'}))
+        .pipe(filesize({title: 'Applying purge...'}))
+        .pipe(uncss(htmldir.removeUnused))
+        .pipe(filesize({title: 'CSS filesize after uncss:'}));
 
 
     // rename on minify
@@ -226,14 +278,11 @@ gulp.task('sass', function () {
             .pipe(postcss([smacss(cssdir.sortOrder)]))
             .pipe(filesize({title: 'Applying nano:'}))
             .pipe(nano())
-            .pipe(filesize({title: 'CSS file-size after nano:'}))
+            .pipe(filesize({title: 'CSS filesize after nano:'}))
             .pipe(gulp.dest(cssdir.out))
-            .pipe(browsersync.stream())
     } else {
         return files
             .pipe(gulp.dest(cssdir.out))
-            .pipe(browsersync.stream())
-
     }
 });
 
@@ -276,16 +325,16 @@ gulp.task('clean', ['clear'], function () {
 // ==========================================================================
 // #Default Tasks
 // ==========================================================================
-gulp.task('default', ['html', 'sass', 'imagemin', 'fonts', 'browsersync', 'cssServe'], function () {
+gulp.task('default', ['html', 'sass', 'imagemin', 'fonts', 'browsersync', 'inlineCSS', 'cssServe'], function () {
     // HTML task + watch
-    gulp.watch(htmldir.watch, ['html', 'cssServe', reload]);
+    gulp.watch(htmldir.watch, ['html', reload]);
 
 
     // Font_Watch
     gulp.watch(fontdir.in, ['fonts']);
 
     //CSS Watch and include into html (compromise for browserSync CSS Injection
-    gulp.watch(cssdir.watch, ['sass', 'html', reload]);
+    gulp.watch(cssdir.watch, ['sass', 'html', 'inlineCSS', 'cssServe', reload]);
 
     // Image_Watch
     gulp.watch(imagedir.in, ['imagemin']);

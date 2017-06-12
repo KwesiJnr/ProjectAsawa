@@ -5,7 +5,7 @@
 @import "mixins";
 
 // Screen reader text
-.srt {
+%srt {
   position: absolute;
   width: 1px;
   height: 1px;
