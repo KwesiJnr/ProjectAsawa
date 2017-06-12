@@ -13,3 +13,4 @@ config.rb
 /framework/build/assets/images/
 /bower_components/
 /framework/build/
+/Emergency_patch_to_gulp_html_watch_task.patch

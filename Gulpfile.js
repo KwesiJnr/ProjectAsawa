@@ -327,7 +327,7 @@ gulp.task('clean', ['clear'], function () {
 // ==========================================================================
 gulp.task('default', ['html', 'sass', 'imagemin', 'fonts', 'browsersync', 'inlineCSS', 'cssServe'], function () {
     // HTML task + watch
-    gulp.watch(htmldir.watch, ['html', reload]);
+    gulp.watch(htmldir.watch, ['html', 'cssServe', 'inlineCSS', reload]);
 
 
     // Font_Watch
