@@ -144,6 +144,33 @@
 // ==========================================================================
 // Folded Elements (Accordion )
 // ==========================================================================
+.show-more {
+  @include p-el(before) {
+    left: 15%;
+    content: '\25b6';
+    font-size: 1.4rem;
+    line-height: 1;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.show-less {
+  @extend .show-more;
+
+  @include p-el(before) {
+    content: '\25bc';
+  }
+}
+amp-accordion {
+  section[expanded] h2 .show-more {
+    display: none;
+  }
+
+  section:not([expanded]) h2 .show-less {
+    display: none;
+  }
+}
 
 .folded {
   position: relative;
@@ -159,21 +186,16 @@
 
     margin-top: 1.2rem;
     padding: 1.2rem;
-    border: 0;
-  }
-
-  section[expanded] h2 .show-more {
-    display: none;
-  }
-
-  section:not([expanded]) h2 .show-less {
-    display: none;
+    border: 2px $color-accent solid;
+    box-shadow: 0 0 .4rem .2rem rgba(0, 0, 0, .1);
   }
 
   @include media-q('medium') {
     display: none;
   }
 }
+
+
 
 // ==========================================================================
 // Unfolded Elements

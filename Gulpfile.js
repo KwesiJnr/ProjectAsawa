@@ -88,7 +88,8 @@ var
 
         removeUnused: {
             html: [htmlpathout],
-            ignore: ['[class*="amphtml-sidebar-mask"]']
+            ignore: ['[class*="amphtml-sidebar-mask"]', 'amp-accordion section[expanded] h2 .show-more',
+                'amp-accordion section:not([expanded]) h2 .show-less']
         },
 
         minifyOpts: {
@@ -245,7 +246,7 @@ gulp.task('html', function () {
     if (!devBuild) {
         pages = pages
             .pipe(filesize({title: 'HTML size in:'}))
-            //.pipe(htmlclean())
+            .pipe(htmlclean())
             .pipe(filesize({title: 'HTML size out:'}))
     }
     return pages
@@ -259,13 +260,13 @@ gulp.task('sass', ['html'], function () {
     files = files
         .pipe(sass(cssdir.sassOpts))
         .pipe(postcss([gradientease()]))
+        .pipe(filesize({title: 'Applying purge...'}))
+        .pipe(purge())
+        .pipe(filesize({title: 'File size after purge:'}))
         .pipe(filesize({title: 'Applying Automaton:'}))
         .pipe(please(cssdir.automaton.options))
         .pipe(filesize({title: 'CSS filesize after Automaton:'}))
-        .pipe(filesize({title: 'Applying purge...'}))
-        .pipe(purge())
-        .pipe(filesize({title: 'CSS filesize after uncss:'}))
-        .pipe(filesize({title: 'Applying purge...'}))
+        .pipe(filesize({title: 'CSS filesize before uncss:'}))
         .pipe(uncss(htmldir.removeUnused))
         .pipe(filesize({title: 'CSS filesize after uncss:'}));
 
@@ -275,10 +276,12 @@ gulp.task('sass', ['html'], function () {
         return files
             .pipe(cached(cssdir.cachename))
             .pipe(rename(cssdir.mini))
-            .pipe(postcss([smacss(cssdir.sortOrder)]))
             .pipe(filesize({title: 'Applying nano:'}))
             .pipe(nano())
             .pipe(filesize({title: 'CSS filesize after nano:'}))
+            .pipe(filesize({title: 'Sorting to SMACSS:'}))
+            .pipe(postcss([smacss(cssdir.sortOrder)]))
+            .pipe(filesize({title: 'SMACSS applied!'}))
             .pipe(gulp.dest(cssdir.out))
     } else {
         return files
