@@ -79,7 +79,6 @@
   background-color: transparent;
   color: $white;
 
-
   // Heading
   @include m(heading) {
     @extend %align-center;
@@ -206,7 +205,6 @@
   list-style-type: square;
 }
 
-
 // ==========================================================================
 // #NOTIFICATION
 // ==========================================================================
@@ -220,7 +218,6 @@
     padding: 1.2rem;
     background: $white;
     font-size: 1.4rem;
-
 
     @include media-q('medium') {
       flex-direction: row;
@@ -245,21 +242,56 @@ amp-user-notification {
   box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .1);
 }
 
-
 // ==========================================================================
-// #MULTIBOX
-// ==========================================================================
-
-
-
-
-// ==========================================================================
-// MISCELLANEOUS
+// #AMP Components Hack
 // ==========================================================================
 amp-accordion {
+  // Sidebar
   .sidebar {
     @include media-q('medium') {
       display: none;
     }
   }
+
+  // Table
+  .table__sub-heading {
+    border: 0;
+    margin: 2.4rem auto 0;
+
+    @include media-q('medium') {
+      margin: 4.8rem auto 0;
+    }
+  }
+
+  table tr {
+    &:after {
+      content: '.';
+      color: transparent;
+    }
+
+    &.accordion-table-controller {
+      @include breakpoint(max-width 480px) {
+        display: none;
+      }
+
+      display: table;
+      position: relative;
+      border-bottom: 0;
+      color: transparent;
+
+      @include p-el(before) {
+        width: 400%;
+        height: 100%;
+        background-color: palette(grey, xx-light);
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// MISCELLANEOUS
+// ==========================================================================
+amp-accordion {
+
 }

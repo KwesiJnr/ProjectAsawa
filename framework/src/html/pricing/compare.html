@@ -2,6 +2,7 @@
 <html amp lang="en">
 <head>
     <!-- @include ../../templates/_meta.html-->
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
     <title>Compare Accommodations | Asawa Resort
     </title>
@@ -12,370 +13,433 @@
     <h2 class="hdln__prim center">Plan Comparison</h2>
 </div>
 
-<section class="grid panel--padded">
-    <h2 class="panel__hd">Compare Accommodations</h2>
-    <div class="panel__desc">
-        <p>Check and compare rates to ensure you get the best possible deal, suitable for you.</p>
+<section class="grid">
+    <div class="flex__grid--dual panel--padded">
+        <!-- @include ../../templates/_sidebar.html-->
 
-        <br><br>
-    </div>
+        <div class="flex__col--2-3">
+            <table class="table">
+                <caption class="panel__hd">Comparison Guide</caption>
+
+                <!-- Table Head -->
+                <thead>
+                <tr class="table--heading">
+                    <th colspan="4" class="table__head--prim">Comparison
+                    </th>
+                </tr>
+
+                <tr class="table--heading">
+                    <th scope="colgroup" class="table__head--sec">Basic</th>
+                    <th scope="colgroup" class="table__head--sec">Standard</th>
+                    <th scope="colgroup" class="table__head--sec">Premium</th>
+                </tr>
+                </thead>
+
+
+            </table>
+
+            <!-- Services -->
+            <amp-accordion>
+                <section>
+                    <h2 class="table__sub-heading">
+                        <span class="show-more"></span>
+                        <span class="show-less"></span>
+                        Services</h2>
+                    <table class="table">
+                        <tr>
+                            <td>TV</td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+
+                        </tr>
+                        <!-- item 1 -->
+                        <tr>
+                            <td>Room Service</td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 2 -->
+                        <tr>
+                            <td>Cleaning</td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 3 -->
+                        <tr>
+                            <td>Capacity</td>
+                            <td>2+2</td>
+                            <td>4+2</td>
+                            <td>6+2</td>
+                        </tr>
+                        <!-- item 4 -->
+                        <tr>
+                            <td>Size</td>
+                            <td>42m²</td>
+                            <td>48m²</td>
+                            <td>66m²</td>
+
+                        </tr>
+                        <!-- Dummy Control -->
+                        <tr class="accordion-table-controller" role="presentation">
+                            <td>dummy</td>
+                            <td>dummy</td>
+                            <td>dummy</td>
+                            <td>dummy</td>
+                        </tr>
+                    </table>
+
+                </section>
+            </amp-accordion>
+
+
+            <!-- Bedrooms -->
+            <amp-accordion>
+                <section>
+                    <h2 class="table__sub-heading">
+                        <span class="show-more"></span>
+                        <span class="show-less"></span>
+                        Bedrooms</h2>
+                    <table class="table">
+                        <!-- item 1 -->
+                        <tr>
+                            <td>En-Suite Bathroom</td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 2 -->
+                        <tr>
+                            <td>Safety Deposit Box</td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 3 -->
+                        <tr>
+                            <td>Luxury Bedside Lamp</td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+
+                        <!-- Dummy Control -->
+                        <tr class="accordion-table-controller" role="presentation">
+                            <td>dummy</td>
+                            <td>dummy</td>
+                            <td>dummy</td>
+                            <td>dummy</td>
+                        </tr>
+                    </table>
+                </section>
+            </amp-accordion>
+
+
+            <!-- Kitchen -->
+            <amp-accordion>
+                <section>
+                    <h2 class="table__sub-heading">
+                        <span class="show-more"></span>
+                        <span class="show-less"></span>
+                        Kitchen</h2>
+                    <table class="table">
+                        <!-- item 1 -->
+                        <tr>
+                            <td>Refrigerator</td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 2 -->
+                        <tr>
+                            <td>Microwave</td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 3 -->
+                        <tr>
+                            <td>Dishwasher</td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 4-->
+                        <tr>
+                            <td>Kettle</td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 5-->
+                        <tr>
+                            <td>Coffee</td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- Dummy Control -->
+                        <tr class="accordion-table-controller" role="presentation">
+                            <td>dummy</td>
+                            <td>dummy</td>
+                            <td>dummy</td>
+                            <td>dummy</td>
+                        </tr>
+                    </table>
+
+                </section>
+
+            </amp-accordion>
+
+
+            <!-- Bathrooms -->
+            <amp-accordion>
+                <section>
+                    <h2 class="table__sub-heading">
+                        <span class="show-more"></span>
+                        <span class="show-less"></span>
+                        Bathrooms</h2>
+                    <table class="table">
+                        <tr>
+                            <td>Whirlpool</td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 1 -->
+                        <tr>
+                            <td>Jacuzzi</td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 2 -->
+                        <tr>
+                            <td>Shower</td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 3-->
+                        <tr>
+                            <td>Shampoo</td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 4-->
+                        <tr>
+                            <td>Hair Dryer</td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- Dummy Control -->
+                        <tr class="accordion-table-controller" role="presentation">
+                            <td>dummy</td>
+                            <td>dummy</td>
+                            <td>dummy</td>
+                            <td>dummy</td>
+                        </tr>
+                    </table>
+
+                </section>
+
+            </amp-accordion>
+
+
+            <!-- Terrace -->
+            <amp-accordion>
+                <section>
+                    <h2 class="table__sub-heading">
+                        <span class="show-more"></span>
+                        <span class="show-less"></span>
+                        Terrace</h2>
+                    <table class="table">
+                        <tr>
+                            <td>Porch</td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 1 -->
+                        <tr>
+                            <td>Sun Loungers</td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 2 -->
+                        <tr>
+                            <td>Parasol</td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare uncheck"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- item 3 -->
+                        <tr>
+                            <td>Frontyard Grass</td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                            <td>
+                                <i class="icn__compare check"></i>
+                            </td>
+                        </tr>
+                        <!-- Dummy Control -->
+                        <tr class="accordion-table-controller" role="presentation">
+                            <td>dummy</td>
+                            <td>dummy</td>
+                            <td>dummy</td>
+                            <td>dummy</td>
+                        </tr>
+                    </table>
+
+                </section>
+
+            </amp-accordion>
+        </div>
+    </div><!-- end of comparison -->
 </section>
 
 <hr class="grid hr">
 
 <section class="grid panel--padded">
-    <h2 class="visually-hidden">Comparison Guide</h2>
-    <table class="table">
-        <caption class="panel__hd">Comparison Guide</caption>
+    <div class="panel__desc">
+        <h2 class="panel__hd">Compare Accommodations</h2>
+        <p>When you book a room directly through our website, we guarantee that you’ll get the best possible
+            rate
+            plus
+            unique benefits and offers you won’t find elsewhere.
+            There are no hidden fees, and we assure you to book with absolute confidence.</p>
 
-        <!-- Table Head -->
-        <thead>
-        <tr class="table--heading">
-            <th class="table__head--blank"></th>
-            <th colspan="3" class="table__head--prim">Comparison
-            </th>
-        </tr>
+        <p>We believe we have the most competitive rates. However, should you find a lower publicly available
+            rate
+            within 24 hours, we’ll be sure match it.
+            Call us on <strong>+233 544 524 830</strong>, or reach us via email at
+            <strong>info@theasawaresort.ml</strong>.</p>
 
-        <tr class="table--heading">
-            <th class="table__head--blank"></th>
-            <th scope="colgroup" class="table__head--sec">Basic</th>
-            <th scope="colgroup" class="table__head--sec">Standard
-                <small>(Most Popular)</small>
-            </th>
-            <th scope="colgroup" class="table__head--sec">Premium</th>
-        </tr>
-        </thead>
-
-
-        <!-- Table Foot -->
-        <tfoot class="table__foot">
-        <tr>
-            <td colspan="4">Please contact our <a href="/contact.html#contact--query" target="_blank">Reservations
-                Department</a> for any additional info.
-            </td>
-        </tr>
-        </tfoot>
-
-        <tbody>
-
-        <!-- Services -->
-        <tr>
-            <th scope="colgroup" class="table__sub-heading">Services</th>
-            <th colspan="3" class="table__sub-heading--whitespace">
-                <i class="icn__special services"></i>
-            </th>
-        </tr>
-
-        <tr>
-            <td>TV</td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 2 -->
-        <tr>
-            <td>Room Service</td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 3 -->
-        <tr>
-            <td>Cleaning</td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 4 -->
-        <tr>
-            <td>Capacity</td>
-            <td>2+2</td>
-            <td>4+2</td>
-            <td>6+2</td>
-        </tr>
-        <!-- item 5 -->
-        <tr>
-            <td>Size</td>
-            <td>42m²</td>
-            <td>48m²</td>
-            <td>66m²</td>
-
-        </tr>
-
-
-        <!-- Rooms -->
-        <tr>
-            <th scope="colgroup" class="table__sub-heading">Bedrooms</th>
-            <th colspan="3" class="table__sub-heading--whitespace">
-                <i class="icn__special bedroom"></i>
-            </th>
-        </tr>
-
-        <tr>
-            <td>En-Suite Bathroom</td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 1 -->
-        <tr>
-            <td>Safety Deposit Box</td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 2 -->
-        <tr>
-            <td>Luxury Bedside Lamp</td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-
-
-        <!-- Bathrooms -->
-        <tr>
-            <th scope="colgroup" class="table__sub-heading">Bathrooms</th>
-            <th colspan="3" class="table__sub-heading--whitespace">
-                <i class="icn__special bathroom"></i>
-            </th>
-        </tr>
-
-        <tr>
-            <td>Whirlpool</td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 1 -->
-        <tr>
-            <td>Jacuzzi</td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 2 -->
-        <tr>
-            <td>Shower</td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 3-->
-        <tr>
-            <td>Shampoo</td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 4-->
-        <tr>
-            <td>Hair Dryer</td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-
-
-        <!-- Kitchen -->
-        <tr>
-            <th scope="colgroup" class="table__sub-heading">Kitchen</th>
-            <th colspan="3" class="table__sub-heading--whitespace">
-                <i class="icn__special kitchen"></i>
-            </th>
-        </tr>
-
-
-        <!-- item 1 -->
-        <tr>
-            <td>Refrigerator</td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 2 -->
-        <tr>
-            <td>Microwave</td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 3 -->
-        <tr>
-            <td>Dishwasher</td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 4-->
-        <tr>
-            <td>Kettle</td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 5-->
-        <tr>
-            <td>Coffee</td>
-            <td>Generic Pot + Beans</td>
-            <td>Italian Pot + Beans</td>
-            <td>Italian Pot + Hawaii Kona Roast</td>
-        </tr>
-
-
-        <!-- Terrace -->
-        <tr>
-            <th scope="colgroup" class="table__sub-heading">Terrace</th>
-            <th colspan="3" class="table__sub-heading--whitespace">
-                <i class="icn__special terrace"></i>
-            </th>
-        </tr>
-
-        <tr>
-            <td>Porch</td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 1 -->
-        <tr>
-            <td>Sun Loungers</td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 2 -->
-        <tr>
-            <td>Parasol</td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare uncheck"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        <!-- item 3 -->
-        <tr>
-            <td>Frontyard Grass</td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-            <td>
-                <i class="icn__compare check"></i>
-            </td>
-        </tr>
-        </tbody>
-
-    </table>
-</section><!-- end of commission -->
+    </div>
+</section>
 
 
 <!-- @include ../../templates/_footer.html-->

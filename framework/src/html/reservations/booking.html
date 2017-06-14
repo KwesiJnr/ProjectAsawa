@@ -16,7 +16,20 @@
     </title>
 </head>
 <body class="page-booking">
-<!-- @include ../../templates/_header.html-->
+<header class="hdr hdr__prim">
+
+    <div class="grid">
+        <section class="nav__container">
+            <!-- Left Navigation -->
+            <div class="flex__nav tab">
+                <a href="/" class="hdr__title icn__logo">
+                    <span class="visually-hidden">Asawa Resort Logo</span>
+                </a>
+                </button>
+            </div>
+        </section>
+    </div>
+</header>
 
 <div class="img--row">
     <h2 class="hdln__prim center">Booking</h2>
@@ -24,7 +37,12 @@
 <!-- TODO: create non-AMP version of site for booking page-->
 
 
-<section class="grid panel--padded">
+<section class="grid">
+    <div class="panel--padded--centered">
+        <a href="/index.html" target="_top">
+            <h3>Back to Main Site</h3>
+        </a>
+    </div>
     <form method="post" action-xhr="form-xhr.php"
           class="form__rsrv form__sidebar">
         <h2 class="form__rsrv--hd">Book Now</h2>

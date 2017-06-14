@@ -2,6 +2,7 @@
 <html amp lang="en">
 <head>
     <!-- @include ../../templates/_meta.html-->
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
     <title>Our Rates | Asawa Resort
     </title>
@@ -12,119 +13,131 @@
     <h2 class="hdln__prim center">Rates for 2017</h2>
 </div>
 
-<section class="grid panel--padded">
-    <h2 class="panel__hd">Our Rate Guarantee</h2>
-    <div class="panel__desc">
-        <p>When you book a room directly through our website, we guarantee that you’ll get the best possible rate plus
-            unique benefits and offers you won’t find elsewhere.
-            There are no hidden fees, and we assure you to book with absolute confidence.</p>
+<section class="grid">
+    <div class="flex__grid--dual panel--padded">
+        <!-- @include ../../templates/_sidebar.html-->
 
-        <br><br>
+        <div class="flex__col--2-3">
+            <div>
+                <h2 class="visually-hidden">Our Rates</h2>
+                <table class="table">
+                    <caption class="panel__hd">Rates</caption>
 
-        <p>We believe we have the most competitive rates. However, should you find a lower publicly available rate
-            within 24 hours, we’ll be sure match it.
-            Call us on <strong>+233 544 524 830</strong>, or reach us via email at <strong>info@theasawaresort.ml</strong>.</p>
-        <br><br>
-        <p class="panel__hd--unstyled">Click here to <a href="/pricing/compare.html">Compare Rates</a>.</p>
+                    <!-- Table Head -->
+                    <thead>
+                    <tr class="table--heading">
+                        <th class="table__head--blank"></th>
+                        <th colspan="3" class="table__head--prim">Pricing
+                            <small>(per night in GH¢)</small>
+                        </th>
+                    </tr>
+
+                    <tr class="table--heading">
+                        <th scope="colgroup" class="table__head--prim">Duration</th>
+                        <th scope="colgroup" class="table__head--sec">Basic</th>
+                        <th scope="colgroup" class="table__head--sec">Standard</th>
+                        <th scope="colgroup" class="table__head--sec">Premium</th>
+                    </tr>
+                    </thead>
+
+                    <!-- Table Foot -->
+                    <tfoot class="table__foot">
+                    <tr>
+                        <td colspan="4">14.3% VAT included (subject to change). Tourist taxes not included.</td>
+                    </tr>
+                    </tfoot>
+
+                    <tbody>
+                    <!-- item 1 -->
+                    <tr>
+                        <td>13/05 &mdash; 26/06</td>
+                        <td>109.00</td>
+                        <td>169.00</td>
+                        <td>229.00</td>
+                    </tr>
+                    <!-- item 2 -->
+                    <tr>
+                        <td>27/06 &mdash; 18/07</td>
+                        <td>102.00</td>
+                        <td>160.00</td>
+                        <td>210.00</td>
+                    </tr>
+                    <!-- item 3 -->
+                    <tr>
+                        <td>19/07 &mdash; 23/08</td>
+                        <td>100.00</td>
+                        <td>155.00</td>
+                        <td>205.00</td>
+                    </tr>
+                    <!-- item 4 -->
+                    <tr>
+                        <td>24/09 &mdash; 18/10</td>
+                        <td>102.99</td>
+                        <td>160.99</td>
+                        <td>210.00</td>
+                    </tr>
+                    <!-- item 5 -->
+                    <tr>
+                        <td>19/10 &mdash; 9/11</td>
+                        <td>115.00</td>
+                        <td>179.00</td>
+                        <td>245.00</td>
+                    </tr>
+
+                    <!-- item 6 -->
+                    <tr>
+                        <td>10/11 &mdash; 15/12</td>
+                        <td>110.00</td>
+                        <td>170.00</td>
+                        <td>235.00</td>
+                    </tr>
+
+                    <!-- item 7 -->
+                    <tr>
+                        <td>16/12 &mdash; 31/12</td>
+                        <td>109.00</td>
+                        <td>165.00</td>
+                        <td>220.00</td>
+                    </tr>
+
+                    <!-- SPECIAL -->
+                    <tr>
+                        <td>
+                            <small>*Price of extra day, from 7 days onwards</small>
+                        </td>
+                        <td>109.00</td>
+                        <td>165.00</td>
+                        <td>220.00</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
     </div>
 </section>
 
 <hr class="grid hr">
 
 <section class="grid panel--padded">
-    <h2 class="visually-hidden">Our Rates</h2>
-    <table class="table">
-        <caption class="panel__hd">Rates</caption>
 
-        <!-- Table Head -->
-        <thead>
-        <tr class="table--heading">
-            <th class="table__head--blank"></th>
-            <th colspan="3" class="table__head--prim">Pricing
-                <small>(per night in GH¢)</small>
-            </th>
-        </tr>
 
-        <tr class="table--heading">
-            <th scope="colgroup" class="table__head--prim">Duration</th>
-            <th scope="colgroup" class="table__head--sec">Basic</th>
-            <th scope="colgroup" class="table__head--sec">Standard</th>
-            <th scope="colgroup" class="table__head--sec">Premium</th>
-        </tr>
-        </thead>
+    <div class="panel__desc">
+        <h2 class="panel__hd">Our Rate Guarantee</h2>
+        <p class="panel--centered panel__hd--unstyled">Click to <a href="/pricing/compare.html">Compare Rates</a>.
+        </p>
+        <p>When you book a room directly through our website, we guarantee that you’ll get the best possible
+            rate
+            plus
+            unique benefits and offers you won’t find elsewhere.
+            There are no hidden fees, and we assure you to book with absolute confidence.</p>
 
-        <!-- Table Foot -->
-        <tfoot class="table__foot">
-        <tr>
-            <td colspan="4">14.3% VAT included (subject to change). Tourist taxes not included.</td>
-        </tr>
-        </tfoot>
-
-        <tbody>
-        <!-- item 1 -->
-        <tr>
-            <td>13/05 &mdash; 26/06</td>
-            <td>109.00</td>
-            <td>169.00</td>
-            <td>229.00</td>
-        </tr>
-        <!-- item 2 -->
-        <tr>
-            <td>27/06 &mdash; 18/07</td>
-            <td>102.00</td>
-            <td>160.00</td>
-            <td>210.00</td>
-        </tr>
-        <!-- item 3 -->
-        <tr>
-            <td>19/07 &mdash; 23/08</td>
-            <td>100.00</td>
-            <td>155.00</td>
-            <td>205.00</td>
-        </tr>
-        <!-- item 4 -->
-        <tr>
-            <td>24/09 &mdash; 18/10</td>
-            <td>102.99</td>
-            <td>160.99</td>
-            <td>210.00</td>
-        </tr>
-        <!-- item 5 -->
-        <tr>
-            <td>19/10 &mdash; 9/11</td>
-            <td>115.00</td>
-            <td>179.00</td>
-            <td>245.00</td>
-        </tr>
-
-        <!-- item 6 -->
-        <tr>
-            <td>10/11 &mdash; 15/12</td>
-            <td>110.00</td>
-            <td>170.00</td>
-            <td>235.00</td>
-        </tr>
-
-        <!-- item 7 -->
-        <tr>
-            <td>16/12 &mdash; 31/12</td>
-            <td>109.00</td>
-            <td>165.00</td>
-            <td>220.00</td>
-        </tr>
-
-        <!-- SPECIAL -->
-        <tr>
-            <td>
-                <small>*Price of extra day, from 7 days onwards</small>
-            </td>
-            <td>109.00</td>
-            <td>165.00</td>
-            <td>220.00</td>
-        </tr>
-        </tbody>
-
-    </table>
+        <p>We believe we have the most competitive rates. However, should you find a lower publicly available
+            rate
+            within 24 hours, we’ll be sure match it.
+            Call us on <strong>+233 544 524 830</strong>, or reach us via email at
+            <strong>info@theasawaresort.ml</strong>.</p>
+    </div>
 </section><!-- end of commission -->
 
 
