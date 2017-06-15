@@ -9,57 +9,12 @@
     <meta name="description"
           content="Asawa Resort, world-leading resort with top-notch service and state-of-the-art equipment to make your stay sensational. Ghana's finest!">
 
-    <!-- inject:css -->
     <link rel="stylesheet" href="../../stylesheets/css/styles.css">
-    <!-- endinject -->
 
     <title>Booking | Asawa Resort
     </title>
 </head>
 <body class="page-booking">
-<!-- Primary Header -->
-<amp-sidebar id="sidebar" layout="nodisplay" side="left">
-    <form action="/" class="dynamic__layer primary" target="_top" novalidate>
-        <button type="reset" class="icn__close" on="tap:sidebar.close" aria-label="Close Sidebar Button"></button>
-
-        <div class="hdr__prim--items">
-            <a href="/" class="menu__item">Home</a>
-            <label class="menu__item item__layer--1 has--sub-lvl"><input type="checkbox">Services
-                <div class="submenu dynamic__layer secondary">
-                    <!-- Submenu Back Key -->
-                    <div class="btn__prev">Back</div>
-                    <button type="reset" class="icn__close" on="tap:sidebar.close"></button>
-
-                    <!-- Submenu Content (Services) -->
-                    <div class="layer--items">
-                        <a href="/services/gym.html" class="menu__item layer__item--lvl2">Gym</a>
-                        <a href="/services/spa.html" class="menu__item layer__item--lvl2">Spa</a>
-                    </div>
-                </div>
-            </label>
-            <a href="/reservations/deals.html" class="menu__item">Deals</a>
-            <a href="/reservations/booking.html" class="menu__item">Booking</a>
-
-            <label class="menu__item item__layer--1 has--sub-lvl"><input type="checkbox">Pricing
-                <div class="submenu dynamic__layer secondary">
-                    <!-- Submenu Back Key -->
-                    <div class="btn__prev">Back</div>
-                    <button type="reset" class="icn__close" on="tap:sidebar.close"></button>
-
-                    <!-- Submenu Content (Pricing) -->
-                    <div class="layer--items">
-                        <a href="/pricing/rates.html" class="menu__item layer__item--lvl2">Rates</a>
-                        <a href="/pricing/compare.html" class="menu__item layer__item--lvl2">Compare</a>
-                    </div>
-                </div>
-            </label>
-
-            <a href="/about.html" class="menu__item">Our Company</a>
-            <a href="/contact.html" class="menu__item">Contact</a>
-        </div>
-    </form>
-</amp-sidebar>
-
 <header class="hdr hdr__prim">
 
     <div class="grid">
@@ -67,14 +22,9 @@
             <!-- Left Navigation -->
             <div class="flex__nav tab">
                 <a href="/" class="hdr__title icn__logo">
-                    <span class="srt">Asawa Resort Logo</span>
+                    <span class="visually-hidden">Asawa Resort Logo</span>
                 </a>
-                <button class="icn__hamburger" id="menu__toggle" on="tap:sidebar.toggle" role="button"><span class="">Menu</span></button>
-
-                <!-- Right Navigation -->
-                <div class="btn btn__primary btn--hollow icn__deals">
-                    <a href="/reservations/deals.html">Deals</a>
-                </div>
+                </button>
             </div>
         </section>
     </div>
@@ -86,7 +36,12 @@
 <!-- TODO: create non-AMP version of site for booking page-->
 
 
-<section class="grid panel--padded">
+<section class="grid">
+    <div class="panel--padded--centered">
+        <a href="/index.html" target="_top">
+            <h3>Back to Main Site</h3>
+        </a>
+    </div>
     <form method="post" action-xhr="form-xhr.php"
           class="form__rsrv form__sidebar">
         <h2 class="form__rsrv--hd">Book Now</h2>
@@ -96,13 +51,15 @@
                 <!-- Date In -->
                 <div class="form__mod">
                     <label for="book__date--in-top" class="form__label--required book--label">Arrival Date</label>
-                    <input type="date" value="2017-01-01" class="form--input book--text" id="book__date--in-top" aria-required="true" required>
+                    <input type="date" value="2017-01-01" class="form--input book--text" id="book__date--in-top"
+                           aria-required="true" required>
                 </div>
 
                 <!-- Date Out -->
                 <div class="form__mod">
                     <label for="book__date--out-top" class="form__label--required book--label">Departure Date</label>
-                    <input type="date" value="2017-01-02" class="form--input book--text" id="book__date--out-top" aria-required="true" required>
+                    <input type="date" value="2017-01-02" class="form--input book--text" id="book__date--out-top"
+                           aria-required="true" required>
                 </div>
 
                 <!-- No. of Rooms -->
@@ -147,13 +104,14 @@
 
                 <!-- Submit -->
                 <div class="form__mod book__submit book__submit--rounded btn btn--cta">
-                    <label for="book__submit-top" class="srt">Book</label>
+                    <label for="book__submit-top" class="visually-hidden">Book</label>
                     <input type="submit" value="Book" id="book__submit-top"
                            aria-label="Button to get rates">
                 </div>
 
                 <div class="form__mod">
-                    <small>* Please contact our <a href="/contact.html#contact--query" target="_blank">Reservations Department</a> if your
+                    <small>* Please contact our <a href="/contact.html#contact--query" target="_blank">Reservations
+                        Department</a> if your
                         requirements exceed default quantities.
                     </small>
                 </div>
@@ -172,7 +130,7 @@
 
 <noscript>
     <amp-user-notification id="enable-javascript" layout="nodisplay">
-        <div class="notification__wide">
+        <div class="notification notification__wide">
             <p class="msg__enable-javascript">For best site experience, please consider enabling Javascript in your
                 browser</p>
             <button on="tap:enable-javascript.dismiss" class="btn btn--cta">Dismiss</button>
@@ -185,9 +143,9 @@
     <section class="footer__prim">
         <div class="grid">
             <!-- NewsLetter -->
-            <form action="/" method="get" target="_top" class="form footer__item">
+            <form action-xhr="subscribe.php" method="post" target="_top" class="form footer__item">
                 <h3 class="footer__item--hd">Join Our Mailing List</h3>
-                <label for="nwsl_usr_email" class="srt">Email Address</label>
+                <label for="nwsl_usr_email" class="visually-hidden">Email Address</label>
                 <input type="email" id="nwsl_usr_email" class="form--input" placeholder="E-mail e.g. example@asawa.com">
                 <input type="submit" value="Subscribe" class="btn btn--default">
             </form>

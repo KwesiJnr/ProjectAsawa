@@ -42,7 +42,9 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.0353470065606!2d-0.21551448462143102!3d5.561779495967526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a08287571e5%3A0x2216633be74853c6!2sBank+of+Baroda!5e0!3m2!1sen!2sgh!4v1484263404692"
                     width="500" height="375" layout="responsive" frameborder="0" allowfullscreen
                     sandbox="allow-scripts allow-same-origin allow-popups">
-                <amp-img layout="fill" src="../../assets/images/map-placeholder.svg" placeholder></amp-img>
+                <amp-img layout="fill" src="../../assets/images/map-placeholder.svg" placeholder>
+                    <div fallback>Image not loaded :(</div>
+                </amp-img>
             </amp-iframe>
         </div>
     </div>
@@ -53,7 +55,8 @@
     <!-- Query Form -->
     <div class="panel--padded panel__section" id="contact--query">
         <h2 class="panel__hd--unstyled">Need To Reach Us?</h2>
-        <p>Please complete the box below and press the "<b>Submit Query</b>" button to drop us an email. We normally respond
+        <p>Please complete the box below and press the "<b>Submit Query</b>" button to drop us an email. We normally
+            respond
             within 2 Business Days. If
             you would like to book directly, click <a href="../../index.html#explore--to">here</a>.</p>
     </div>

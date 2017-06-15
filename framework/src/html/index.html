@@ -38,13 +38,15 @@
                 <!-- Date In -->
                 <div class="form__mod">
                     <label for="book__date--in-top" class="form__label--required book--label">Arrival Date</label>
-                    <input type="date" value="2017-01-01" class="form--input book--text" id="book__date--in-top" aria-required="true" required>
+                    <input type="date" value="2017-01-01" class="form--input book--text" id="book__date--in-top"
+                           aria-required="true" required>
                 </div>
 
                 <!-- Date Out -->
                 <div class="form__mod">
                     <label for="book__date--out-top" class="form__label--required book--label">Departure Date</label>
-                    <input type="date" value="2017-01-02" class="form--input book--text" id="book__date--out-top" aria-required="true" required>
+                    <input type="date" value="2017-01-02" class="form--input book--text" id="book__date--out-top"
+                           aria-required="true" required>
                 </div>
 
                 <div class="form__mod">
@@ -86,7 +88,9 @@
                     <ul class="wthr__child--list">
                         <li class="icn__wthr">
                             <amp-img src="../assets/images/weather/sunny.png" alt="Weather Today"
-                                     width="192" height="179" layout="responsive"></amp-img>
+                                     width="192" height="179" layout="responsive">
+                                <div fallback>Image not loaded :(</div>
+                            </amp-img>
                         </li>
                         <li class="wthr__desc">
                             <span class="wthr__temp wthr__temp--tomorrow">19&deg;C</span>
@@ -104,7 +108,9 @@
                         <li class="icn__wthr">
                             <amp-img src="../assets/images/weather/rainy.png"
                                      alt="Weather Tomorrow" width="192" height="179"
-                                     layout="responsive"></amp-img>
+                                     layout="responsive">
+                                <div fallback>Image not loaded :(</div>
+                            </amp-img>
                         </li>
                         <li class="wthr__desc">
                             <span class="wthr__temp wthr__temp--tomorrow">13&deg;C</span>
@@ -162,14 +168,18 @@
                              srcset="../assets/images/gallery/adventure.jpg 640w,
                              ../assets/images/gallery/adventure-2x.jpg 1280w,
                              ../assets/images/gallery/adventure-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="1"></amp-img>
+                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="1">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </div>
                 <div class="img__gallery--item">
                     <amp-img src="../assets/images/gallery/honeymoon.jpg" alt="Honeymoon-Image" width="320" height="220"
                              srcset="../assets/images/gallery/honeymoon.jpg 640w,
                              ../assets/images/gallery/honeymoon-2x.jpg 1280w,
                              ../assets/images/gallery/honeymoon-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="2"></amp-img>
+                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="2">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </div>
                 <div class="img__gallery--item">
                     <amp-img src="../assets/images/gallery/relaxation.jpg" alt="Relaxation-Image" width="320"
@@ -177,28 +187,36 @@
                              srcset="../assets/images/gallery/relaxation.jpg 640w,
                              ../assets/images/gallery/relaxation-2x.jpg 1280w,
                              ../assets/images/gallery/relaxation-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="3"></amp-img>
+                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="3">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </div>
                 <div class="img__gallery--item">
                     <amp-img src="../assets/images/gallery/nature.jpg" alt="Nature-Image" width="320" height="220"
                              srcset="../assets/images/gallery/nature.jpg 640w,
                              ../assets/images/gallery/nature-2x.jpg 1280w,
                              ../assets/images/gallery/nature-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="4"></amp-img>
+                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="4">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </div>
                 <div class="img__gallery--item">
                     <amp-img src="../assets/images/gallery/rooms.jpg" alt="Room-Image" width="320" height="220"
                              srcset="../assets/images/gallery/rooms.jpg 640w,
                              ../assets/images/gallery/rooms-2x.jpg 1280w,
                              ../assets/images/gallery/rooms-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="5"></amp-img>
+                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="5">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </div>
                 <div class="img__gallery--item">
                     <amp-img src="../assets/images/gallery/serene.jpg" alt="Serene-Image" width="320" height="220"
                              srcset="../assets/images/gallery/serene.jpg 640w,
                              ../assets/images/gallery/serene-2x.jpg 1280w,
                              ../assets/images/gallery/serene-3x.jpg 1920w"
-                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="6"></amp-img>
+                             layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="6">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </div>
             </amp-carousel>
             <div class="img__gallery--text">Click/Tap to zoom</div>
@@ -207,27 +225,39 @@
             <amp-carousel id="asawa__viewBox1--preview" type="carousel" controls layout="fixed-height" height="75">
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=0)">
                     <amp-img src="../assets/images/gallery/thumbnails/adventure.jpg" alt="Adventure Image Thumbnail"
-                             width="80" height="60"></amp-img>
+                             width="80" height="60">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </button>
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=1)">
                     <amp-img src="../assets/images/gallery/thumbnails/honeymoon.jpg" alt="Honeymoon Image Thumbnail"
-                             width="80" height="60"></amp-img>
+                             width="80" height="60">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </button>
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=2)">
                     <amp-img src="../assets/images/gallery/thumbnails/relaxation.jpg" alt="Relaxation Image Thumbnail"
-                             width="80" height="60"></amp-img>
+                             width="80" height="60">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </button>
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=3)">
                     <amp-img src="../assets/images/gallery/thumbnails/nature.jpg" alt="Nature Image Thumbnail"
-                             width="80" height="60"></amp-img>
+                             width="80" height="60">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </button>
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=4)">
                     <amp-img src="../assets/images/gallery/thumbnails/rooms.jpg" alt="Rooms Image Thumbnail"
-                             width="80" height="60"></amp-img>
+                             width="80" height="60">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </button>
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=5)">
                     <amp-img src="../assets/images/gallery/thumbnails/serene.jpg" alt="Serene Image Thumbnail"
-                             width="80" height="60"></amp-img>
+                             width="80" height="60">
+                        <div fallback>Image not loaded :(</div>
+                    </amp-img>
                 </button>
             </amp-carousel>
 
