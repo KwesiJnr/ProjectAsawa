@@ -8,6 +8,8 @@
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <link rel="shortcut icon" href="/assets/images/logo/favicon.ico">
+    
     
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="canonical" href="index.html" />
@@ -53,7 +55,7 @@
 	border: 0;
 	overflow: hidden;
 }
-amp-sidebar .dynamic__layer:after,.panel__hd:after,.panel__hd--unstyled:after,.btn__prev:before,amp-accordion table tr.accordion-table-controller:before,.form__label--required:after,.img__main--bckgrnd:before,.img--row:before,.wthr__child > li:first-child:after,.show-more:before,.show-less:before,amp-sidebar .has--sub-lvl:after,.page-deals .node__item:after {
+amp-sidebar .dynamic__layer:after,.panel__hd:after,.panel__hd--unstyled:after,.btn__prev:before,amp-accordion table tr.accordion-table-controller:before,.node__item:after,.show-more:before,.show-less:before,.form__label--required:after,.img__main--bckgrnd:before,.img--row:before,.wthr__child > li:first-child:after,amp-sidebar .has--sub-lvl:after {
 	position: absolute;
 	content: '';
 	position: absolute;
@@ -77,7 +79,7 @@ amp-sidebar .dynamic__layer:after,.panel__hd--colored {
 	background: linear-gradient(hsl(285, 100%, 40%) 0%, hsl(284.6, 98.7%, 40.5%) 19%, hsl(284.3, 97.8%, 40.9%) 34%, hsl(284.1, 97.1%, 41.2%) 47%, hsl(283.9, 96.6%, 41.4%) 56.5%, hsl(283.8, 96.2%, 41.6%) 65%, hsl(283.7, 95.9%, 41.7%) 73%, hsl(283.6, 95.7%, 41.8%) 80.2%, hsl(283.6, 95.5%, 41.9%) 86.1%, hsl(283.6, 95.4%, 41.9%) 91%, hsl(283.5, 95.4%, 41.9%) 95.2%, hsl(283.5, 95.3%, 42%) 98.2%, hsl(283.5, 95.3%, 42%) 100%);
 	background: linear-gradient(hsl(285, 100%, 40%) 0%, hsl(284.6, 98.7%, 40.5%) 19%, hsl(284.3, 97.8%, 40.9%) 34%, hsl(284.1, 97.1%, 41.2%) 47%, hsl(283.9, 96.6%, 41.4%) 56.5%, hsl(283.8, 96.2%, 41.6%) 65%, hsl(283.7, 95.9%, 41.7%) 73%, hsl(283.6, 95.7%, 41.8%) 80.2%, hsl(283.6, 95.5%, 41.9%) 86.1%, hsl(283.6, 95.4%, 41.9%) 91%, hsl(283.5, 95.4%, 41.9%) 95.2%, hsl(283.5, 95.3%, 42%) 98.2%, hsl(283.5, 95.3%, 42%) 100%);
 }
-.footer__prim,.footer__item .flex,.flex,.flex__nav,.flex__grid--dual,.flex__footer--social,.main--bckgrnd--inner,.address__box,.icn__modal .grid,.wthr__child,.node {
+.footer__prim,.footer__item .flex,.flex,.flex__nav,.flex__grid--dual,.flex__footer--social,.main--bckgrnd--inner,.address__box,.node,.icn__modal .grid,.wthr__child {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -118,7 +120,7 @@ amp-sidebar .dynamic__layer:after,.panel__hd--colored {
 	height: 3.4rem;
 }
 
-.form__rsrv,.folded .form__rsrv--hd {
+.folded .form__rsrv--hd,.form__rsrv {
 	background: linear-gradient(270deg, #9900cc, #0066FF, #9905d1);
 	background-size: 600% 600%;
 	-webkit-animation: gradientTransition 40s ease infinite;
@@ -126,6 +128,10 @@ amp-sidebar .dynamic__layer:after,.panel__hd--colored {
 	background: linear-gradient(270deg, #9900cc, #0066FF, #9905d1);
 	background-size: 600% 600%;
 	animation: gradientTransition 40s ease infinite;
+}
+.shadow-md {
+	box-shadow: 0px 0.3rem 2rem 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0.3rem 2rem 0 rgba(0, 0, 0, 0.1);
 }
 
 
@@ -175,6 +181,10 @@ b,strong {
 
 small {
 	font-size: 80%;
+}
+
+img {
+	border-style: none;
 }
 
 
@@ -276,20 +286,8 @@ input::placeholder,textarea::placeholder {
 	color: #98acb9;
 }
 @font-face {
-	font-family: "Kaushan Script";
-	src: url('../../assets/fonts/kaushan script/kaushan-script.eot') format('embedded-opentype'), url('../../assets/fonts/kaushan script/kaushan-script.ttf') format('truetype'), url('../../assets/fonts/kaushan script/kaushan-script.woff') format('woff'), url('../../assets/fonts/kaushan script/kaushan-script.woff2') format('woff2');
-}
-@font-face {
 	font-family: "WCManoNegraBta";
 	src: url('../../assets/fonts/wc mano negra/wcmanonegrabta.eot') format('embedded-opentype'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.svg') format('svg'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.ttf') format('truetype'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.woff') format('woff'), url('../../assets/fonts/wc mano negra/wcmanonegrabta.woff2') format('woff2');
-}
-@font-face {
-	font-family: "Playfair Display";
-	src: url('../../assets/fonts/playfair display/playfair-display.eot') format('embedded-opentype'), url('../../assets/fonts/playfair display/playfair-display.eot') format('embedded-opentype'), url('../../assets/fonts/playfair display/playfair-display.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-italic.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-italic.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-italic.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-bold.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-bold.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-bold.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-bold-italic.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-bold-italic.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-bold-italic.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-black.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-black.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-black.woff2') format('woff2'), url('../../assets/fonts/playfair display/playfair-display-black-italic.ttf') format('truetype'), url('../../assets/fonts/playfair display/playfair-display-black-italic.woff') format('woff'), url('../../assets/fonts/playfair display/playfair-display-black-italic.woff2') format('woff2');
-}
-@font-face {
-	font-family: "Noto sans";
-	src: url('../../assets/fonts/noto sans/noto-sans.eot') format('embedded-opentype'), url('../../assets/fonts/noto sans/noto-sans.svg') format('svg'), url('../../assets/fonts/noto sans/noto-sans.ttf') format('truetype'), url('../../assets/fonts/noto sans/noto-sans.woff') format('woff'), url('../../assets/fonts/noto sans/noto-sans.woff2') format('woff2'), url('../../assets/fonts/noto sans/noto-sans-italic.ttf') format('truetype'), url('../../assets/fonts/noto sans/noto-sans-italic.woff') format('woff'), url('../../assets/fonts/noto sans/noto-sans-italic.woff2') format('woff2'), url('../../assets/fonts/noto sans/noto-sans-bold.ttf') format('truetype'), url('../../assets/fonts/noto sans/noto-sans-bold.woff') format('woff'), url('../../assets/fonts/noto sans/noto-sans-bold.woff2') format('woff2'), url('../../assets/fonts/noto sans/noto-sans-bold-italic.ttf') format('truetype'), url('../../assets/fonts/noto sans/noto-sans-bold-italic.woff') format('woff'), url('../../assets/fonts/noto sans/noto-sans-bold-italic.woff2') format('woff2');
 }
 .hdln__prim {
 	line-height: .8;
@@ -321,6 +319,8 @@ input::placeholder,textarea::placeholder {
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+	margin-top: 48px;
+	margin-top: 4.8rem;
 	background: linear-gradient(to right, hsl(283.5, 95.3%, 42%) 0%, hsl(283.6, 95.4%, 41.9%) 9.7%, hsl(283.6, 95.6%, 41.8%) 18.3%, hsl(283.7, 95.9%, 41.7%) 25.7%, hsl(283.8, 96.3%, 41.6%) 32.2%, hsl(284, 96.6%, 41.4%) 37.9%, hsl(284.1, 97%, 41.2%) 43.1%, hsl(284.2, 97.4%, 41.1%) 47.9%, hsl(284.3, 97.8%, 40.9%) 52.4%, hsl(284.5, 98.2%, 40.7%) 57.2%, hsl(284.6, 98.6%, 40.6%) 62.4%, hsl(284.7, 99%, 40.4%) 68.2%, hsl(284.8, 99.4%, 40.3%) 74.7%, hsl(284.9, 99.7%, 40.1%) 82.2%, hsl(285, 99.9%, 40%) 90.9%, hsl(285, 100%, 40%) 100%);
 	color: #fff;
 	font-family: "Noto Sans", sans-serif;
@@ -397,6 +397,8 @@ input::placeholder,textarea::placeholder {
 	text-transform: uppercase;
 }
 .prefooter {
+	margin-bottom: -48px;
+	margin-bottom: -4.8rem;
 	background: linear-gradient(to bottom, hsl(48, 100%, 50%) 0%, hsla(48, 100%, 50%, 0.996) 9.5%, hsla(48, 100%, 50%, 0.985) 17.7%, hsla(48, 100%, 50%, 0.971) 24.7%, hsla(48, 100%, 50%, 0.956) 31%, hsla(48, 100%, 50%, 0.94) 36.8%, hsla(48, 100%, 50%, 0.924) 42.3%, hsla(48, 100%, 50%, 0.908) 47.6%, hsla(48, 100%, 50%, 0.891) 52.9%, hsla(48, 100%, 50%, 0.875) 58.2%, hsla(48, 100%, 50%, 0.858) 63.7%, hsla(48, 100%, 50%, 0.842) 69.5%, hsla(48, 100%, 50%, 0.828) 75.8%, hsla(48, 100%, 50%, 0.814) 82.9%, hsla(48, 100%, 50%, 0.804) 91.2%, hsla(48, 100%, 50%, 0.8) 100%);
 }
 .prefooter--hd {
@@ -562,6 +564,12 @@ amp-sidebar .dynamic__layer input:checked + .submenu {
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 }
+.tri {
+	width: 33.33%;
+}
+.quad {
+	width: 25%;
+}
 
 .hdln__prim.long-text {
 	font-size: 26.18px;
@@ -645,6 +653,7 @@ amp-sidebar .dynamic__layer input:checked + .submenu {
 	margin-right: auto;
 }
 .panel__review--carousel blockquote {
+	margin: 0 auto;
 	font-size: 16px;
 	font-size: 1.6rem;
 }
@@ -918,8 +927,8 @@ amp-sidebar .dynamic__layer input:checked + .submenu {
 	padding: 12px;
 	padding: 1.2rem;
 	background: #fff;
-	font-size: 14px;
-	font-size: 1.4rem;
+	font-size: 12px;
+	font-size: 1.2rem;
 	box-shadow: 0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
@@ -929,8 +938,8 @@ amp-sidebar .dynamic__layer input:checked + .submenu {
 }
 
 .notification__wide p {
-	font-size: 14px;
-	font-size: 1.4rem;
+	font-size: 12px;
+	font-size: 1.2rem;
 	line-height: 1.25;
 }
 
@@ -958,6 +967,102 @@ amp-accordion table tr.accordion-table-controller:before {
 	height: 100%;
 	background-color: #f3f5f7;
 	overflow: hidden;
+}
+
+.node {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+.node__item {
+	position: relative;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 72px;
+	margin-bottom: 7.2rem;
+	max-width: 360px;
+	max-width: 36rem;
+}
+.node__item--hd {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+.node__item--desc {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+.node__item:after {
+	width: "null";
+	height: "null";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -36px;
+	bottom: -3.6rem;
+	border-bottom: 1px solid #f3f5f7;
+}
+.node__item:hover {
+	transition: 0.5s;
+	-webkit-transform: translateY(-0.5rem);
+	    -ms-transform: translateY(-0.5rem);
+	        transform: translateY(-0.5rem);
+}
+
+.node__item.borderless:after {
+	border: 0;
+}
+.node__item .img__mod--min {
+	padding: 0;
+}
+.show-more:before,.show-less:before {
+	width: "null";
+	height: "null";
+	left: 15%;
+	color: inherit;
+	content: '\25b6';
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+.show-less:before {
+	width: "null";
+	height: "null";
+	content: '\25bc';
+}
+amp-accordion section[expanded] h2 .show-more {
+	display: none;
+}
+amp-accordion section:not([expanded]) h2 .show-less {
+	display: none;
+}
+.folded {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+.folded .sidebar {
+	min-height: 1px;
+}
+.folded .form__rsrv--hd {
+	margin-top: 12px;
+	margin-top: 1.2rem;
+	padding: 12px;
+	padding: 1.2rem;
+	border: 2px #FFCC00 solid;
+	box-shadow: 0 0 0.4rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.unfolded {
+	display: none;
 }
 
 .hr {
@@ -1309,8 +1414,9 @@ amp-accordion table tr.accordion-table-controller:before {
 }
 .img__main--bckgrnd {
 	position: relative;
-	height: 80vh;
-	background: url('../../assets/images/generic/index-background-768.jpg') no-repeat;
+	height: 100vh;
+	background: url('../../assets/images/generic/index-background-1920.jpg') no-repeat;
+	background-size: cover;
 }
 .img__main--bckgrnd:before {
 	width: 100%;
@@ -1347,7 +1453,7 @@ amp-accordion table tr.accordion-table-controller:before {
 	padding: 8px;
 	padding: .8rem;
 	background-color: #333333;
-	line-height: .8;
+	line-height: 0;
 }
 .img__gallery {
 	display: block;
@@ -1432,9 +1538,6 @@ amp-image-lightbox {
 	font-size: 14px;
 	font-size: 1.4rem;
 }
-.wthr--actv a {
-	color: #0066FF;
-}
 .item__layer--1 {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1444,65 +1547,6 @@ amp-image-lightbox {
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 }
-.node__item {
-	position: relative;
-	margin-bottom: 36px;
-	margin-bottom: 3.6rem;
-}
-.node__item--hd {
-	font-size: 18px;
-	font-size: 1.8rem;
-}
-.node__item--desc {
-	font-size: 14px;
-	font-size: 1.4rem;
-}
-.show-more:before,.show-less:before {
-	width: "null";
-	height: "null";
-	left: 15%;
-	color: inherit;
-	content: '\25b6';
-	font-size: 14px;
-	font-size: 1.4rem;
-	line-height: 1;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	    -ms-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
-}
-.show-less:before {
-	width: "null";
-	height: "null";
-	content: '\25bc';
-}
-amp-accordion section[expanded] h2 .show-more {
-	display: none;
-}
-amp-accordion section:not([expanded]) h2 .show-less {
-	display: none;
-}
-.folded {
-	position: relative;
-	display: block;
-	width: 100%;
-}
-.folded .sidebar {
-	min-height: 1px;
-}
-.folded .form__rsrv--hd {
-	margin-top: 12px;
-	margin-top: 1.2rem;
-	padding: 12px;
-	padding: 1.2rem;
-	border: 2px #FFCC00 solid;
-	box-shadow: 0 0 0.4rem 0.2rem rgba(0, 0, 0, 0.1);
-}
-
-.unfolded {
-	display: none;
-}
-
 .affiliate {
 	display: none;
 }
@@ -1512,6 +1556,17 @@ amp-accordion section:not([expanded]) h2 .show-less {
 }
 .heart {
 	color: #dc143c;
+}
+div[fallback] {
+	padding: 8px;
+	padding: .8rem;
+	font-size: 10px;
+	font-size: 1rem;
+	font-family: monospace;
+	line-height: 1;
+}
+.info {
+	color: #0066FF;
 }
 .nav__container {
 	width: 100%;
@@ -1566,7 +1621,6 @@ amp-accordion section:not([expanded]) h2 .show-less {
 }
 
 .table td {
-	width: 25%;
 	padding: 12px 6px;
 	padding: 1.2rem .6rem;
 	border-left: 1px dotted #d5dde2;
@@ -1583,7 +1637,6 @@ amp-accordion section:not([expanded]) h2 .show-less {
 	vertical-align: baseline;
 }
 .table__head--sec {
-	width: 33.33%;
 	border-right: 1px dotted #fff;
 	background: linear-gradient(to right, hsl(216, 100%, 50%) 0%, hsl(214.5, 100%, 50%) 19%, hsl(213.3, 100%, 50%) 34%, hsl(212.4, 100%, 50%) 47%, hsl(211.8, 100%, 50%) 56.5%, hsl(211.3, 100%, 50%) 65%, hsl(210.9, 100%, 50%) 73%, hsl(210.6, 100%, 50%) 80.2%, hsl(210.4, 100%, 50%) 86.1%, hsl(210.2, 100%, 50%) 91%, hsl(210.2, 100%, 50%) 95.2%, hsl(210.1, 100%, 50%) 98.2%, hsl(210.1, 100%, 50%) 100%);
 	color: #fff;
@@ -1684,38 +1737,12 @@ amp-sidebar .has--sub-lvl:after {
 	    flex-wrap: wrap;
 }
 
-.page-deals .node__item {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 72px;
-	margin-bottom: 7.2rem;
-	max-width: 360px;
-	max-width: 36rem;
-}
 .page-deals .node__item h2 {
 	margin-top: 12px;
 	margin-top: 1.2rem;
 	font-size: 20px;
 	font-size: 2rem;
 	text-transform: uppercase;
-}
-.page-deals .node__item:after {
-	width: "null";
-	height: "null";
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -36px;
-	bottom: -3.6rem;
-	border-bottom: 1px solid #f3f5f7;
-}
-
-.page-deals .node__item.borderless:after {
-	border: 0;
-}
-.page-deals .img__mod--min {
-	padding: 0;
 }
 .page-deals-offer .hdln__prim {
 	text-transform: lowercase;
@@ -1875,7 +1902,6 @@ amp-sidebar .has--sub-lvl:after {
 	}
 	.hdln__prim {
 		font-size: 13.09rem;
-		line-height: 1;
 	}
 	.hdln__prim.long-text {
 		font-size: 4.236rem;
@@ -1947,6 +1973,7 @@ amp-sidebar .has--sub-lvl:after {
 		width: 40%;
 	}
 	.notification__wide {
+		font-size: 1.2rem;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		    -ms-flex-direction: row;
@@ -1955,11 +1982,31 @@ amp-sidebar .has--sub-lvl:after {
 	.notification__wide button {
 		margin: 0 1.2rem;
 	}
+	.notification__wide p {
+		font-size: 1.4rem;
+	}
 	amp-accordion .sidebar {
 		display: none;
 	}
 	amp-accordion .table__sub-heading {
 		margin: 4.8rem auto 0;
+	}
+	.node {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+	}
+	.node__item {
+		width: 45%;
+		margin-left: 2.4rem;
+		margin-right: 0;
+	}
+	.folded {
+		display: none;
+	}
+	.unfolded {
+		display: block;
 	}
 	.form__rsrv .grid {
 		display: -webkit-box;
@@ -2090,9 +2137,6 @@ amp-sidebar .has--sub-lvl:after {
 		width: 8rem;
 		height: 8rem;
 	}
-	.img__main--bckgrnd {
-		background: url('../../assets/images/generic/index-background-1200.jpg') no-repeat;
-	}
 	.img--row {
 		height: 40rem;
 	}
@@ -2139,12 +2183,6 @@ amp-sidebar .has--sub-lvl:after {
 		left: 5%;
 		border-right: none;
 		border-bottom: 1px dotted #98acb9;
-	}
-	.folded {
-		display: none;
-	}
-	.unfolded {
-		display: block;
 	}
 	.affiliate {
 		display: block;
@@ -2195,11 +2233,6 @@ amp-sidebar .has--sub-lvl:after {
 		    -ms-flex-direction: row;
 		        flex-direction: row;
 	}
-	.page-deals .node__item {
-		width: 45%;
-		margin-left: 2.4rem;
-		margin-right: 0;
-	}
 	.page-deals-offer .text-hdln h2 {
 		max-width: 70%;
 	}
@@ -2237,12 +2270,17 @@ amp-sidebar .has--sub-lvl:after {
 		background: url('../../assets/images/generic/head-rates.jpg') no-repeat;
 	}
 }
-@media (min-width: 1px) and (max-width: 320px) {
+@media (min-width: 1px) and (max-width: 768px) {
 	.panel--padded,.panel--padded--centered {
 		padding-bottom: 2rem;
 	}
+	.icn__deals.btn--hollow {
+		padding: 0;
+		background: url('../../assets/images/icons/mobile-icon-notepad.svg') no-repeat center;
+		cursor: pointer;
+	}
 	.img__main--bckgrnd {
-		background: url('../../assets/images/generic/index-background-480.jpg') no-repeat;
+		background-position-x: -600px;
 	}
 }
 @media (min-width: 1200px) {
@@ -2299,6 +2337,12 @@ amp-sidebar .has--sub-lvl:after {
 	amp-accordion tbody > tr:first-child {
 		border-top: 1px solid #d5dde2;
 	}
+	.node__item {
+		width: 30%;
+	}
+	.node__item:nth-child(3n + 1) {
+		margin-left: 0;
+	}
 	.form__rsrv {
 		padding-top: 4rem;
 		padding-bottom: 4.5rem;
@@ -2308,20 +2352,11 @@ amp-sidebar .has--sub-lvl:after {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.img__main--bckgrnd {
-		background: url('../../assets/images/generic/index-background-1920.jpg') no-repeat;
-	}
 	.img__gallery {
 		max-width: 50%;
 	}
 	.table {
 		max-width: 108rem;
-	}
-	.page-deals .node__item {
-		width: 30%;
-	}
-	.page-deals .node__item:nth-child(3n + 1) {
-		margin-left: 0;
 	}
 }
 @media (max-width: 480px) {
@@ -2348,35 +2383,8 @@ amp-sidebar .has--sub-lvl:after {
 		font-size: 1.618rem;
 	}
 }
-@media (min-width: 320px) and (max-width: 768px) {
-	.icn__deals.btn--hollow {
-		padding: 0;
-		background: url('../../assets/images/icons/mobile-icon-notepad.svg') no-repeat center;
-		cursor: pointer;
-	}
-}
-@media (max-width: 769px) {
-	.img__main--bckgrnd {
-		height: 100vh;
-	}
-}
-@media (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2), (orientation: portrait) and (min-resolution: 2dppx), (orientation: portrait) and (min--moz-device-pixel-ratio: 2), (orientation: portrait) and (min-resolution: 192dpi) {
-	.img__main--bckgrnd {
-		background: url('../../assets/images/generic/index-background-768-port.jpg') no-repeat;
-		background-size: cover;
-	}
-}
-@media (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), (orientation: landscape) and (min-resolution: 2dppx), (orientation: landscape) and (min--moz-device-pixel-ratio: 2), (orientation: landscape) and (min-resolution: 192dpi) {
-	.img__main--bckgrnd {
-		background: url('../../assets/images/generic/index-background-768-land.jpg') no-repeat;
-		background-size: cover;
-	}
-	.img__main--bckgrnd .hdln__prim {
-		font-size: 10vmax;
-	}
-}
 @media (min-width: 769px) and (max-width: 1199px) {
-	.page-deals .node__item:nth-child(2n + 1) {
+	.node__item:nth-child(2n + 1) {
 		margin-left: 0;
 	}
 }
@@ -2619,8 +2627,11 @@ amp-sidebar .has--sub-lvl:after {
                         <div class="img__mod--min">
                             <amp-img src="../../assets/images/deals/deal-25-off.svg" width="320" height="160"
                                      layout="responsive">
-                                <div fallback>Image not loaded :(</div>
                             </amp-img>
+
+                            <noscript>
+                                <img src="../../assets/images/deals/deal-25-off.svg" width="100%" height="100%">
+                            </noscript>
                         </div>
                         <h2 class="node__item--hd left">Limited Time &mdash; 25% Off!</h2>
                     </a>
@@ -2639,10 +2650,12 @@ amp-sidebar .has--sub-lvl:after {
                 <div class="node__item">
                     <a href="deals-and-packages/break-offer-3-nights-for-2.html">
                         <div class="img__mod--min">
-                            <amp-img src="../../assets/images/deals/deal-342.jpg" width="320" height="160"
-                                     layout="responsive">
-                                <div fallback>Image not loaded :(</div>
+                            <amp-img src="../../assets/images/deals/deal-342.jpg" width="320" height="160" layout="responsive">
                             </amp-img>
+
+                            <noscript>
+                                <img src="../../assets/images/deals/deal-342.jpg" width="100%" height="100%">
+                            </noscript>
                         </div>
                         <h2 class="node__item--hd left">Asawa Break Offer &mdash; Book 3 Nights and Pay For 2!</h2>
                     </a>
@@ -2663,8 +2676,11 @@ amp-sidebar .has--sub-lvl:after {
                         <div class="img__mod--min">
                             <amp-img src="../../assets/images/deals/deal-spa-royal.jpg" width="320" height="160"
                                      layout="responsive">
-                                <div fallback>Image not loaded :(</div>
                             </amp-img>
+
+                            <noscript>
+                                <img src="../../assets/images/deals/deal-spa-royal.jpg" width="100%" height="100%">
+                            </noscript>
                         </div>
                         <h2 class="node__item--hd left">Royal Spa Package</h2>
                     </a>
@@ -2673,7 +2689,7 @@ amp-sidebar .has--sub-lvl:after {
                         Body
                         Tone of your own choosing.
                         <br>
-                        <strong>Coupon Code</strong>: ASR342
+                        <strong>Coupon Code</strong>: ASRRSP
                         <br>
                         <a href="deals-and-packages/royal-spa-package.html">Learn More ></a>
                     </p>
@@ -2685,8 +2701,12 @@ amp-sidebar .has--sub-lvl:after {
                         <div class="img__mod--min">
                             <amp-img src="../../assets/images/deals/deal-couple-2.jpg" width="320" height="160"
                                      layout="responsive">
-                                <div fallback>Image not loaded :(</div>
                             </amp-img>
+
+                            <noscript>
+                                <img src="../../assets/images/deals/deal-couple-2.jpg" width="100%" height="100%">
+                            </noscript>
+
                         </div>
                         <h2 class="node__item--hd left">Stay for 2 w/ GH¢100 credit</h2>
                     </a>
@@ -2704,8 +2724,11 @@ amp-sidebar .has--sub-lvl:after {
                         <div class="img__mod--min">
                             <amp-img src="../../assets/images/deals/deal-family-inclusive.jpg" width="320" height="160"
                                      layout="responsive">
-                                <div fallback>Image not loaded :(</div>
                             </amp-img>
+
+                            <noscript>
+                                <img src="../../assets/images/deals/deal-family-inclusive.jpg" width="100%" height="100%">
+                            </noscript>
                         </div>
                         <h2 class="node__item--hd left">All-Inclusive Family Escape</h2>
                     </a>
@@ -2714,7 +2737,7 @@ amp-sidebar .has--sub-lvl:after {
                         a
                         special plan for the children. We got you covered.
                         <br>
-                        <strong>Coupon Code</strong>: ASR342
+                        <strong>Coupon Code</strong>: ASRFAM360
                         <br>
                         <a href="deals-and-packages/all-inclusive-family.html">Learn More ></a>
                     </p>
