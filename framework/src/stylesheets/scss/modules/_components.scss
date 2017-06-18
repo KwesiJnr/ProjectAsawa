@@ -209,17 +209,24 @@
 // #NOTIFICATION
 // ==========================================================================
 .notification {
+  z-index: 999;
+
   @include e(wide) {
+    position: fixed;
+    bottom: 0;
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 1.2rem;
     background: $white;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .1);
 
     @include media-q('medium') {
+      font-size: 1.2rem;
       flex-direction: row;
     }
 
@@ -232,15 +239,16 @@
     }
 
     p {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       line-height: 1.25;
+
+      @include media-q('medium') {
+        font-size: 1.4rem;
+      }
     }
   }
 }
 
-amp-user-notification {
-  box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .1);
-}
 
 // ==========================================================================
 // #AMP Components Hack
@@ -260,6 +268,10 @@ amp-accordion {
 
     @include media-q('medium') {
       margin: 4.8rem auto 0;
+    }
+
+    @include media-q('large') {
+      width: 30%;
     }
   }
 
@@ -287,11 +299,160 @@ amp-accordion {
       }
     }
   }
+
+  tbody > tr:first-child {
+   @include media-q(large) {
+     border-top: 1px solid palette(grey, x-light);
+   }
+  }
 }
 
 // ==========================================================================
-// MISCELLANEOUS
+// #NODE ITEM
 // ==========================================================================
-amp-accordion {
+.node {
+  @extend %flex-sb;
 
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include media-q('medium') {
+    flex-direction: row;
+  }
+
+  @include e(item) {
+    position: relative;
+
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7.2rem;
+    max-width: 36rem;
+
+
+    // Heading
+    @include m(hd) {
+      font-size: 1.8rem;
+    }
+
+    // Description
+    @include m(desc) {
+      font-size: 1.4rem;
+    }
+
+
+    @include p-el(after) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -3.6rem;
+      border-bottom: 1px solid palette(grey, 'xx-light');
+    }
+
+    &:hover {
+      transition: $trns-duration;
+      transform: translateY(-.5rem);
+    }
+
+    @include media-q('medium') {
+      width: 45%;
+      margin-left: 2.4rem;
+      margin-right: 0;
+    }
+
+    @include breakpoint(width 769px 1199px) {
+      &:nth-child(2n + 1) {
+        margin-left: 0;
+      }
+    }
+
+    @include media-q('large') {
+      width: 30%;
+
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+    }
+
+    &.borderless:after {
+      border: 0;
+    }
+
+    .img__mod--min {
+      padding: 0;
+
+      a {
+        @extend .shadow-md;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Folded Elements (Accordion )
+// ==========================================================================
+.show-more {
+  @include p-el(before) {
+    left: 15%;
+    color: inherit;
+    content: '\25b6';
+    font-size: 1.4rem;
+    line-height: 1;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.show-less {
+  @extend .show-more;
+
+  @include p-el(before) {
+    content: '\25bc';
+  }
+}
+
+amp-accordion {
+  section[expanded] h2 .show-more {
+    display: none;
+  }
+
+  section:not([expanded]) h2 .show-less {
+    display: none;
+  }
+}
+
+.folded {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  .sidebar {
+    min-height: 1px;
+  }
+
+  .form__rsrv--hd {
+    @extend %background-animation;
+
+    margin-top: 1.2rem;
+    padding: 1.2rem;
+    border: 2px $color-accent solid;
+    box-shadow: 0 0 .4rem .2rem rgba(0, 0, 0, .1);
+  }
+
+  @include media-q('medium') {
+    display: none;
+  }
+}
+
+
+
+// ==========================================================================
+// Unfolded Elements
+// ==========================================================================
+.unfolded {
+  display: none;
+
+  @include media-q('medium') {
+    display: block;
+  }
 }

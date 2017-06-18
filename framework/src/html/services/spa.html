@@ -2,6 +2,8 @@
 <html amp lang="en">
 <head>
     <!-- @include ../../templates/_meta.html-->
+    <link rel="canonical" href="spa.html"/>
+
     <script async custom-element="amp-image-lightbox"
             src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
@@ -58,7 +60,6 @@
                              ../assets/images/gallery/spa/sparoom-2x.jpg 1280w,
                              ../assets/images/gallery/spa/sparoom-3x.jpg 1920w"
                                      layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="1">
-                                <div fallback>Image not loaded :(</div>
                             </amp-img>
                         </div>
                         <div class="img__gallery--item">
@@ -70,7 +71,6 @@
                              ../assets/images/gallery/spa/couplespa-2x.jpg 1280w,
                              ../assets/images/gallery/spa/couplespa-3x.jpg 1920w"
                                      layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="2">
-                                <div fallback>Image not loaded :(</div>
                             </amp-img>
                         </div>
                         <div class="img__gallery--item">
@@ -81,7 +81,6 @@
                                      srcset="../assets/images/gallery/spa/spices.jpg 640w,
                              ../assets/images/gallery/spa/spices-2x.jpg 1280w"
                                      layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="3">
-                                <div fallback>Image not loaded :(</div>
                             </amp-img>
                         </div>
                         <div class="img__gallery--item">
@@ -92,7 +91,6 @@
                              ../assets/images/gallery/spa/spa1-2x.jpg 1280w,
                              ../assets/images/gallery/spa/spa1-3x.jpg 1920w"
                                      layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="4">
-                                <div fallback>Image not loaded :(</div>
                             </amp-img>
                         </div>
                         <div class="img__gallery--item">
@@ -103,11 +101,65 @@
                              ../assets/images/gallery/spa/womanspa-2x.jpg 1280w,
                              ../assets/images/gallery/spa/womanspa-3x.jpg 1920w"
                                      layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="5">
-                                <div fallback>Image not loaded :(</div>
                             </amp-img>
                         </div>
                     </amp-carousel>
                 </div>
+
+                <noscript>
+                    <div class="node panel">
+                        <div class="node__item">
+                            <a href="/assets/images/gallery/spa/sparoom-2x.jpg" class="shadow-md" target="_blank">
+                                <img src="../assets/images/gallery/gym/sparoom.jpg" alt="Photo of one our Spa Rooms"
+                                     width="100%"
+                                     srcset="../assets/images/gallery/spa/sparoom.jpg 640w,
+                             ../assets/images/gallery/spa/sparoom-2x.jpg 1280w">
+                            </a>
+                        </div>
+
+                        <div class="node__item">
+                            <a href="/assets/images/gallery/spa/couplespa-2x.jpg" class="shadow-md" target="_blank">
+                                <a href="/assets/images/gallery/spa/couplespa-2x.jpg" class="shadow-md">
+                                    <img src="../assets/images/gallery/spa/couplespa.jpg"
+                                         alt="2-in-one special couple's spa session" width="100%"
+                                         srcset="../assets/images/gallery/spa/couplespa.jpg 640w,
+                             ../assets/images/gallery/spa/couplespa-2x.jpg 1280w">
+                                </a>
+                            </a>
+                        </div>
+
+                        <div class="node__item">
+                            <a href="/assets/images/gallery/spa/spices-2x.jpg" class="shadow-md" target="_blank">
+                                <img src="../assets/images/gallery/spa/spices.jpg"
+                                     alt="Photo of some of the spices and ingredients used"
+                                     width="100%"
+                                     srcset="../assets/images/gallery/spa/spices.jpg 640w,
+                             ../assets/images/gallery/spa/spices-2x.jpg 1280w">
+                            </a>
+                        </div>
+
+                        <div class="node__item">
+                            <a href="/assets/images/gallery/spa/spa1-2x.jpg" class="shadow-md" target="_blank">
+                                <img src="../assets/images/gallery/spa/spa1.jpg" alt="Another couple in a spa session"
+                                     width="100%"
+                                     srcset="../assets/images/gallery/spa/spa1.jpg 640w,
+                             ../assets/images/gallery/spa/spa1-2x.jpg 1280w">
+                            </a>
+                        </div>
+
+                        <div class="node__item">
+                            <a href="/assets/images/gallery/spa/womanspa-2x.jpg" class="shadow-md" target="_blank">
+                                <img src="../assets/images/gallery/spa/womanspa.jpg"
+                                     alt="A woman taking a solo spa session" width="100%"
+                                     srcset="../assets/images/gallery/spa/womanspa.jpg 640w,
+                             ../assets/images/gallery/spa/womanspa-2x.jpg 1280w">
+                            </a>
+                        </div>
+
+                        <!-- Dummy -->
+                        <div class="node__item borderless"></div>
+                    </div>
+                </noscript>
             </div>
         </div>
     </div>

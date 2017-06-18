@@ -3,11 +3,10 @@
 // ==========================================================================
 .page-reservations {
   .img--row {
-    background: image-url('generic/mobile-head-reservations.jpg') no-repeat;
-    background-size: cover;
+    background-image: image-url('generic/mobile-head-reservations.jpg');
 
     @include media-q('medium') {
-      background: image-url('generic/head-reservations.jpg') no-repeat;
+      background-image: image-url('generic/head-reservations.jpg');
     }
   }
 }

@@ -7,41 +7,19 @@
 .img {
   @include e(main) {
     @include m(bckgrnd) {
-      position: relative;
-      height: 80vh;
-      background: image-url('generic/index-background-768.jpg') no-repeat;
       @include image-gradient;
 
+      position: relative;
+      height: 100vh;
+      background: image-url('generic/mobile-head-index-background.jpg') top left / cover no-repeat;
+
       @include media-q('medium') {
-        //height: 90vh;
-        background: image-url('generic/index-background-1200.jpg') no-repeat;
+        background-image: image-url('generic/head-index-background.jpg');
       }
 
-      @include media-q('large') {
-        background: image-url('generic/index-background-1920.jpg') no-repeat;
-      }
-
-      // Mobile Special
-      @include media-q('min') {
-        background: image-url('generic/index-background-480.jpg') no-repeat;
-      }
-
-      @media (max-width: 769px) {
-        height: 100vh;
-      }
-
-      @include breakpoint($hidpi-port) {
-        background: image-url('generic/index-background-768-port.jpg') no-repeat;
-        background-size: cover;
-      }
 
       @include breakpoint($hidpi-land) {
-        background: image-url('generic/index-background-768-land.jpg') no-repeat;
-        background-size: cover;
-
-        .hdln__prim {
-          font-size: 10vmax;
-        }
+        background-size: auto;
       }
     }
   }
@@ -57,8 +35,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 30rem;
-    border-bottom: 4px groove palette(grey, 'x-light');
+    height: 26rem;
+    background :  top left / cover no-repeat;
+    border-bottom: 1px solid palette(grey, 'x-light');
 
     @include media-q('medium') {
       height: 40rem;
@@ -86,7 +65,7 @@
     @include m(min) {
       padding: .8rem;
       background-color: $black;
-      line-height: .8;
+      line-height: 0;
     }
   }
 
@@ -117,8 +96,11 @@
     // Guide Text
     // ==========================================================================
     @include m(text) {
-      margin-top: 2.4rem;
-      margin-bottom: 2.4rem;
+      margin: 1.6rem auto;
+
+      @include media-q('medium') {
+        margin-top: 0; //due to amp's over-compensating padding on amp-img.
+      }
     }
   }
 }

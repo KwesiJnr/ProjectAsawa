@@ -117,6 +117,7 @@ var
         watch: [scsspath + '**/*'],
         mini: {suffix: '.min'},
         cachename: 'sass-cache',
+        //processOpts: scsspath + 'base/webfonts.scss',
 
         // PropertySortOrder
         sortOrder: {
@@ -258,6 +259,7 @@ gulp.task('html', function () {
 gulp.task('sass', ['html'], function () {
     var files = gulp.src(cssdir.in);
     files = files
+        .pipe(preprocess())
         .pipe(sass(cssdir.sassOpts))
         .pipe(postcss([gradientease()]))
         .pipe(filesize({title: 'Applying purge...'}))

@@ -3,15 +3,14 @@
 // ==========================================================================
 .page-gym {
   .img--row {
-    background: image-url('generic/mobile-head-gym.jpg') no-repeat;
-    background-size: cover;
+    background-image: image-url('generic/mobile-head-gym.jpg');
 
     @include media-q('medium') {
-      background: image-url('generic/head-gym.jpg') no-repeat;
+      background-image: image-url('generic/head-gym.jpg');
     }
   }
 
-  .panel__hd--unstyled {
-    text-align: left;
+  .icn__modal {
+    margin-bottom: -4.8rem;
   }
 }

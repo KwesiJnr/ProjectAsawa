@@ -3,11 +3,11 @@
 // ==========================================================================
 .page-booking {
   .img--row {
-    background: image-url('generic/mobile-head-booking.jpg') no-repeat;
+    background-image: image-url('generic/mobile-head-booking.jpg');
     background-size: cover;
 
     @include media-q('medium') {
-      background: image-url('generic/head-booking.jpg') no-repeat;
+      background-image: image-url('generic/head-booking.jpg');
     }
   }
 

@@ -27,6 +27,10 @@
     font-size: 1.6rem;
   }
 
+  @include media-q('large') {
+    max-width: 108rem;
+  }
+
 
   @include m(heading) {
     th {
@@ -54,7 +58,6 @@
   }
 
   td {
-    width: 25%;
     padding: 1.2rem .6rem;
     border-left: 1px dotted palette(grey, 'x-light');
     text-align: center;
@@ -84,7 +87,6 @@
     }
 
     @include m(sec) {
-      width: 33.33%;
       border-right: 1px dotted $white;
       background: scrim-gradient(to right, $color-secondary, $color-secondary-light);;
       color: $white;
@@ -100,6 +102,11 @@
     font-size: 1.8rem;
     background-color: palette(grey, 'x-light');
     text-align: center;
+    outline: none;
+
+    &:hover {
+      background-color: palette(grey, 'xx-light');
+    }
 
     @include m(whitespace) {
       background-color: palette(grey, 'x-light');
@@ -115,11 +122,6 @@
   caption {
     font-family: $font-family-primary;
     font-weight: bold;
-  }
-
-
-  @include media-q('large') {
-    //max-width: 75%;
   }
 }
 

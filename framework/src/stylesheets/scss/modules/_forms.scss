@@ -216,7 +216,7 @@
 
   @include e(submit) {
 
-    margin-bottom: 0;
+    margin: 0 auto;
     max-width: 60rem;
 
     @include m(rounded) {

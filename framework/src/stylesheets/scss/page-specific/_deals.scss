@@ -3,11 +3,10 @@
 // ==========================================================================
 .page-deals {
   .img--row {
-    background: image-url('generic/mobile-head-deals.jpg') no-repeat;
-    background-size: cover;
+    background-image: image-url('generic/mobile-head-deals.jpg');
 
     @include media-q('medium') {
-      background: image-url('generic/head-deals.jpg') no-repeat;
+      background-image: image-url('generic/head-deals.jpg');
     }
   }
 
@@ -21,53 +20,11 @@
   }
 
   .node__item {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 7.2rem;
-    max-width: 36rem;
-
     h2 {
       margin-top: 1.2rem;
       font-size: 2rem;
       text-transform: uppercase;
     }
-
-    @include p-el(after) {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -3.6rem;
-      border-bottom: 1px solid palette(grey, 'xx-light');
-    }
-
-    @include media-q('medium') {
-      width: 45%;
-      margin-left: 2.4rem;
-      margin-right: 0;
-    }
-
-    @include breakpoint(width 769px 1199px) {
-      &:nth-child(2n + 1) {
-        margin-left: 0;
-      }
-    }
-
-    @include media-q('large') {
-      width: 30%;
-
-      &:nth-child(3n + 1) {
-        margin-left: 0;
-      }
-    }
-
-    &.borderless:after {
-      border: 0;
-    }
-  }
-
-  .img__mod--min {
-    padding: 0;
   }
 }
 

@@ -3,11 +3,10 @@
 // ==========================================================================
 .page-rates {
   .img--row {
-    background: image-url('generic/mobile-head-rates.jpg') no-repeat;
-    background-size: cover;
+    background-image: image-url('generic/mobile-head-rates.jpg');
 
     @include media-q('medium') {
-      background: image-url('generic/head-rates.jpg') no-repeat;
+      background-image: image-url('generic/head-rates.jpg');
     }
   }
 }

@@ -5,23 +5,16 @@
 // scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PropertySortOrder
 
 .page-contact {
-  .row {
-    @include media-q('medium') {
-      max-width: 75%;
-    }
-  }
-
   .img--row {
-    background: image-url('generic/mobile-head-contact.jpg') no-repeat;
+    background-image: image-url('generic/mobile-head-contact.jpg');
     background-size: cover;
 
     @include media-q('medium') {
-      background: image-url('generic/head-contact.jpg') no-repeat;
+      background-image: image-url('generic/head-contact.jpg');
     }
   }
 
   .box__modal--wide {
-    //margin: 4.8rem auto;
     padding-bottom: 0;
 
     @include media-q('medium') {

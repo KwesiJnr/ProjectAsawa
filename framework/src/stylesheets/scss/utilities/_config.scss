@@ -81,11 +81,11 @@ $g-col-c: 12; // Grid Column Count
 $g-max-w: 1200px; // Maximum Grid Width
 
 // Breakpoints
-$breakpoint-min: 1px;
-$breakpoint-sm: 320px;
+$breakpoint-sm: 1px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1200px;
 
 // HiDPI
-$hidpi-port: (min-resolution 2dppx) (orientation portrait);
+$hidpi: (min-resolution 1.5dppx);
+$hidpi-port: (min-resolution 1.5dppx) (orientation portrait);
 $hidpi-land: (min-resolution 2dppx) (orientation landscape);

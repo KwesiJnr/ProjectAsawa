@@ -1,28 +1,34 @@
 
-
-// Kaushan Script
-@include font-face('Kaushan Script', font-files('kaushan script/kaushan-script.eot', 'kaushan script/kaushan-script.ttf', 'kaushan script/kaushan-script.woff',
-        'kaushan script/kaushan-script.woff2'));
-
 // WC Mano Negra
 @include font-face('WCManoNegraBta', font-files(
                 'wc mano negra/wcmanonegrabta.eot', 'wc mano negra/wcmanonegrabta.svg', 'wc mano negra/wcmanonegrabta.ttf', 'wc mano negra/wcmanonegrabta.woff',
                 'wc mano negra/wcmanonegrabta.woff2'));
 
-// Playfair Display
-@include font-face('Playfair Display', font-files(
-                'playfair display/playfair-display.eot', 'playfair display/playfair-display.eot', 'playfair display/playfair-display.woff', 'playfair display/playfair-display.woff2',
-                'playfair display/playfair-display-italic.ttf', 'playfair display/playfair-display-italic.woff', 'playfair display/playfair-display-italic.woff2',
-                'playfair display/playfair-display-bold.ttf', 'playfair display/playfair-display-bold.woff', 'playfair display/playfair-display-bold.woff2',
-                'playfair display/playfair-display-bold-italic.ttf', 'playfair display/playfair-display-bold-italic.woff', 'playfair display/playfair-display-bold-italic.woff2',
-                'playfair display/playfair-display-black.ttf', 'playfair display/playfair-display-black.woff', 'playfair display/playfair-display-black.woff2',
-                'playfair display/playfair-display-black-italic.ttf', 'playfair display/playfair-display-black-italic.woff', 'playfair display/playfair-display-black-italic.woff2'
-));
 
-// Noto Sans
-@include font-face('Noto sans', font-files(
-                'noto sans/noto-sans.eot', 'noto sans/noto-sans.svg', 'noto sans/noto-sans.ttf', 'noto sans/noto-sans.woff', 'noto sans/noto-sans.woff2',
-                'noto sans/noto-sans-italic.ttf', 'noto sans/noto-sans-italic.woff', 'noto sans/noto-sans-italic.woff2',
-                'noto sans/noto-sans-bold.ttf', 'noto sans/noto-sans-bold.woff', 'noto sans/noto-sans-bold.woff2',
-                'noto sans/noto-sans-bold-italic.ttf', 'noto sans/noto-sans-bold-italic.woff', 'noto sans/noto-sans-bold-italic.woff2'
-));
+
+
+
+//// Playfair Display
+//@include font-face('Playfair Display', font-files(
+//                'playfair display/playfair-display.eot', 'playfair display/playfair-display.eot', 'playfair display/playfair-display.woff', 'playfair display/playfair-display.woff2',
+//                'playfair display/playfair-display-italic.ttf', 'playfair display/playfair-display-italic.woff', 'playfair display/playfair-display-italic.woff2',
+//                'playfair display/playfair-display-bold.ttf', 'playfair display/playfair-display-bold.woff', 'playfair display/playfair-display-bold.woff2',
+//                'playfair display/playfair-display-bold-italic.ttf', 'playfair display/playfair-display-bold-italic.woff', 'playfair display/playfair-display-bold-italic.woff2',
+//                'playfair display/playfair-display-black.ttf', 'playfair display/playfair-display-black.woff', 'playfair display/playfair-display-black.woff2',
+//                'playfair display/playfair-display-black-italic.ttf', 'playfair display/playfair-display-black-italic.woff', 'playfair display/playfair-display-black-italic.woff2'
+//));
+//
+//
+//// Kaushan Script
+//@include font-face('Kaushan Script', font-files('kaushan script/kaushan-script.eot', 'kaushan script/kaushan-script.ttf', 'kaushan script/kaushan-script.woff',
+//        'kaushan script/kaushan-script.woff2'));
+//
+//
+//// Noto Sans
+//@include font-face('Noto sans', font-files(
+//                'noto sans/noto-sans.eot', 'noto sans/noto-sans.svg', 'noto sans/noto-sans.ttf', 'noto sans/noto-sans.woff', 'noto sans/noto-sans.woff2',
+//                'noto sans/noto-sans-italic.ttf', 'noto sans/noto-sans-italic.woff', 'noto sans/noto-sans-italic.woff2',
+//                'noto sans/noto-sans-bold.ttf', 'noto sans/noto-sans-bold.woff', 'noto sans/noto-sans-bold.woff2',
+//                'noto sans/noto-sans-bold-italic.ttf', 'noto sans/noto-sans-bold-italic.woff', 'noto sans/noto-sans-bold-italic.woff2'
+//));
+//

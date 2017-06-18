@@ -12,7 +12,7 @@
 
     @include media-q('medium') {
       font-size: 13.09rem;
-      line-height: 1;
+      //line-height: 1;
     }
 
     @include breakpoint(max-width 480px) {

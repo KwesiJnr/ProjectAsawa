@@ -15,4 +15,8 @@
   .table {
     margin-bottom: 0;
   }
+
+  .unfolded > .sidebar {
+    display: none;
+  }
 }

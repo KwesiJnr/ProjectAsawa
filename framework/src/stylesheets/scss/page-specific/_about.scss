@@ -2,11 +2,12 @@
 // About Page Styles
 // ==========================================================================
 .page-about {
+
   .img--row {
-    background: image-url('generic/mobile-head-about.jpg') no-repeat;
+    background-image: image-url('generic/mobile-head-about.jpg');
 
     @include media-q('medium') {
-      background: image-url('generic/head-about.jpg') no-repeat;
+      background-image: image-url('generic/head-about.jpg');
     }
   }
 }

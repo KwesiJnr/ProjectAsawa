@@ -7,6 +7,7 @@
 .footer {
   display: flex;
   flex-direction: column;
+  margin-top: 4.8rem;
   background: ease-in-out-quad-gradient(to right, #9905d1, #90c);
   color: $white;
   font-family: $font-family-utility;
@@ -87,6 +88,7 @@
 
 .prefooter {
   //font-family: $font-family-utility;
+  margin-bottom: -4.8rem;
   background: ease-in-out-sine-gradient(to bottom, $color-accent, rgba($color-accent, .8));
 
   @include m(hd) {

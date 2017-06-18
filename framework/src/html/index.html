@@ -2,6 +2,7 @@
 <html amp lang="en">
 <head>
     <!-- @include ../templates/_meta.html-->
+    <link rel="canonical" href="index.html"/>
     <script async custom-element="amp-image-lightbox"
             src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
@@ -89,14 +90,18 @@
                         <li class="icn__wthr">
                             <amp-img src="../assets/images/weather/sunny.png" alt="Weather Today"
                                      width="192" height="179" layout="responsive">
-                                <div fallback>Image not loaded :(</div>
                             </amp-img>
+                            <noscript>
+                                <img src="../assets/images/weather/sunny.png" alt="Weather Today"
+                                     width="100%" height="100%">
+                            </noscript>
                         </li>
                         <li class="wthr__desc">
                             <span class="wthr__temp wthr__temp--tomorrow">19&deg;C</span>
-                            <span class="wthr--actv">
-                                Suggested Activity<br><a href="#" target="_blank">Kayaking</a>
-                            </span>
+                            <div class="wthr--actv">
+                                Suggested Activity<br>
+                                <span class="info">Kayaking</span>
+                            </div>
                         </li>
                     </ul>
                 </li>
@@ -109,14 +114,18 @@
                             <amp-img src="../assets/images/weather/rainy.png"
                                      alt="Weather Tomorrow" width="192" height="179"
                                      layout="responsive">
-                                <div fallback>Image not loaded :(</div>
                             </amp-img>
+                            <noscript>
+                                <img src="../assets/images/weather/rainy.png"
+                                     alt="Weather Tomorrow" width="100%" height="100%">
+                            </noscript>
                         </li>
                         <li class="wthr__desc">
                             <span class="wthr__temp wthr__temp--tomorrow">13&deg;C</span>
-                            <span class="wthr--actv">
-                                Suggested Activity<br><a href="#" target="_blank">Billiards</a>
-                            </span>
+                            <div class="wthr--actv">
+                                Suggested Activity<br>
+                                <span class="info">Billiards</span>
+                            </div>
                         </li>
                     </ul>
                 </li>
@@ -130,20 +139,20 @@
                 <h2 class="panel__hd">The Perfect Getaway</h2>
                 <p>Hello, and welcome to the Asawa Resort!
                     <br><br>
-                    Step onto the balcony; bask in the glorious tropical sunshine and inhale the sweet scent of tropical
+                    Step onto the balcony; bask in the glorious sunshine and inhale the sweet scent of tropical
                     flowers in the courtyard.
                     <br><br>
 
                     With an elevated view on the landscape, you can drink in the
-                    stunning greenery and wildlife that stretch miles and miles around our resort.</p>
+                    stunning greenery and wildlife that stretch for miles around our resort.</p>
 
-                <p>Take a moment and step onto the grass, wiggle your toes in 'em. This is the moment you have always
+                <p>Take a moment to wiggle your toes in the grass. This is the moment you have always
                     wanted. Perfect place, perfect food - all away from the humdrum and chaos of urban life.
                 </p>
                 <br>
 
                 <p>All of this comes completely hassle-free. You only need to book a reservation and we handle
-                    everything. Walk-in, walk-out as you please.</p>
+                    everything. Walk in and walk out, as you please.</p>
                 <br>
 
                 <p>We are Asawa, and are happy to have you stay with us!</p>
@@ -166,56 +175,44 @@
                 <div class="img__gallery--item">
                     <amp-img src="../assets/images/gallery/adventure.jpg" alt="Adventure-Image" width="320" height="220"
                              srcset="../assets/images/gallery/adventure.jpg 640w,
-                             ../assets/images/gallery/adventure-2x.jpg 1280w,
-                             ../assets/images/gallery/adventure-3x.jpg 1920w"
+                             ../assets/images/gallery/adventure-2x.jpg 1280w"
                              layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="1">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </div>
                 <div class="img__gallery--item">
                     <amp-img src="../assets/images/gallery/honeymoon.jpg" alt="Honeymoon-Image" width="320" height="220"
                              srcset="../assets/images/gallery/honeymoon.jpg 640w,
-                             ../assets/images/gallery/honeymoon-2x.jpg 1280w,
-                             ../assets/images/gallery/honeymoon-3x.jpg 1920w"
+                             ../assets/images/gallery/honeymoon-2x.jpg 1280w"
                              layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="2">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </div>
                 <div class="img__gallery--item">
                     <amp-img src="../assets/images/gallery/relaxation.jpg" alt="Relaxation-Image" width="320"
                              height="220"
                              srcset="../assets/images/gallery/relaxation.jpg 640w,
-                             ../assets/images/gallery/relaxation-2x.jpg 1280w,
-                             ../assets/images/gallery/relaxation-3x.jpg 1920w"
+                             ../assets/images/gallery/relaxation-2x.jpg 1280w"
                              layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="3">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </div>
                 <div class="img__gallery--item">
                     <amp-img src="../assets/images/gallery/nature.jpg" alt="Nature-Image" width="320" height="220"
                              srcset="../assets/images/gallery/nature.jpg 640w,
-                             ../assets/images/gallery/nature-2x.jpg 1280w,
-                             ../assets/images/gallery/nature-3x.jpg 1920w"
+                             ../assets/images/gallery/nature-2x.jpg 1280w"
                              layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="4">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </div>
                 <div class="img__gallery--item">
                     <amp-img src="../assets/images/gallery/rooms.jpg" alt="Room-Image" width="320" height="220"
                              srcset="../assets/images/gallery/rooms.jpg 640w,
-                             ../assets/images/gallery/rooms-2x.jpg 1280w,
-                             ../assets/images/gallery/rooms-3x.jpg 1920w"
+                             ../assets/images/gallery/rooms-2x.jpg 1280w"
                              layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="5">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </div>
                 <div class="img__gallery--item">
                     <amp-img src="../assets/images/gallery/serene.jpg" alt="Serene-Image" width="320" height="220"
                              srcset="../assets/images/gallery/serene.jpg 640w,
-                             ../assets/images/gallery/serene-2x.jpg 1280w,
-                             ../assets/images/gallery/serene-3x.jpg 1920w"
+                             ../assets/images/gallery/serene-2x.jpg 1280w"
                              layout="responsive" on="tap:asawa__viewBox1" role="button" tabindex="6">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </div>
             </amp-carousel>
@@ -226,42 +223,108 @@
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=0)">
                     <amp-img src="../assets/images/gallery/thumbnails/adventure.jpg" alt="Adventure Image Thumbnail"
                              width="80" height="60">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </button>
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=1)">
                     <amp-img src="../assets/images/gallery/thumbnails/honeymoon.jpg" alt="Honeymoon Image Thumbnail"
                              width="80" height="60">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </button>
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=2)">
                     <amp-img src="../assets/images/gallery/thumbnails/relaxation.jpg" alt="Relaxation Image Thumbnail"
                              width="80" height="60">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </button>
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=3)">
                     <amp-img src="../assets/images/gallery/thumbnails/nature.jpg" alt="Nature Image Thumbnail"
                              width="80" height="60">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </button>
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=4)">
                     <amp-img src="../assets/images/gallery/thumbnails/rooms.jpg" alt="Rooms Image Thumbnail"
                              width="80" height="60">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </button>
                 <button on="tap:asawa-gallery-w-preview.goToSlide(index=5)">
                     <amp-img src="../assets/images/gallery/thumbnails/serene.jpg" alt="Serene Image Thumbnail"
                              width="80" height="60">
-                        <div fallback>Image not loaded :(</div>
                     </amp-img>
                 </button>
             </amp-carousel>
 
         </div>
+
+
+        <noscript>
+            <div class="node">
+                <div class="node__item">
+                    <a class="shadow-md" href="/assets/images/gallery/adventure-3x.jpg" target="_blank">
+                        <img class="img__mod--min" src="../assets/images/gallery/adventure.jpg" alt="Adventure-Image"
+                             width="320" height="220"
+                             srcset="../assets/images/gallery/adventure.jpg 640w,
+                             ../assets/images/gallery/adventure-2x.jpg 1280w">
+                        </img>
+                    </a>
+                </div>
+
+
+                <div class="node__item">
+                    <a class="shadow-md" href="/assets/images/gallery/honeymoon-3x.jpg" target="_blank">
+                        <img class="img__mod--min" src="../assets/images/gallery/honeymoon.jpg" alt="Honeymoon-Image"
+                             width="320" height="220"
+                             srcset="../assets/images/gallery/honeymoon.jpg 640w,
+                             ../assets/images/gallery/honeymoon-2x.jpg 1280w">
+                        </img>
+                    </a>
+                </div>
+
+
+                <div class="node__item">
+                    <a class="shadow-md" href="/assets/images/gallery/relaxation-3x.jpg" target="_blank">
+                        <img class="img__mod--min" src="../assets/images/gallery/relaxation.jpg" alt="Relaxation-Image"
+                             width="320"
+                             height="220"
+                             srcset="../assets/images/gallery/relaxation.jpg 640w,
+                             ../assets/images/gallery/relaxation-2x.jpg 1280w">
+                        </img>
+                    </a>
+                </div>
+
+
+                <div class="node__item">
+                    <a class="shadow-md" href="/assets/images/gallery/nature-3x.jpg 1920w" target="_blank">
+                        <img class="img__mod--min" src="../assets/images/gallery/nature.jpg" alt="Nature-Image"
+                             width="320"
+                             height="220"
+                             srcset="../assets/images/gallery/nature.jpg 640w,
+                             ../assets/images/gallery/nature-2x.jpg 1280w">
+                        </img>
+                    </a>
+                </div>
+
+
+                <div class="node__item">
+                    <a class="shadow-md" href="/assets/images/gallery/rooms-3x.jpg 1920w" target="_blank">
+                        <img class="img__mod--min" src="../assets/images/gallery/rooms.jpg" alt="Room-Image" width="320"
+                             height="220"
+                             srcset="../assets/images/gallery/rooms.jpg 640w,
+                             ../assets/images/gallery/rooms-2x.jpg 1280w">
+                        </img>
+                    </a>
+                </div>
+
+
+                <div class="node__item ">
+                    <a class="shadow-md" href="/assets/images/gallery/serene-3x.jpg" target="_blank">
+                        <img class="img__mod--min" src="../assets/images/gallery/serene.jpg" alt="Serene-Image"
+                             width="320" height="220"
+                             srcset="../assets/images/gallery/serene.jpg 640w,
+                             ../assets/images/gallery/serene-2x.jpg 1280w">
+                        </img>
+                    </a>
+                </div>
+            </div>
+        </noscript>
     </div>
 </section>
 
@@ -294,7 +357,7 @@
         <div class="panel__review--carousel">
             <amp-carousel type="slides" height="200" width="320" layout="fixed" autoplay delay="6000">
                 <div class="panel__review--item">
-                    <blockquote class="box__modal--wide">The tropical gardens are beautiful and the pool area great for
+                    <blockquote>The tropical gardens are beautiful and the pool area great for
                         swimming and relaxing. The location is perfect for touring the island and close to shops and
                         restaurants and the airport. Well worth staying and would recommend.
                     </blockquote>
@@ -303,7 +366,7 @@
                 </div>
 
                 <div class="panel__review--item">
-                    <blockquote class="box__modal--wide">I have 4 kids and a great husband, but sometimes a girl has to
+                    <blockquote>I have 4 kids and a great husband, but sometimes a girl has to
                         have her time out with her friends. Asawa is where we always seem to come to. Great environment!
                         The feeling is just too good to pass up.
                     </blockquote>
@@ -312,7 +375,7 @@
                 </div>
 
                 <div class="panel__review--item">
-                    <blockquote class="box__modal--wide">As a photography student, I tend to come to Ghana often. I
+                    <blockquote>As a photography student, I tend to come to Ghana often. I
                         prefer Asawa due to the serene environment and state-of-the-art facilities. The food is also
                         fantastic! I wasn't born here, but I do feel at home when I visit.
                     </blockquote>
@@ -322,10 +385,11 @@
             </amp-carousel>
         </div>
 
+
         <!-- Desktop Version -->
         <div class="panel__review--desktop">
             <div class="panel__review--item">
-                <blockquote class="box__modal--wide">The tropical gardens are beautiful and the pool area great for
+                <blockquote>The tropical gardens are beautiful and the pool area great for
                     swimming and relaxing. The location is perfect for touring the island and close to shops and
                     restaurants and the airport. Well worth staying and would recommend.
                 </blockquote>
@@ -334,7 +398,7 @@
             </div>
 
             <div class="panel__review--item">
-                <blockquote class="box__modal--wide">I have 4 kids and a great husband, but sometimes a girl has to
+                <blockquote>I have 4 kids and a great husband, but sometimes a girl has to
                     have her time out with her friends. Asawa is where we always seem to come to. Great environment!
                     The feeling is just too good to pass up.
                 </blockquote>
@@ -343,7 +407,7 @@
             </div>
 
             <div class="panel__review--item">
-                <blockquote class="box__modal--wide">As a photography student, I tend to come to Ghana often. I
+                <blockquote>As a photography student, I tend to come to Ghana often. I
                     prefer Asawa due to the serene environment and state-of-the-art facilities. The food is also
                     fantastic! I wasn't born here, but I do feel at home when I visit.
                 </blockquote>

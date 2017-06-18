@@ -6,11 +6,10 @@
 
 .page-privacy {
   .img--row {
-    background: image-url('generic/mobile-head-privacy.jpg') no-repeat;
-    background-size: cover;
+    background-image: image-url('generic/mobile-head-privacy.jpg');
 
     @include media-q('medium') {
-      background: image-url('generic/head-privacy.jpg') no-repeat;
+      background-image: image-url('generic/head-privacy.jpg');
     }
   }
 }
