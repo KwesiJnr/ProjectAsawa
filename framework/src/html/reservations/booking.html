@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
-
-    <meta name="description"
-          content="Asawa Resort, world-leading resort with top-notch service and state-of-the-art equipment to make your stay sensational. Ghana's finest!">
-
-    <!--[htmlclean-protect]-->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!--[/htmlclean-protect]-->
+    <!-- @include ../../templates/_nonamp-meta.html-->
 
     <title>Booking | Asawa Resort
     </title>
@@ -45,7 +34,7 @@
             <h3>Back to Main Site</h3>
         </a>
     </div>
-    <form method="post" action-xhr="form-xhr.php"
+    <form method="post" action="/"
           class="form__rsrv form__sidebar">
         <h2 class="form__rsrv--hd">Book Now</h2>
 
@@ -67,8 +56,8 @@
 
                 <!-- No. of Rooms -->
                 <div class="form__mod">
-                    <label for="rooms" class="form__label book--label">Rooms</label>
-                    <select class="form--input book--text" id="rooms">
+                    <label for="rooms" class="form__label--required book--label">Rooms</label>
+                    <select class="form--input book--text" id="rooms" aria-required="true" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -80,7 +69,7 @@
                 <!-- No. of Adults -->
                 <div class="form__mod">
                     <label for="adults" class="form__label--required book--label">Adults</label>
-                    <select class="form--input book--text" id="adults">
+                    <select class="form--input book--text" id="adults" aria-required="true" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -93,9 +82,9 @@
                 <div class="form__mod">
                     <label for="children" class="form__label book--label">Children</label>
                     <select class="form--input book--text" id="children">
+                        <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
-                        <option value="3">3</option>
                     </select>
                 </div>
 

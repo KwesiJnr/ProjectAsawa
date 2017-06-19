@@ -83,7 +83,7 @@ var
         in: source + 'html/**/*.html',
         out: dest + 'html',
         watch: [source + 'html/**/*.html', source + 'templates/**/*'],
-        rel: [dest + 'html/**/*'],
+        phpOut: dest + 'php',
 
 
         processOpts: {
@@ -260,7 +260,9 @@ gulp.task('html', function () {
     }
     return pages
         .pipe(cachebust())
-        .pipe(gulp.dest(htmldir.out));
+        .pipe(gulp.dest(htmldir.out))
+        .pipe(rename({extname: '.php'}))
+        .pipe(gulp.dest(htmldir.phpOut));
 });
 
 //#CSS

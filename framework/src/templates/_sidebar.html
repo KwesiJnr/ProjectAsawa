@@ -4,7 +4,7 @@
             <span class="show-more"></span>
             <span class="show-less"></span>
             Book Now</h2>
-        <form action-xhr="https://formspree.io/your@email.com" target="_blank" method="post"
+        <form action-xhr="//" target="_blank" method="post"
               class="form__rsrv form__sidebar">
 
             <div class="grid">
@@ -23,38 +23,35 @@
 
                     <!-- No. of Rooms -->
                     <div class="form__mod">
-                        <label for="rooms" class="form__label book--label">Rooms</label>
-                        <select class="form--input book--text" id="rooms">
+                        <label for="rooms" class="form__label--required book--label">Rooms</label>
+                        <select class="form--input book--text" id="rooms" aria-required="true" required>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
                         </select>
                     </div>
 
                     <!-- No. of Adults -->
                     <div class="form__mod">
                         <label for="adults" class="form__label--required book--label">Adults</label>
-                        <select class="form--input book--text" id="adults">
+                        <select class="form--input book--text" id="adults" aria-required="true" required>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
 
                     <!-- No. of Children -->
                     <div class="form__mod">
-                        <label for="children" class="form__label--required book--label">Children</label>
+                        <label for="children" class="form__label book--label">Children</label>
                         <select class="form--input book--text" id="children">
+                            <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
-                            <option value="3">3</option>
                         </select>
                     </div>
 
@@ -99,7 +96,7 @@
 
                     <!-- No. of Rooms -->
                     <div class="form__mod">
-                        <label for="rooms" class="form__label book--label">Rooms</label>
+                        <label for="rooms" class="form__label--required book--label">Rooms</label>
                         <select class="form--input book--text" id="rooms">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -125,9 +122,9 @@
                     <div class="form__mod">
                         <label for="children" class="form__label book--label">Children</label>
                         <select class="form--input book--text" id="children">
+                            <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
-                            <option value="3">3</option>
                         </select>
                     </div>
 

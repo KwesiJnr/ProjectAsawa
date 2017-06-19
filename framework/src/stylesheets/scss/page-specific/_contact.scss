@@ -26,4 +26,13 @@
       color: $white;
     }
   }
+
+  .address__item {
+    @include p-el(after, .1rem, 100%) {
+      left: 0;
+      right: 0;
+      bottom: -1.2rem;
+      border-bottom: 1px dotted $white;
+    }
+  }
 }
