@@ -13,6 +13,26 @@
     </title>
 </head>
 <body class="page-gym" id="top">
+<!-- @if !devBuild -->
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-101290816-1"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+  </script>
+</amp-analytics>
+
+<!-- @endif -->
+
 <!-- @include ../../templates/_header.html-->
 
 <!-- Top Row Image -->

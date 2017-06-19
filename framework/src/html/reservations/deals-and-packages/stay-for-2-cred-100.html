@@ -8,6 +8,27 @@
     </title>
 </head>
 <body class="page-deals-offer">
+
+<!-- @if !devBuild -->
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-101290816-1"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+  </script>
+</amp-analytics>
+
+<!-- @endif -->
+
 <!-- @include ../../../templates/_header.html-->
 <div class="img--row stay-for-2-cred-100">
     <h2 class="hdln__prim long-text center">Stay for 2 w/ GH¢100 credit</h2>

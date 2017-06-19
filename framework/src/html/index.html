@@ -10,6 +10,26 @@
     </title>
 </head>
 <body class="page-index" id="top">
+<!-- @if !devBuild -->
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-101290816-1"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+  </script>
+</amp-analytics>
+
+<!-- @endif -->
+
 <!-- Main Background Image -->
 <div class="img__main--bckgrnd" role="presentation" aria-label="Main Page Background Image">
     <section class="main--bckgrnd--inner">

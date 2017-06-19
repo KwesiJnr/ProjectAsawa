@@ -9,13 +9,34 @@
 </head>
 
 <body class="page-about" id="top">
-<!-- @include ../templates/_header.html-->
+<!-- @if !devBuild -->
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-101290816-1"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+  </script>
+</amp-analytics>
+
+<!-- @endif -->
+
 
 
 <!-- Top Row Image -->
 <div class="img--row">
     <h2 class="hdln__prim center">About Us</h2>
 </div>
+
+<!-- @include ../templates/_header.html-->
 
 <section class="grid panel--padded">
     <div class="panel__info">
