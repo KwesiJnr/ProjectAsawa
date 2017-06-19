@@ -14,18 +14,18 @@
 
 <amp-analytics type="googleanalytics">
     <script type="application/json">
-    {
-      "vars": {
-        "account": "UA-101290816-1"
-      },
-      "triggers": {
-        "trackPageview": {
-          "on": "visible",
-          "request": "pageview"
+        {
+            "vars": {
+                "account": "UA-101290816-1"
+            },
+            "triggers": {
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 </amp-analytics>
 
 <!-- @endif -->
@@ -51,7 +51,7 @@
 <!-- Secondary Header -->
 <div class="hdr__sec">
     <div id="explore--to"></div>
-    <form action-xhr="https://formspree.io/your@email.com" target="_blank" method="post" class="form__rsrv">
+    <form action="/" target="_blank" method="get" class="form__rsrv">
         <div class="grid">
             <h2 class="form__rsrv--hd">Book A Reservation</h2>
 
