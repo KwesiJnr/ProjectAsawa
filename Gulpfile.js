@@ -3,39 +3,48 @@
  */
 var
     assetsass = require('node-sass-asset-functions'),
-    gulp = require('gulp'),
+
     browsersync = require('browser-sync'),
+
     cache = require('gulp-cache'),
-    cached = require('gulp-cached'),
     cachebust = require('gulp-cache-bust'),
-    del = require('del'),
+    cached = require('gulp-cached'),
     concat = require('gulp-concat'),
+
+    del = require('del'),
+
+    filesize = require('gulp-size'),
+
     gradientease = require('postcss-easing-gradients'),
-    ignore = require('gulp-ignore'),
-    inject = require('gulp-inject'),
+    gulp = require('gulp'),
+
     htmlclean = require('gulp-htmlclean'),
-    imagemin = require('gulp-imagemin'),
+
+    ignore = require('gulp-ignore'),
     imacss = require('gulp-imacss'),
+    imagemin = require('gulp-imagemin'),
+    inject = require('gulp-inject'),
     inline = require('gulp-inline'),
+
     nano = require('gulp-cssnano'),
-    lazypipe = require('lazypipe'),
-    minifyHTML = require('gulp-htmlmin'),
     newer = require('gulp-newer'),
+
     pkg = require('./package.json'),
     please = require('gulp-pleeease'),
     plumber = require('gulp-plumber'),
+
     postcss = require('gulp-postcss'),
-    purge = require('gulp-css-purge'),
-    pug = require('gulp-pug'),
-    puglint = require('gulp-pug-lint'),
     preprocess = require('gulp-preprocess'),
+    pug = require('gulp-pug'),
+    purge = require('gulp-css-purge'),
+    puglint = require('gulp-pug-lint'),
+
     rename = require('gulp-rename'),
     replace = require('gulp-replace'),
     sass = require('gulp-sass'),
     smacss = require('css-declaration-sorter'),
     svgo = require('gulp-svgo'),
-    stripcomments = require('gulp-strip-css-comments'),
-    filesize = require('gulp-size'),
+
     uglify = require('gulp-uglify'),
     uncss = require('gulp-uncss');
 
@@ -47,7 +56,6 @@ var
     source = 'framework/src/',
     dest = 'framework/build/',
     scsspath = source + 'stylesheets/scss/',
-    htmlpath = source + 'html/',
     csspath = dest + 'stylesheets/css/',
     htmlpathout = dest + 'html/**/*.html',
     noampin = dest + 'html' + ['/reservations/*.html'],
@@ -95,7 +103,7 @@ var
         minifyOpts: {
             collapseWhitespace: true,
             removeComments: true,
-            removeEmptyAttributes: true,
+            removeEmptyAttributes: true
         }
 
     },
@@ -259,7 +267,6 @@ gulp.task('html', function () {
 gulp.task('sass', ['html'], function () {
     var files = gulp.src(cssdir.in);
     files = files
-        .pipe(preprocess())
         .pipe(sass(cssdir.sassOpts))
         .pipe(postcss([gradientease()]))
         .pipe(filesize({title: 'Applying purge...'}))

@@ -109,7 +109,11 @@
 // LightBox
 // ==========================================================================
 amp-image-lightbox {
-  background: rgba($color-primary, .6);
+  background: $color-primary;
+
+  @include media-q('medium') {
+    background: rgba($color-primary, .6);
+  }
 }
 
 
