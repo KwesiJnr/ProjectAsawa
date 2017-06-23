@@ -20,7 +20,6 @@ var
 
     htmlclean = require('gulp-htmlclean'),
 
-    ignore = require('gulp-ignore'),
     imacss = require('gulp-imacss'),
     imagemin = require('gulp-imagemin'),
     inject = require('gulp-inject'),
@@ -45,7 +44,6 @@ var
     smacss = require('css-declaration-sorter'),
     svgo = require('gulp-svgo'),
 
-    uglify = require('gulp-uglify'),
     uncss = require('gulp-uncss');
 
 

@@ -25,10 +25,10 @@
   @include e(prim) {
 
   }
-    @include m(items) {
-      a:hover {
-        color: $grey;
-      }
+  @include m(items) {
+    a:hover {
+      color: $grey;
+    }
   }
 
   // ==========================================================================
@@ -39,7 +39,6 @@
       height: 100%;
     }
   }
-
 
   // Header Title
   @include e(title) {
@@ -61,8 +60,6 @@ amp-sidebar {
   @include media-q('medium') {
     width: 40vw;
   }
-
-
 
   // Dynamic Layer
   .dynamic__layer {
@@ -88,7 +85,6 @@ amp-sidebar {
       }
     }
 
-
     .hdr__prim--items {
       position: absolute;
       top: 12rem;
@@ -104,7 +100,7 @@ amp-sidebar {
       visibility: hidden;
     }
 
-    input:checked+.submenu {
+    input:checked + .submenu {
       transform: translateX(0);
     }
 
@@ -113,11 +109,9 @@ amp-sidebar {
 
 // Header Primary Items
 .hdr__prim--items {
-  @include media-q('medium') {
-    &::-webkit-scrollbar {
+  &::-webkit-scrollbar {
       display: none;
     }
-  }
 }
 
 // SubMenu
